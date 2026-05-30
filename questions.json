@@ -1,0 +1,3214 @@
+[
+ {
+  "id": 1,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida loyiha maqsadining asosiy vazifasi qaysi?",
+  "correctAnswer": "Loyihaning nimaga erishishini aniq belgilab, reja va resurslarni shu natijaga yo‘naltiradi",
+  "wrong": [
+   "Faqat umumiy niyatni bildiradi, rejalashtirishga ta’sir ko‘rsatmaydi",
+   "Asosan reklama matnini chiroyli qilish uchun yoziladigan qism hisoblanadi",
+   "Loyiha yakunida hisobot uchun kerak bo‘ladigan formal hujjat xolos"
+  ]
+ },
+ {
+  "id": 2,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida loyiha hayotiy sikli nima uchun muhim?",
+  "correctAnswer": "Bosqichma-bosqich boshqaruvni ta’minlab, resurs, vaqt va risklarni tizimli nazorat qiladi",
+  "wrong": [
+   "Faqat loyiha tugagandan keyin arxivlash uchun qo‘llaniladigan tasnifdir",
+   "Faqat moliyaviy audit jarayonida ishlatiladigan texnik tushunchadir",
+   "Loyiha natijasiga ta’sir qilmaydi, faqat nazariy model sifatida qoladi"
+  ]
+ },
+ {
+  "id": 3,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha boshqaruvida tashabbus (initiation) bosqichining asosiy natijasi qaysi?",
+  "correctAnswer": "Loyiha nizomi (charter) va dastlabki asoslantirish shakllanadi",
+  "wrong": [
+   "Barcha ish paketlari va batafsil smeta tayyor bo‘ladi",
+   "Yakuniy hisobot va “lessons learned” rasmiylashtiriladi",
+   "Barcha pudratchilar bilan shartnomalar imzolanib bo‘ladi"
+  ]
+ },
+ {
+  "id": 4,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Loyiha” tushunchasining eng to‘g‘ri ta’rifi qaysi?",
+  "correctAnswer": "Ma’lum vaqt va resurslar doirasida noyob natija yaratishga qaratilgan vaqtinchalik faoliyat",
+  "wrong": [
+   "Har kuni takrorlanadigan turistik xizmat jarayoni va operatsion ishlar majmuasi",
+   "Faqat kompaniyaning marketing bo‘limi olib boradigan doimiy kampaniya",
+   "Faqat davlat dasturlari doirasida bajariladigan majburiy ishlar to‘plami"
+  ]
+ },
+ {
+  "id": 5,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida muvaffaqiyat mezonlari odatda nimaga tayanadi?",
+  "correctAnswer": "Vaqt–xarajat–sifat va manfaatdor tomonlar qoniqishi muvozanatiga",
+  "wrong": [
+   "Faqat turistlar soni oshgan-oshmaganiga, boshqa omillarni hisobga olmasdan",
+   "Faqat reklama ko‘rsatkichlari va ko‘rishlar soni yuqori bo‘lishiga",
+   "Faqat loyiha rahbarining shaxsiy fikriga asoslangan subyektiv bahoga"
+  ]
+ },
+ {
+  "id": 6,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida Triple Constraint nimalardan iborat?",
+  "correctAnswer": "Muddat, xarajat va ko‘lam/sifat o‘rtasidagi bog‘liqlik",
+  "wrong": [
+   "Faqat marketing, savdo va reklama xarajatlari majmui",
+   "Faqat tashqi hamkorlar, investitsiya va kredit shartlari",
+   "Faqat ichki tartib-qoidalar va xodimlar intizomi"
+  ]
+ },
+ {
+  "id": 7,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Dastur (program)” bilan “loyiha (project)” farqi qaysi?",
+  "correctAnswer": "Dastur bir-biriga bog‘liq loyihalar portfeli bo‘lib, strategik natijaga xizmat qiladi",
+  "wrong": [
+   "Dastur faqat kichik loyihalarga nisbatan ishlatiladigan atama hisoblanadi",
+   "Loyiha strategik boshqaruv, dastur esa faqat operatsion ishdir",
+   "Ikkalasi bir xil tushuncha bo‘lib, faqat nomlanishi turlicha"
+  ]
+ },
+ {
+  "id": 8,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida ko‘lam (scope) nimani bildiradi?",
+  "correctAnswer": "Loyihada bajarilishi kerak bo‘lgan ishlar va yetkaziladigan natijalar chegarasi",
+  "wrong": [
+   "Faqat loyiha reklamasida ishlatiladigan mavzu va shiorlar to‘plami",
+   "Loyiha jamoasi soni va ularning ish jadvali haqida qisqa ma’lumot",
+   "Faqat smetadagi xarajat bandlari ro‘yxati va to‘lov grafiklari"
+  ]
+ },
+ {
+  "id": 9,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Deliverable” (natija) nima?",
+  "correctAnswer": "Loyiha yakunida yoki bosqichida topshiriladigan aniq mahsulot/xizmat/hujjat",
+  "wrong": [
+   "Faqat loyiha davomida gaplashib qo‘yiladigan umumiy va’dalar majmui",
+   "Faqat budjetda ko‘rsatilgan xarajatlar ro‘yxatiga beriladigan nom",
+   "Faqat loyiha rahbari tayyorlaydigan shaxsiy prezentatsiya materiali"
+  ]
+ },
+ {
+  "id": 10,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida bosqichli tasdiqlash (stage-gate) nimaga xizmat qiladi?",
+  "correctAnswer": "Har bosqich oxirida qaror qabul qilib, davom ettirish/tuxtatish/tuzatish imkonini beradi",
+  "wrong": [
+   "Faqat loyiha tugagach, hujjatlarni bir joyga yig‘ib qo‘yish uchun kerak bo‘ladi",
+   "Faqat xodimlar ish haqi hisoblash tizimining texnik qismidir",
+   "Loyiha tezligini pasaytiradi, shuning uchun amaliyotda ishlatilmaydi"
+  ]
+ },
+ {
+  "id": 11,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha nizomi (charter) odatda nimani o‘z ichiga oladi?",
+  "correctAnswer": "Maqsad, asos, sponsor, yuqori darajadagi ko‘lam va vakolatlar",
+  "wrong": [
+   "WBSning barcha elementlari va har bir ish paketi bo‘yicha xarajatlar",
+   "Faqat dizayn eskizlari va reklama bannerlari bo‘yicha talablar",
+   "Pudratchilar bilan shartnoma matnlari va to‘lov rekvizitlari"
+  ]
+ },
+ {
+  "id": 12,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida talablar (requirements) nima?",
+  "correctAnswer": "Manfaatdor tomonlar kutadigan funksiyalar, sifat mezonlari va cheklovlar",
+  "wrong": [
+   "Faqat loyiha jamoasi ichida kelishilgan norasmiy fikrlar",
+   "Faqat budjetni oshirish uchun kiritiladigan qo‘shimcha bandlar",
+   "Faqat dizaynerlar ishlatadigan vizual yo‘riqnomalar"
+  ]
+ },
+ {
+  "id": 13,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Baseline” nimani anglatadi?",
+  "correctAnswer": "Reja bo‘yicha tasdiqlangan ko‘lam–jadval–xarajat asosiy nuqtasi (etalon)",
+  "wrong": [
+   "Faqat loyiha logotipi va brend ranglari bo‘yicha yakuniy qaror",
+   "Loyiha boshlanishidan oldingi bozor narxlari bo‘yicha taxminiy ma’lumot",
+   "Faqat jamoaning kundalik vazifalar ro‘yxati va “to-do” jadvali"
+  ]
+ },
+ {
+  "id": 14,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “Change request” (o‘zgarish so‘rovi) nima?",
+  "correctAnswer": "Baselinega ta’sir qiladigan o‘zgarishni rasmiy ko‘rib chiqish va tasdiqlash jarayoni",
+  "wrong": [
+   "Oddiy og‘zaki kelishuv bo‘lib, hujjatlashtirish talab qilinmaydi",
+   "Faqat reklama bo‘limi ichida qabul qilinadigan xabar",
+   "Loyiha tugaganidan keyin qoldiriladigan takliflar ro‘yxati"
+  ]
+ },
+ {
+  "id": 15,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Scope creep” nimani anglatadi?",
+  "correctAnswer": "Rasmiy tasdiqsiz ko‘lamning sekin-asta kengayib ketishi",
+  "wrong": [
+   "Jadvalni optimallashtirish natijasida ishlar tezroq bajarilishi",
+   "Xarajatlar kamayib, loyiha rentabelligi oshib borishi",
+   "Jamoa motivatsiyasi oshib, ko‘proq ish qilishga intilishi"
+  ]
+ },
+ {
+  "id": 16,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “Kick-off meeting” maqsadi qaysi?",
+  "correctAnswer": "Maqsad, rol, jadval, aloqa va kutilmalarni bir xil tushunishga keltirish",
+  "wrong": [
+   "Faqat rasmlarni ijtimoiy tarmoqqa joylash uchun tantanali uchrashuv o‘tkazish",
+   "Faqat investorlarni ko‘ndirish uchun marketing tadbiri o‘tkazish",
+   "Loyiha tugaganini e’lon qilish va hisobot topshirish marosimi"
+  ]
+ },
+ {
+  "id": 17,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Portfel (portfolio) boshqaruvi nimaga yo‘naltiriladi?",
+  "correctAnswer": "Strategiyaga mos loyihalarni tanlash, ustuvorlashtirish va resurs taqsimlashga",
+  "wrong": [
+   "Faqat bitta loyiha ichidagi vazifalarni kunlik nazorat qilishga",
+   "Faqat moliyaviy buxgalteriya hisobotlarini yuritishga",
+   "Faqat turistik marshrut dizaynini chizishga va banner tayyorlashga"
+  ]
+ },
+ {
+  "id": 18,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida SMART maqsad talabi nimani anglatadi?",
+  "correctAnswer": "Aniq, o‘lchanadigan, erishiladigan, dolzarb va muddatli maqsad qo‘yish",
+  "wrong": [
+   "Faqat “ambitsiyali” maqsad qo‘yib, raqamlarni ko‘rsatmaslik ham mumkin",
+   "Faqat marketingda chiroyli eshitiladigan shior tanlashni anglatadi",
+   "Faqat IT loyihalarida qo‘llaniladi, turizmda ishlatilmaydi"
+  ]
+ },
+ {
+  "id": 19,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha boshqaruvining “operatsion boshqaruv”dan farqi qaysi?",
+  "correctAnswer": "Loyiha vaqtinchalik va noyob natijaga yo‘naltirilgan, operatsiya esa doimiy jarayon",
+  "wrong": [
+   "Operatsiya har doim qisqa muddatli bo‘lib, loyiha esa doimiy davom etadi",
+   "Loyiha faqat xizmat ko‘rsatish, operatsiya esa faqat qurilish ishlarini anglatadi",
+   "Ikkalasi farqsiz, faqat tashkilot nomi boshqacha bo‘ladi"
+  ]
+ },
+ {
+  "id": 20,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “Business case” vazifasi qaysi?",
+  "correctAnswer": "Loyiha qiymati, foydasi, xarajati va alternativalarni asoslab berish",
+  "wrong": [
+   "Faqat jamoa uchun motivatsion nutq yozib berish va ruhlantirish",
+   "Faqat dizayn variantlari ichidan eng chiroylisini tanlash",
+   "Faqat qonunchilikka oid ruxsatnomalarni sanab chiqish"
+  ]
+ },
+ {
+  "id": 21,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha doirasida “Assumption” nimani bildiradi?",
+  "correctAnswer": "Hozircha tekshirilmagan, ammo rejalashtirishda qabul qilingan faraz",
+  "wrong": [
+   "Aniq isbotlangan fakt bo‘lib, hech qachon o‘zgarib ketmaydi",
+   "Faqat moliyaviy hisobotda ko‘rsatiladigan raqamli ko‘rsatkich",
+   "Manfaatdor tomonlar bilan kelishilmagan, shuning uchun kiritilmaydigan fikr"
+  ]
+ },
+ {
+  "id": 22,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Constraint” (cheklov) nima?",
+  "correctAnswer": "Loyiha tanlov erkinligini cheklaydigan shart (muddat, budjet, resurs va h.k.)",
+  "wrong": [
+   "Faqat turistlarning kayfiyati bilan bog‘liq mavsumiy holat",
+   "Faqat reklama kanalini tanlashda paydo bo‘ladigan muammo",
+   "Faqat loyiha tugagach paydo bo‘ladigan hujjatlashtirish talabi"
+  ]
+ },
+ {
+  "id": 23,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “Milestone” nima?",
+  "correctAnswer": "Jadvaldagi muhim nazorat nuqtasi bo‘lib, odatda 0 davomiylikka ega",
+  "wrong": [
+   "Har doim 2–3 hafta davom etadigan katta ish paketi hisoblanadi",
+   "Faqat xodimlar uchun mukofot beriladigan bayram kuni",
+   "Faqat marketing kampaniyasining postlar soni bo‘yicha ko‘rsatkich"
+  ]
+ },
+ {
+  "id": 24,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha boshqaruvida “go/no-go” qarori qachon muhim?",
+  "correctAnswer": "Bosqich yakunida natija va risklarni baholab, keyingi bosqichga o‘tishda",
+  "wrong": [
+   "Faqat loyiha o‘rtasida jamoa charchagan paytda motivatsiya uchun",
+   "Faqat loyiha tugagach, arxivlashdan oldin",
+   "Faqat reklama boshlangan kundan so‘ng"
+  ]
+ },
+ {
+  "id": 25,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “Value proposition” nima?",
+  "correctAnswer": "Mijoz nima uchun aynan shu turistik mahsulotni tanlashini asoslaydigan qiymat taklifi",
+  "wrong": [
+   "Faqat kompaniyaning ichki qoidalari va intizomiy talablar to‘plami",
+   "Faqat jamoa a’zolarining lavozim yo‘riqnomalari",
+   "Faqat davlat statistikasiga topshiriladigan hisobot shakli"
+  ]
+ },
+ {
+  "id": 26,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha tashabbuskorining (sponsor) asosiy roli qaysi?",
+  "correctAnswer": "Strategik qo‘llab-quvvatlash va resurs/vakolat ta’minlash, to‘siqlarni olib tashlash",
+  "wrong": [
+   "Har kuni barcha vazifalarni mikro-boshqarib, jamoa o‘rniga qaror qilish",
+   "Faqat reklama matnlarini tekshirib, dizaynni tanlash bilan cheklanish",
+   "Faqat yakuniy hisobotga imzo qo‘yish, jarayonga aralashmaslik"
+  ]
+ },
+ {
+  "id": 27,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida “benefit realization” nimani anglatadi?",
+  "correctAnswer": "Loyiha natijasidan keladigan foydani o‘lchash va amalga oshishini ta’minlash",
+  "wrong": [
+   "Faqat loyiha davomida xarajatlarni ko‘paytirib, ko‘proq pul sarflash",
+   "Faqat turistlar fikrini so‘ramasdan, ichki baho bilan cheklanish",
+   "Faqat vizual identifikatsiya va brendingni qayta chizish"
+  ]
+ },
+ {
+  "id": 28,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha maqsadini noto‘g‘ri qo‘yish nimaga olib keladi?",
+  "correctAnswer": "Ko‘lam chalkashadi, resurslar noto‘g‘ri taqsimlanadi va natija sifati pasayadi",
+  "wrong": [
+   "Har doim budjet kamayib, foyda ortib boradi, chunki maqsad erkin bo‘ladi",
+   "Jadval avtomatik ravishda tezlashadi va risklar o‘z-o‘zidan yo‘qoladi",
+   "Loyiha hujjatlari kamroq bo‘ladi, shuning uchun hammasi osonlashadi"
+  ]
+ },
+ {
+  "id": 29,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “lessons learned” qachon va nima uchun kerak?",
+  "correctAnswer": "Bosqichlar va yakunda tajribani jamlab, keyingi loyihalarga bilim transferi uchun",
+  "wrong": [
+   "Faqat loyiha boshlanishida taxminiy fikrlar yozib qo‘yish uchun",
+   "Faqat audit kelganda ko‘rsatish uchun sun’iy hujjat sifatida",
+   "Faqat marketing bo‘limi ijtimoiy tarmoqqa post qilish uchun"
+  ]
+ },
+ {
+  "id": 30,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Loyiha yopilishi” (closure) bosqichining asosiy mazmuni qaysi?",
+  "correctAnswer": "Yetkazib berishlarni qabul qilish, shartnomalarni yopish va yakuniy hisobotni rasmiylashtirish",
+  "wrong": [
+   "Loyiha rejalarini birinchi marta tasdiqlash va jamoani shakllantirish",
+   "Faqat bozor tahlilini qayta boshlash va strategiyani noldan yozish",
+   "Faqat reklama kampaniyasini ishga tushirish va postlarni rejalash"
+  ]
+ },
+ {
+  "id": 31,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "WBS (Work Breakdown Structure)ning asosiy vazifasi qaysi?",
+  "correctAnswer": "Ishlarni ierarxik tarzda bo‘lib, ko‘lamni boshqariladigan paketlarga ajratadi",
+  "wrong": [
+   "Faqat jamoa a’zolarining telefon raqamlarini bir jadvalga yig‘ib beradi",
+   "Faqat reklama kanallari bo‘yicha postlar sonini sanab chiqadi",
+   "Faqat smetadagi xarajatlarni kutilgan foyda bilan almashtirib ko‘rsatadi"
+  ]
+ },
+ {
+  "id": 32,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Work package” nimani anglatadi?",
+  "correctAnswer": "WBSning eng past darajadagi, boshqariladigan va o‘lchanadigan ish birligi",
+  "wrong": [
+   "Har doim bir nechta loyihani birlashtiradigan strategik hujjat to‘plami",
+   "Turistlar uchun tayyorlangan umumiy reklama paketi va bannerlar jamlanmasi",
+   "Loyiha rahbarining shaxsiy rejalari va eslatmalar daftari"
+  ]
+ },
+ {
+  "id": 33,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Jadval tuzishda “activity sequencing” nimaga xizmat qiladi?",
+  "correctAnswer": "Vazifalar o‘zaro bog‘liqligini aniqlab, to‘g‘ri ketma-ketlikni belgilaydi",
+  "wrong": [
+   "Faqat vazifalarga chiroyli nom berish va dizaynini bezashga xizmat qiladi",
+   "Faqat moliyaviy smetani vaqtga bog‘lamasdan alohida yuritadi",
+   "Vazifalar bog‘liqligi kerak emas deb hisoblab, hammasini bir kunda boshlaydi"
+  ]
+ },
+ {
+  "id": 34,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Critical path” nimani bildiradi?",
+  "correctAnswer": "Loyihaning minimal davomiyligini belgilovchi eng uzun bog‘liq vazifalar zanjiri",
+  "wrong": [
+   "Faqat eng ko‘p pul sarflanadigan xarajat bandlari ro‘yxati",
+   "Faqat turistlar oqimi eng yuqori bo‘ladigan mavsumiy davr",
+   "Faqat reklama kampaniyasi postlarining haftalik rejalari"
+  ]
+ },
+ {
+  "id": 35,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "CPM/PERT usullaridan foydalanishning foydasi qaysi?",
+  "correctAnswer": "Muddatni ilmiy asosda baholab, kritik vazifalarni aniqlashga yordam beradi",
+  "wrong": [
+   "Faqat loyiha prezentatsiyasini chiroyli ko‘rsatish uchun grafik chizadi",
+   "Faqat marketing bo‘limi uchun auditoriya segmentatsiyasini qiladi",
+   "Turizmda qo‘llanilmaydi, faqat zavod ishlab chiqarishida ishlatiladi"
+  ]
+ },
+ {
+  "id": 36,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Float/Slack” nimani anglatadi?",
+  "correctAnswer": "Kritik bo‘lmagan vazifalarda kechikish mumkin bo‘lgan vaqt zaxirasi",
+  "wrong": [
+   "Har doim kritik yo‘l vazifalariga qo‘shiladigan majburiy vaqt",
+   "Faqat xarajatlarni kamaytirish uchun budjetdan ajratiladigan pul",
+   "Faqat turistlar uchun bepul bonus xizmatlar ro‘yxati"
+  ]
+ },
+ {
+  "id": 37,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Gantt jadvalining asosiy vazifasi qaysi?",
+  "correctAnswer": "Vazifalar davomiyligi va ketma-ketligini vizual ko‘rsatib, monitoringni osonlashtiradi",
+  "wrong": [
+   "Faqat xarajatlarni hisoblab, moliyaviy balansni avtomatik tuzib beradi",
+   "Faqat mahsulot dizaynining rang va shriftlarini tasdiqlash uchun kerak",
+   "Faqat tashqi auditorlar uchun bezatilgan rasmiy grafik sifatida ishlatiladi"
+  ]
+ },
+ {
+  "id": 38,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Fast-tracking” nima?",
+  "correctAnswer": "Ketma-ket ishlarni qisman parallel olib borib, jadvalni qisqartirish usuli",
+  "wrong": [
+   "Budjetni ikki baravar oshirib, ishlarga ko‘proq pul sarflash usuli",
+   "Vazifalarni kamaytirib, ko‘lamni rasmiy tasdiqsiz qisqartirish usuli",
+   "Jamoani qisqartirib, ish sifatini nazorat qilmaslikka asoslangan yondashuv"
+  ]
+ },
+ {
+  "id": 39,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Crashing” nimani anglatadi?",
+  "correctAnswer": "Qo‘shimcha resurs qo‘shib, kritik vazifalar davomiyligini qisqartirish",
+  "wrong": [
+   "Marketing postlarini ko‘paytirib, turistlar sonini oshirish strategiyasi",
+   "Risklarni inkor etib, “hammasi yaxshi bo‘ladi” degan yondashuv",
+   "Loyihani to‘xtatib, keyin qayta boshlash uchun hujjatlarni yo‘qotish"
+  ]
+ },
+ {
+  "id": 40,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida jadval risklarini kamaytirishning to‘g‘ri yo‘li qaysi?",
+  "correctAnswer": "Realistik baholash, kritik yo‘lni nazorat qilish va zaxira vaqt belgilash",
+  "wrong": [
+   "Jadvalni juda qisqa qilib yozib, jamoani kuchli bosim ostida ishlatish",
+   "Vazifalarni hujjatlashtirmasdan, og‘zaki topshiriqlar bilan yuritish",
+   "Monitoringni bekor qilib, faqat yakunda holatni bilish"
+  ]
+ },
+ {
+  "id": 41,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Resource leveling” nimaga xizmat qiladi?",
+  "correctAnswer": "Resurs chekloviga moslab jadvalni tekislab, haddan tashqari yuklanishni kamaytiradi",
+  "wrong": [
+   "Har doim jadvalni qisqartiradi va muddatni avtomatik tezlashtiradi",
+   "Faqat dizayn elementlarini bir xil standartga keltirish usulidir",
+   "Faqat marketing kanallarini teng taqsimlash bo‘yicha qoidalar to‘plami"
+  ]
+ },
+ {
+  "id": 42,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Timeboxing” yondashuvi nimani anglatadi?",
+  "correctAnswer": "Ishga qat’iy vaqt bloklari ajratib, shu muddatda minimal natijani chiqarish",
+  "wrong": [
+   "Budjetni vaqtga bog‘lamasdan, faqat xarajatni nazorat qilish",
+   "Vazifalarni kechiktirib, keyin bir kunda hammasini tugatishga urinish",
+   "Faqat turistlar uchun vaqtni tejash bo‘yicha xizmatlar dizayni"
+  ]
+ },
+ {
+  "id": 43,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “dependencies” turlari (FS, SS, FF, SF) nima uchun kerak?",
+  "correctAnswer": "Vazifalar bog‘liqligini formal belgilab, jadval xatolarini kamaytiradi",
+  "wrong": [
+   "Faqat akademik termin bo‘lib, amaliyotda ishlatilmaydi",
+   "Faqat smetani tuzishda, jadvalga bog‘liq bo‘lmagan holda qo‘llanadi",
+   "Faqat marketing kampaniyasi postlari orasidagi oraliqni belgilaydi"
+  ]
+ },
+ {
+  "id": 44,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Jadval monitoringida “SPI” (Schedule Performance Index) nimaga xizmat qiladi?",
+  "correctAnswer": "Rejaga nisbatan jadval ijrosini ko‘rsatadigan ko‘rsatkich (Earned Value doirasida)",
+  "wrong": [
+   "Faqat turistlar qoniqishi indeksini hisoblash uchun marketing metriki",
+   "Faqat pul oqimi va bank to‘lovlarini tekshirish uchun buxgalteriya ko‘rsatkichi",
+   "Faqat xodimlar KPI jadvali bo‘lib, loyiha jadvaliga aloqasi yo‘q"
+  ]
+ },
+ {
+  "id": 45,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “timeline” va “schedule” farqi qaysi?",
+  "correctAnswer": "Timeline umumiy vaqt chizig‘i, schedule esa detallashtirilgan vazifalar jadvali",
+  "wrong": [
+   "Timeline faqat auditorlar uchun, schedule esa faqat turistlar uchun ishlatiladi",
+   "Schedule umumiy, timeline esa faqat ish paketlarini ko‘rsatadi",
+   "Ikkalasi bir xil, farqi faqat inglizcha atamasida"
+  ]
+ },
+ {
+  "id": 46,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Vazifa davomiyligini baholashda “three-point estimate” nimani anglatadi?",
+  "correctAnswer": "Optimistik, ehtimoliy va pessimist baholar bilan aniqlikni oshirish",
+  "wrong": [
+   "Uchta turistik paket narxini qo‘shib, o‘rtacha narx topish",
+   "Uchta reklama kanalini tanlab, postlarni teng taqsimlash",
+   "Uchta rahbar fikrini olib, o‘rtacha qaror chiqarish, raqam kerak emas"
+  ]
+ },
+ {
+  "id": 47,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “rolling wave planning” nimaga mos?",
+  "correctAnswer": "Yaqin davrni detallashtirib, uzoq davrni umumiy rejalash orqali noaniqlikni boshqaradi",
+  "wrong": [
+   "Butun loyihani bir kunda 100% detallashtirib, keyin hech narsani o‘zgartirmaydi",
+   "Faqat moliyaviy hisobotni oyma-oy yozib borish bilan cheklanadi",
+   "Faqat marketing postlarini haftama-hafta rejalashga taalluqli bo‘ladi"
+  ]
+ },
+ {
+  "id": 48,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Baseline schedule” buzilayotganini eng to‘g‘ri qanday aniqlash mumkin?",
+  "correctAnswer": "Reja va faktni muntazam solishtirib, kritik yo‘l va KPI/SPI orqali kuzatish bilan",
+  "wrong": [
+   "Faqat loyiha oxirida “kechikkan ekan” deb xulosa qilish orqali",
+   "Faqat jamoaning hissiyotiga qarab “ulguryapmiz” deyish orqali",
+   "Faqat reklama ko‘rsatkichlari oshsa, jadval ham yaxshi ketmoqda deb hisoblash"
+  ]
+ },
+ {
+  "id": 49,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida jadval tuzishda “calendar” nimani bildiradi?",
+  "correctAnswer": "Ish kunlari, dam olish, bayramlar va ishlash vaqtini inobatga oladigan ish taqvimi",
+  "wrong": [
+   "Faqat turistlar uchun festival va bayramlar ro‘yxati bo‘lgan reklama varaqasi",
+   "Faqat investorlarga yuboriladigan prezentatsiya slaydi",
+   "Faqat pudratchilar bilan uchrashuvlar rejasidan iborat hujjat"
+  ]
+ },
+ {
+  "id": 50,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “workload”ni balanslash nega muhim?",
+  "correctAnswer": "Haddan tashqari yuklanish xatolar, kechikish va sifat pasayishiga olib kelmasligi uchun",
+  "wrong": [
+   "Ko‘proq yuk bo‘lsa, har doim ish tezroq tugaydi, shuning uchun balans shart emas",
+   "Yuklamani nazorat qilish faqat HR bo‘limi ishi bo‘lib, loyiha bilan bog‘liq emas",
+   "Balanslash marketing postlarini teng taqsimlashni bildiradi, jadvalga aloqasi yo‘q"
+  ]
+ },
+ {
+  "id": 51,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida budjet boshqaruvining asosiy maqsadi qaysi?",
+  "correctAnswer": "Xarajatlarni rejalashtirish, nazorat qilish va tasdiqlangan limitdan chiqmasligini ta’minlash",
+  "wrong": [
+   "Xarajatlar oshsa ham, reklama kuchaysa yetarli degan yondashuvni qo‘llash",
+   "Faqat hujjatda raqamlar bo‘lishi uchun taxminiy summalarni yozib qo‘yish",
+   "Moliyani nazorat qilmasdan, hamma to‘lovlarni loyihaning oxiriga qoldirish"
+  ]
+ },
+ {
+  "id": 52,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Cost baseline” nimani anglatadi?",
+  "correctAnswer": "Tasdiqlangan xarajat rejasining vaqt bo‘yicha taqsimlangan etaloni",
+  "wrong": [
+   "Faqat mahsulot narxini bozordagi raqobatchilar bilan solishtirish jadvali",
+   "Faqat investorlar bilan muzokara uchun ishlatiladigan taxminiy summa",
+   "Faqat kassadagi real pul qoldig‘i bo‘lib, reja bilan solishtirilmaydi"
+  ]
+ },
+ {
+  "id": 53,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “contingency reserve” nima?",
+  "correctAnswer": "Aniqlangan risklar uchun ajratiladigan budjet zaxirasi",
+  "wrong": [
+   "Har qanday holatda foydani ko‘paytirish uchun reklama budjeti",
+   "Loyiha rahbarining shaxsiy mukofoti uchun maxfiy fond",
+   "Loyiha tugagach, ofis xarajatlarini yopish uchun operatsion budjet"
+  ]
+ },
+ {
+  "id": 54,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Management reserve” nimaga mo‘ljallanadi?",
+  "correctAnswer": "Noma’lum noma’lumlar (unknown-unknowns) uchun rahbariyat zaxirasi",
+  "wrong": [
+   "Faqat dizaynni chiroyli qilish uchun alohida ajratiladigan pul",
+   "Faqat xodimlar oyligini oshirish uchun oldindan belgilangan fond",
+   "Faqat marketing postlarini ko‘paytirish uchun doimiy xarajat"
+  ]
+ },
+ {
+  "id": 55,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Earned Value’da “CPI” nimani ko‘rsatadi?",
+  "correctAnswer": "Xarajat samaradorligi indeksi bo‘lib, reja va fakt xarajat ijrosini taqqoslaydi",
+  "wrong": [
+   "Faqat turistlar qoniqishi indeksini o‘lchaydigan marketing ko‘rsatkichidir",
+   "Faqat soliq organlari talab qiladigan buxgalteriya koeffitsiyentidir",
+   "Faqat jamoa motivatsiyasini baholashda ishlatiladigan psixologik o‘lchovdir"
+  ]
+ },
+ {
+  "id": 56,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “procurement” nimani anglatadi?",
+  "correctAnswer": "Tovar/xizmatlarni tashqi manbadan xarid qilish va shartnomalarni boshqarish jarayoni",
+  "wrong": [
+   "Faqat ichki jamoa bilan ishlash bo‘lib, tashqi pudratchi kerak bo‘lmaydi",
+   "Faqat reklama agentligini tanlash bilan cheklanadigan faoliyat",
+   "Faqat loyiha tugagach, qolgan aktivlarni sotish jarayoni"
+  ]
+ },
+ {
+  "id": 57,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“RFP” (Request for Proposal) nimaga xizmat qiladi?",
+  "correctAnswer": "Pudratchilardan texnik va moliyaviy takliflarni rasmiy so‘rash hujjati",
+  "wrong": [
+   "Turistlardan ijtimoiy tarmoqda fikr yozishni so‘rash posti",
+   "Bankdan kredit olish uchun shaxsiy ariza shakli",
+   "Xodimlarni ishga qabul qilishda rezyume so‘rash e’loni"
+  ]
+ },
+ {
+  "id": 58,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Fixed-price contract”ning afzalligi qaysi?",
+  "correctAnswer": "Narx oldindan aniq bo‘lib, xarajat riskining katta qismi pudratchiga o‘tadi",
+  "wrong": [
+   "Narx doim o‘zgarib turadi, shuning uchun budjetni nazorat qilish qiyinlashadi",
+   "Buyurtmachi har bir detalni o‘zi bajaradi, pudratchi javobgarligi bo‘lmaydi",
+   "Loyiha ko‘lamini istalgancha o‘zgartirish mumkin, narxga ta’sir qilmaydi"
+  ]
+ },
+ {
+  "id": 59,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Time & materials” shartnomasi qachon mos?",
+  "correctAnswer": "Ko‘lam aniq bo‘lmaganda va ish hajmi o‘zgarishi kutilganda",
+  "wrong": [
+   "Ko‘lam juda aniq bo‘lsa ham, narxni yashirish uchun ishlatiladi",
+   "Faqat davlat loyihalarida qonunan majburiy bo‘lgan shakl hisoblanadi",
+   "Turizm sohasida umuman qo‘llanilmaydigan shartnoma turi"
+  ]
+ },
+ {
+  "id": 60,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Risk boshqaruvining asosiy maqsadi qaysi?",
+  "correctAnswer": "Noaniqliklarni aniqlash, baholash va salbiy ta’sirni kamaytirib, imkoniyatlarni oshirish",
+  "wrong": [
+   "Risklar haqida gapirmaslik, chunki gapirish riskni “chaqiradi” degan qarash",
+   "Faqat loyiha yakunida risklar ro‘yxatini yozib qo‘yish, amaliy choralar ko‘rmaslik",
+   "Riskni faqat sug‘urta bilan yopish, boshqa boshqaruv usullarini ishlatmaslik"
+  ]
+ },
+ {
+  "id": 61,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Risk register” nima?",
+  "correctAnswer": "Risklar, ehtimol–ta’sir, egasi va javob choralarini jamlaydigan reyestr",
+  "wrong": [
+   "Faqat turistlar pasport ma’lumotlari saqlanadigan maxfiy ro‘yxat",
+   "Faqat reklama postlari va ularning ko‘rishlar soni kiritiladigan jadval",
+   "Faqat buxgalteriya uchun cheklar va kvitansiyalar papkasi"
+  ]
+ },
+ {
+  "id": 62,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Riskga javob strategiyasida “mitigation” nimani anglatadi?",
+  "correctAnswer": "Risk ehtimoli yoki ta’sirini kamaytirish bo‘yicha oldindan choralar ko‘rish",
+  "wrong": [
+   "Riskni butunlay inkor etish va e’tiborsiz qoldirish",
+   "Riskni oshirib, keyin tezroq foyda olishga urinish",
+   "Riskni faqat oxirida muhokama qilish, chunki boshida vaqt yo‘q"
+  ]
+ },
+ {
+  "id": 63,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida sifat boshqaruvi nima uchun muhim?",
+  "correctAnswer": "Xizmat standartlari va mijoz kutgan darajani ta’minlab, qayta ish va shikoyatni kamaytiradi",
+  "wrong": [
+   "Sifat muhim emas, chunki marketing kuchli bo‘lsa turist baribir kelaveradi",
+   "Sifat faqat mehmonxona ichki ishi, loyiha boshqaruviga aloqasi yo‘q",
+   "Sifatni nazorat qilish faqat loyiha tugagach, hisobot yozish paytida kerak"
+  ]
+ },
+ {
+  "id": 64,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Quality assurance” va “quality control” farqi qaysi?",
+  "correctAnswer": "QA jarayonlarni to‘g‘ri tashkil etish, QC esa natijani tekshirish va o‘lchashga qaratilgan",
+  "wrong": [
+   "QA faqat yakunda tekshiradi, QC esa faqat rejalashtirishda ishlaydi",
+   "Ikkalasi bir xil bo‘lib, faqat nomi boshqacha aytiladi",
+   "QC faqat marketing sifati, QA esa faqat moliya sifati bilan bog‘liq"
+  ]
+ },
+ {
+  "id": 65,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Stakeholderlarni tahlil qilishning foydasi qaysi?",
+  "correctAnswer": "Ta’sir/kuch va qiziqish darajasiga ko‘ra strategik aloqani rejalash imkonini beradi",
+  "wrong": [
+   "Faqat ro‘yxat tuzib qo‘yish uchun kerak, boshqaruv qaroriga ta’sir qilmaydi",
+   "Faqat investorlarni rozi qilish uchun formal jadval bo‘lib qoladi",
+   "Stakeholderlar bilan ishlash marketing bo‘limining xolos, loyiha jamoasiga kerak emas"
+  ]
+ },
+ {
+  "id": 66,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Barqaror turizm loyihasida “carrying capacity” (sig‘im) nimani bildiradi?",
+  "correctAnswer": "Ekologik va ijtimoiy zarar bermasdan qabul qilinadigan tashrif buyuruvchilar chegarasi",
+  "wrong": [
+   "Faqat mehmonxona xonalari soni bo‘lib, tabiat va aholi omillari hisobga olinmaydi",
+   "Faqat marketing prognozi bo‘lib, real rejalashtirishda ishlatilmaydi",
+   "Faqat transport imkoniyatlari bilan cheklanib, boshqa ko‘rsatkichlar inkor qilinadi"
+  ]
+ },
+ {
+  "id": 67,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida ESG yondashuvining mazmuni qaysi?",
+  "correctAnswer": "Ekologik, ijtimoiy va boshqaruv omillarini qarorga integratsiya qilish",
+  "wrong": [
+   "Faqat foydani maksimal qilish uchun narxlarni keskin oshirish strategiyasi",
+   "Faqat reklama va brending bilan bog‘liq estetik talablar majmui",
+   "Faqat investorlar oldida yaxshi ko‘rinish uchun formal shiorlar to‘plami"
+  ]
+ },
+ {
+  "id": 68,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Monitoring va baholash (M&E)ning asosiy farqi qaysi?",
+  "correctAnswer": "Monitoring jarayonni doimiy kuzatadi, baholash esa natija/ta’sirni tahlil qiladi",
+  "wrong": [
+   "Baholash har kuni qilinadi, monitoring esa faqat loyiha oxirida o‘tkaziladi",
+   "Ikkalasi bir xil bo‘lib, faqat inglizcha terminlar turlicha",
+   "M&E faqat davlat loyihalarida bo‘ladi, xususiy turizm loyihalariga kerak emas"
+  ]
+ },
+ {
+  "id": 69,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "“Logical framework” (Logframe) nimaga xizmat qiladi?",
+  "correctAnswer": "Maqsad–natija–faoliyat–indikator–taxminlar zanjiri orqali loyihani mantiqan bog‘laydi",
+  "wrong": [
+   "Faqat dizayn va brendbook talablarini bir faylga jamlaydi",
+   "Faqat smeta bandlarini ko‘paytirib, xarajatni oqlashga yordam beradi",
+   "Faqat jamoa ro‘yxatini tuzib, kim qayerda ishlashini yozib qo‘yadi"
+  ]
+ },
+ {
+  "id": 70,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Indikatorlarning “SMART” bo‘lishi nimani anglatadi?",
+  "correctAnswer": "O‘lchanadigan va aniq indikatorlar bo‘lib, natijani tekshirish imkonini beradi",
+  "wrong": [
+   "Faqat umumiy gaplar bo‘lsa ham yetarli, chunki sifatni raqam bilan o‘lchab bo‘lmaydi",
+   "Indikatorlar faqat rasmiy hujjat uchun, amaliy qarorga ta’sir qilmaydi",
+   "Indikatorlar faqat moliyaviy bo‘lishi kerak, boshqa turlar keraksiz"
+  ]
+ },
+ {
+  "id": 71,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida raqamli transformatsiya nimaga yordam beradi?",
+  "correctAnswer": "Ma’lumotga asoslangan qaror, avtomatlashtirish va mijoz tajribasini yaxshilashga",
+  "wrong": [
+   "Faqat logotipni yangilash va ijtimoiy tarmoqda ko‘proq post qilishga",
+   "Faqat xodimlar sonini kamaytirish uchun majburiy jarayon hisoblanadi",
+   "Faqat IT bo‘limining ishi bo‘lib, biznes natijaga ta’sir qilmaydi"
+  ]
+ },
+ {
+  "id": 72,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida “data privacy” nega muhim?",
+  "correctAnswer": "Mijoz ma’lumotlari himoyasi reputatsiya va huquqiy risklarni kamaytiradi",
+  "wrong": [
+   "Turizmda shaxsiy ma’lumot bo‘lmaydi, shuning uchun hech qanday talab yo‘q",
+   "Faqat yirik banklar uchun muhim, turistik agentliklarga taalluqli emas",
+   "Ma’lumotni himoya qilish o‘rniga ko‘proq reklama qilish muhimroq"
+  ]
+ },
+ {
+  "id": 73,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida favqulodda vaziyatlar rejasining asosiy vazifasi qaysi?",
+  "correctAnswer": "Inqiroz paytida aniq rol, aloqa zanjiri va tezkor choralarni belgilab, zararlarni minimallashtiradi",
+  "wrong": [
+   "Faqat marketing imijini yaxshilash uchun yoziladigan umumiy shiorlar to‘plamidir",
+   "Loyiha tugagandan keyin arxivga topshiriladigan, amalda ishlatilmaydigan hujjat hisoblanadi",
+   "Faqat moliyaviy hisobotdagi xarajatlar ro‘yxatini ko‘paytirishga xizmat qiladi"
+  ]
+ },
+ {
+  "id": 74,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida krizis-kommunikatsiya nima uchun muhim?",
+  "correctAnswer": "Xabarlarni tez, aniq va bir xil kanalda berib, reputatsion zarar va vahimani kamaytiradi",
+  "wrong": [
+   "Faqat reklama postlari sonini oshirish uchun kerak bo‘lgan texnik jarayondir",
+   "Loyiha jamoasi ichida gaplashmaslik, tashqi savollarga javob bermaslik strategiyasidir",
+   "Faqat konferensiya yakunida press-reliz yozish bilan cheklanadigan ish hisoblanadi"
+  ]
+ },
+ {
+  "id": 75,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida xizmat sifati standarti (service standard)ning eng to‘g‘ri mazmuni qaysi?",
+  "correctAnswer": "Xizmat ko‘rsatish talablari va o‘lchovlarini belgilab, barqaror sifatni ta’minlaydigan mezonlar tizimi",
+  "wrong": [
+   "Faqat logotip va brend ranglari bo‘yicha dizayn qoidasidir, xizmat jarayoniga ta’siri yo‘q",
+   "Xodimlar uchun intizomiy jazolar ro‘yxati bo‘lib, mijoz tajribasiga aloqasi bo‘lmaydi",
+   "Faqat turistlar soni ko‘p bo‘lsa standart yaxshi ishlaydi, kam bo‘lsa keraksiz hisoblanadi"
+  ]
+ },
+ {
+  "id": 76,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasi deganda nima tushuniladi?",
+  "correctAnswer": "Turizm sohasida ma’lum maqsadga qaratilgan, vaqtinchalik va noyob natija beruvchi faoliyat",
+  "wrong": [
+   "Turistik korxonaning doimiy kundalik xizmat ko‘rsatish jarayoni va operatsion ishlari majmuasi",
+   "Faqat reklama kampaniyasi bo‘lib, xizmat yaratish va resurs boshqaruvi kirmaydigan jarayondir",
+   "Faqat davlat tomonidan amalga oshiriladigan, xususiy sektor qatnasha olmaydigan faoliyatdir"
+  ]
+ },
+ {
+  "id": 77,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha boshqarishning asosiy maqsadi nima?",
+  "correctAnswer": "Resurslardan samarali foydalanib, belgilangan natijani muddat va cheklovlarda yetkazib berish",
+  "wrong": [
+   "Har qanday holatda daromadni maksimal qilish, sifat va xavfsizlikni ikkinchi o‘ringa tushirish",
+   "Faqat xodimlar sonini oshirish orqali ishni ko‘paytirish, reja va nazoratni chetlab o‘tish",
+   "Loyiha hujjatlarini ko‘paytirish, natijadan ko‘ra rasmiyatchilikni ustun qo‘yish"
+  ]
+ },
+ {
+  "id": 78,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida manfaatdor tomonlar (stakeholderlar) kimlar?",
+  "correctAnswer": "Loyihaga ta’sir qiladigan yoki loyiha ta’siriga uchraydigan barcha shaxs va tashkilotlar",
+  "wrong": [
+   "Faqat turistlar, chunki boshqa guruhlar loyihaning natijasiga ta’sir qilmaydi",
+   "Faqat davlat idoralari, chunki xususiy sektor turizm loyihalarida qatnashmaydi",
+   "Faqat mehmonxonalar, chunki turizm faqat joylashtirish xizmatidan iborat"
+  ]
+ },
+ {
+  "id": 79,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha hayotiy siklining birinchi bosqichi qaysi?",
+  "correctAnswer": "Loyihani tashabbus qilish (initiation) va dastlabki asoslantirishni shakllantirish",
+  "wrong": [
+   "Loyihani yopish (closure) va yakuniy hisobotni tayyorlash bosqichi",
+   "Monitoring jarayoni, chunki loyiha boshidayoq nazorat boshlanib ketadi",
+   "Baholash, chunki natija olinmasdan ham loyihani baholash mumkin"
+  ]
+ },
+ {
+  "id": 80,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida risk nima?",
+  "correctAnswer": "Maqsadlarga salbiy yoki ijobiy ta’sir ko‘rsatishi mumkin bo‘lgan noaniqlik hodisasi",
+  "wrong": [
+   "Loyiha foydasi bo‘lib, faqat ijobiy natijani anglatadigan ko‘rsatkichdir",
+   "Turistlar soni bo‘lib, faqat yuqori bo‘lsa risk deb hisoblanadi",
+   "Marketing strategiyasi bo‘lib, reklama bo‘lsa risk yo‘qoladi degan tushunchadir"
+  ]
+ },
+ {
+  "id": 81,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Risklarni boshqarish jarayoni nimani o‘z ichiga oladi?",
+  "correctAnswer": "Risklarni aniqlash, baholash (ehtimol/ta’sir), javob rejalash va monitoring qilish",
+  "wrong": [
+   "Risklar haqida gapirmaslik, chunki bu jamoa motivatsiyasini pasaytiradi",
+   "Risklarni ko‘paytirish orqali tezroq foyda olish va nazoratni soddalashtirish",
+   "Risklarni yashirish va faqat muammo yuzaga kelganda javob berish yondashuvi"
+  ]
+ },
+ {
+  "id": 82,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha budjeti nima?",
+  "correctAnswer": "Loyihani bajarish uchun rejalashtirilgan xarajatlar va moliyaviy resurslar yig‘indisi",
+  "wrong": [
+   "Korxonaning umumiy foydasi bo‘lib, loyiha xarajatlari bilan bog‘liq bo‘lmaydi",
+   "Soliq summasi bo‘lib, faqat davlatga to‘lanadigan majburiyatni anglatadi",
+   "Xodimlar oyligi bo‘lib, boshqa xarajat turlari budjetga kiritilmaydi"
+  ]
+ },
+ {
+  "id": 83,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida vaqtni boshqarish nimani anglatadi?",
+  "correctAnswer": "Ishlarni ketma-ketlik, muddat va resurslarga mos rejalab, belgilangan vaqtda yakunlash",
+  "wrong": [
+   "Turistlarning dam olish vaqtini ko‘paytirish, loyiha jadvalini hisobga olmaslik",
+   "Reklama vaqtini uzaytirish, chunki marketing qancha ko‘p bo‘lsa loyiha shuncha tez bitadi",
+   "Muddatni nazoratsiz qoldirish, chunki ijodiy loyihalarda vaqtni o‘lchab bo‘lmaydi"
+  ]
+ },
+ {
+  "id": 84,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha rejasi nima uchun zarur?",
+  "correctAnswer": "Ishlarni tizimli tashkil etish, resurslarni taqsimlash va nazorat mezonlarini belgilash uchun",
+  "wrong": [
+   "Faqat hisobot topshirish uchun kerak bo‘lib, amaliy boshqaruvga ta’sir qilmaydi",
+   "Soliq to‘lash uchun majburiy hujjat bo‘lib, loyiha jamoasiga kerak emas",
+   "Faqat reklama qilish uchun tuziladi, ichki jarayonlar rejaga kiritilmaydi"
+  ]
+ },
+ {
+  "id": 85,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "SWOT-tahlil nimani aniqlaydi?",
+  "correctAnswer": "Kuchli va zaif tomonlar hamda tashqi imkoniyatlar va tahdidlarni tizimli baholaydi",
+  "wrong": [
+   "Faqat daromadni hisoblab beradi, ichki va tashqi omillarni e’tiborsiz qoldiradi",
+   "Faqat xarajatlarni kamaytirish usullarini ko‘rsatadi, bozor sharoitini kiritmaydi",
+   "Faqat raqobatchilar nomini sanab chiqadi, strategik xulosa bermaydi"
+  ]
+ },
+ {
+  "id": 86,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasining muvaffaqiyati nimaga ko‘proq bog‘liq?",
+  "correctAnswer": "Rejalashtirish sifati, ijro nazorati va stakeholderlar bilan samarali boshqaruvga",
+  "wrong": [
+   "Faqat ob-havoga, chunki iqlim yomon bo‘lsa hech qanday boshqaruv yordam bermaydi",
+   "Faqat turistlar soniga, chunki son bo‘lsa qolgan jarayonlar o‘zi hal bo‘ladi",
+   "Faqat reklama hajmiga, chunki marketing hamma muammoni yopib yuboradi"
+  ]
+ },
+ {
+  "id": 87,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha menejeri kim?",
+  "correctAnswer": "Loyiha ko‘lam–muddat–xarajat–riskni boshqarib, natija yetkazib berishga mas’ul shaxs",
+  "wrong": [
+   "Mehmonxona direktori bo‘lib, faqat joylashtirish xizmatini nazorat qiladigan rahbar",
+   "Turistik agent bo‘lib, faqat sotuv va bron qilish jarayonini yuritadigan xodim",
+   "Gid bo‘lib, faqat ekskursiya mazmunini tushuntiradigan mutaxassis"
+  ]
+ },
+ {
+  "id": 88,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha monitoringi nimani anglatadi?",
+  "correctAnswer": "Reja bilan faktni solishtirib, jarayonni doimiy kuzatish va og‘ishlarni erta aniqlash",
+  "wrong": [
+   "Loyihani to‘xtatish va keyin qayta boshlash bo‘yicha qaror chiqarish jarayoni",
+   "Loyihani reklama qilish, chunki ko‘proq post monitoring natijasini beradi",
+   "Loyiha yakunida hisobot yozib qo‘yish, jarayon davomida kuzatish shart emas"
+  ]
+ },
+ {
+  "id": 89,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida sifatni boshqarish nimaga xizmat qiladi?",
+  "correctAnswer": "Xizmat va natijalarni belgilangan standart hamda talabga mos qilib, qayta ishni kamaytirishga",
+  "wrong": [
+   "Xarajatlarni oshirishga, chunki qimmat bo‘lsa sifat avtomatik yuqori bo‘ladi",
+   "Narxlarni pasaytirishga, chunki arzon narx sifatni kafolatlaydi degan yondashuvga",
+   "Xodimlar sonini kamaytirishga, chunki kam odam bo‘lsa jarayon osonlashadi"
+  ]
+ },
+ {
+  "id": 90,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha yakunida odatda nima amalga oshiriladi?",
+  "correctAnswer": "Natijalarni qabul qilish, yakuniy baholash va rasmiy hisobot/lessons learned tayyorlash",
+  "wrong": [
+   "Yangi loyihani darhol boshlash, avvalgi natijalarni tekshirmasdan davom etish",
+   "Faqat reklama kampaniyasini kuchaytirish, chunki loyiha tugagach marketing kerak bo‘ladi",
+   "Xodimlarni qisqartirish, chunki har bir loyiha yakuni shu bilan tugashi shart"
+  ]
+ },
+ {
+  "id": 91,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihasida innovatsiya nima?",
+  "correctAnswer": "Yangi g‘oya, xizmat, jarayon yoki texnologiyani joriy etib, qiymat yaratish",
+  "wrong": [
+   "Eski xizmatlarni bekor qilish, mijoz tajribasini hisobga olmasdan qisqartirish",
+   "Narxlarni oshirish, chunki qimmat narx har doim innovatsiya degani",
+   "Reklamani kamaytirish, chunki marketing bo‘lmasa innovatsiya kuchliroq ko‘rinadi"
+  ]
+ },
+ {
+  "id": 92,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha resurslariga nimalar kiradi?",
+  "correctAnswer": "Inson resursi, moliyaviy mablag‘, vaqt, uskunalar va materiallar kabi omillar",
+  "wrong": [
+   "Faqat pul mablag‘i, chunki qolganlari budjetda aks etmasa resurs hisoblanmaydi",
+   "Faqat xodimlar, chunki texnika va vaqt avtomatik tarzda yetarli bo‘ladi",
+   "Faqat bino va ofis jihozlari, chunki xizmat ko‘rsatishda odam omili ikkilamchi"
+  ]
+ },
+ {
+  "id": 93,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Turizm loyihalarida marketingning vazifasi nima?",
+  "correctAnswer": "Mahsulotni bozorda joylashtirish, segment tanlash va talabni rag‘batlantirish orqali sotuvni qo‘llab-quvvatlash",
+  "wrong": [
+   "Xarajatlarni oshirish, chunki ko‘p reklama bo‘lsa nazoratga ehtiyoj qolmaydi",
+   "Soliqni kamaytirish, chunki marketing soliq rejimiga bevosita ta’sir qiladi degan qarash",
+   "Loyiha muddatini uzaytirish, chunki marketing qancha ko‘p bo‘lsa loyiha shuncha davom etadi"
+  ]
+ },
+ {
+  "id": 94,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha hujjatlari nima uchun kerak?",
+  "correctAnswer": "Talablar, qarorlar, o‘zgarishlar va mas’uliyatni rasmiylashtirib, nazorat va auditni ta’minlash uchun",
+  "wrong": [
+   "Faqat reklama qilish uchun kerak bo‘lib, ichki boshqaruvga deyarli ta’sir qilmaydi",
+   "Faqat tekshiruv kelganda ko‘rsatish uchun, amalda boshqaruv hujjatlarsiz ham yuradi",
+   "Arxivni to‘ldirish uchun, chunki hujjatlar loyiha davomida ishlatilmaydi"
+  ]
+ },
+ {
+  "id": 95,
+  "subject": "Turizm loyihasini boshqarish",
+  "question": "Loyiha risklarini kamaytirishning eng samarali usuli qaysi?",
+  "correctAnswer": "Oldindan rejalashtirish, risk javob choralarini belgilash va zaxira (vaqt/budjet) yaratish",
+  "wrong": [
+   "Riskni e’tiborsiz qoldirish, chunki muammolarni o‘ylash motivatsiyani pasaytiradi",
+   "Riskni oshirish, chunki katta tavakkal katta foyda beradi degan yondashuvni tanlash",
+   "Riskni yashirish, chunki muammo haqida gapirilmasa u paydo bo‘lmaydi degan qarash"
+  ]
+ },
+ {
+  "id": 96,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona daromadlarini boshqarishning asosiy maqsadi nima?",
+  "correctAnswer": "To‘g‘ri xonani, to‘g‘ri mijozga, to‘g‘ri vaqtda sotish orqali daromadni maksimal darajada oshirish",
+  "wrong": [
+   "Xizmat ko‘rsatish (housekeeping) xarajatlarini kamaytirish",
+   "Xodimlar sonini oshirish",
+   "Marketing xarajatlarini kamaytirish"
+  ]
+ },
+ {
+  "id": 97,
+  "subject": "Menejmentga kirish",
+  "question": "Qaysi formula RevPAR ni aniqlaydi?",
+  "correctAnswer": "O‘rtacha kunlik tarif (ADR) × Bandlik darajasi",
+  "wrong": [
+   "Umumiy daromad ÷ Xodimlar soni",
+   "Sof foyda ÷ Umumiy aktivlar",
+   "Operatsion xarajatlar ÷ Umumiy xonalar soni"
+  ]
+ },
+ {
+  "id": 98,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmondo‘stlik sohasida strategik narxlash nimani anglatadi?",
+  "correctAnswer": "Talab, raqobat va bozor sharoitlariga qarab xona narxlarini moslashtirish",
+  "wrong": [
+   "Barcha mavsumlar uchun qat’iy narx belgilash",
+   "Har doim raqobatchilardan past narx qo‘yish",
+   "Faqat doimiy mehmonlarga chegirma berish"
+  ]
+ },
+ {
+  "id": 99,
+  "subject": "Menejmentga kirish",
+  "question": "Talabni aniq prognoz qilish uchun qaysi element muhim?",
+  "correctAnswer": "Tarixiy ma’lumotlarni tahlil qilish",
+  "wrong": [
+   "Tasodifiy narx o‘zgarishlari",
+   "Xonalar sig‘imini oshirish",
+   "Xodimlar almashinuvi jadvali"
+  ]
+ },
+ {
+  "id": 100,
+  "subject": "Menejmentga kirish",
+  "question": "Prognozlashda tarixiy bron ma’lumotlarining roli qanday?",
+  "correctAnswer": "Kelajakdagi talabni bashorat qilish uchun naqsh va tendensiyalarni aniqlash",
+  "wrong": [
+   "Xodimlar maoshini hisoblash",
+   "Mehmonxona interyer dizaynini belgilash",
+   "Oziq-ovqat va ichimlik xarajatlarini o‘lchash"
+  ]
+ },
+ {
+  "id": 101,
+  "subject": "Menejmentga kirish",
+  "question": "Daromad menejerining asosiy vazifalari nimalardan iborat?",
+  "correctAnswer": "Talabni tahlil qilish, narx strategiyasini belgilash va xona fondini optimallashtirish",
+  "wrong": [
+   "Housekeeping jadvalini boshqarish",
+   "Restoran faoliyatini nazorat qilish",
+   "Mehmonxona xavfsizligini boshqarish"
+  ]
+ },
+ {
+  "id": 102,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona sohasida differensial narxlash qanday ishlaydi?",
+  "correctAnswer": "Mijoz segmentlari, talab yoki bron shartlariga qarab turli narx belgilash",
+  "wrong": [
+   "Barcha mehmonlar uchun bir xil narx qo‘yish",
+   "Faqat mavsumiy chegirmalar taklif qilish",
+   "Narxlarni doimiy ravishda pasaytirish"
+  ]
+ },
+ {
+  "id": 103,
+  "subject": "Menejmentga kirish",
+  "question": "Dinamik narxlashdan foydalanishning afzalligi nimada?",
+  "correctAnswer": "Real vaqt talabiga qarab narxlarni moslashtirib daromadni maksimal oshirish",
+  "wrong": [
+   "Yil davomida narxlarni o‘zgartirmaslik",
+   "Prognozlashga ehtiyojni yo‘qotish",
+   "Mehmonlar sonini kamaytirish"
+  ]
+ },
+ {
+  "id": 104,
+  "subject": "Menejmentga kirish",
+  "question": "Qaysi ko‘rsatkich band qilingan har bir xona uchun o‘rtacha kunlik daromadni ko‘rsatadi?",
+  "correctAnswer": "O‘rtacha kunlik tarif (ADR)",
+  "wrong": [
+   "RevPAR",
+   "Yalpi operatsion foyda",
+   "Bandlik darajasi"
+  ]
+ },
+ {
+  "id": 105,
+  "subject": "Menejmentga kirish",
+  "question": "ADR nimani anglatadi?",
+  "correctAnswer": "O‘rtacha kunlik tarif)",
+  "wrong": [
+   "Yillik talab koeffitsienti",
+   "Tuzatilgan diskont tushumi",
+   "Talabning o'rtacha daromadliligi"
+  ]
+ },
+ {
+  "id": 106,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun kanal aralashmasi (channel mix) daromadlarni boshqarishda muhim?",
+  "correctAnswer": "Turli taqsimot kanallarini muvozanatlashtirish orqali daromadni optimallashtirishga yordam beradi",
+  "wrong": [
+   "Mehmonxona xonalari sonini kamaytiradi",
+   "Marketingga ehtiyojni yo‘q qiladi",
+   "Xona narxlarini doimiy belgilab qo‘yadi"
+  ]
+ },
+ {
+  "id": 107,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona kontekstida inventar boshqaruvi nimani anglatadi?",
+  "correctAnswer": "Daromadni maksimal oshirish uchun xona mavjudligini nazorat qilish va taqsimlash",
+  "wrong": [
+   "Restoran menyusini boshqarish",
+   "Housekeeping xodimlarini nazorat qilish",
+   "Mehmonxona mebellarini xarid qilish"
+  ]
+ },
+ {
+  "id": 108,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona talab prognozi modellarini qanday qo‘llaydi?",
+  "correctAnswer": "Tarixiy ma’lumotlar va bozor tendensiyalarini tahlil qilib kelajak bronlarini bashorat qilish orqali",
+  "wrong": [
+   "Xona narxlarini tasodifiy o‘zgartirish orqali",
+   "Xona sig‘imini oshirish orqali",
+   "Xodimlar sonini kamaytirish orqali"
+  ]
+ },
+ {
+  "id": 109,
+  "subject": "Menejmentga kirish",
+  "question": "Raqobatchilar narxi strategik narxlashda qanday rol o‘ynaydi?",
+  "correctAnswer": "Mehmonxonalarga bozorda raqobatbardosh bo‘lish uchun narxlarni moslashtirishga yordam beradi",
+  "wrong": [
+   "Xodimlar maoshini belgilaydi",
+   "Ichki moliyaviy tahlil o‘rnini bosadi",
+   "Mavsumiylik ta’sirini yo‘q qiladi"
+  ]
+ },
+ {
+  "id": 110,
+  "subject": "Menejmentga kirish",
+  "question": "Bandlik darajasi (occupancy rate) nima?",
+  "correctAnswer": "Ma’lum davrda sotilgan mavjud xonalar foizi",
+  "wrong": [
+   "Bir oyda olingan umumiy daromad",
+   "Har smenadagi xodimlar soni",
+   "Mehmonxona xonasining o‘rtacha narxi"
+  ]
+ },
+ {
+  "id": 111,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun qiymatga asoslangan narxlash ayrim mehmon segmentlari uchun samarali?",
+  "correctAnswer": "Chunki narxlar faqat xarajatlarga emas, balki mijozning qabul qilgan qiymatiga asoslanadi",
+  "wrong": [
+   "Chunki u har doim eng past narxni taklif qiladi",
+   "Chunki u bozor talabini inobatga olmaydi",
+   "Chunki u yil bo‘yi narxni o‘zgartirmaydi"
+  ]
+ },
+ {
+  "id": 112,
+  "subject": "Menejmentga kirish",
+  "question": "“Length of stay control” atamasi nimani anglatadi?",
+  "correctAnswer": "Daromadni optimallashtirish uchun minimal yoki maksimal qolish muddatini boshqarish",
+  "wrong": [
+   "Mehmonxona xodimlari sonini cheklash",
+   "Restoran ish vaqtini nazorat qilish",
+   "Har bir xonani tozalash vaqtini qisqartirish"
+  ]
+ },
+ {
+  "id": 113,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona narxlashida blackout date nima?",
+  "correctAnswer": "Yuqori talab sababli chegirma yoki maxsus narxlar amal qilmaydigan sana",
+  "wrong": [
+   "Mehmonxona yopiq bo‘ladigan kun",
+   "Doimiy mehmonlarga bepul tunash kuni",
+   "Xonalar ta’mirlanadigan kun"
+  ]
+ },
+ {
+  "id": 114,
+  "subject": "Menejmentga kirish",
+  "question": "Umumiy daromad boshqaruvi an’anaviy daromad boshqaruvidan nimasi bilan farq qiladi?",
+  "correctAnswer": "Faqat xonalar emas, balki mehmonxonaning barcha bo‘limlari daromadini maksimal oshirishga qaratilgan",
+  "wrong": [
+   "Faqat oziq-ovqat va ichimlik savdosini tahlil qiladi",
+   "Narxlash strategiyalarini bekor qiladi",
+   "Bozor segmentatsiyasini e’tiborga olmaydi"
+  ]
+ },
+ {
+  "id": 115,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona faoliyatini baholash uchun qaysi KPIlar muhim?",
+  "correctAnswer": "ADR, RevPAR, Bandlik darajasi va GOPPAR",
+  "wrong": [
+   "Xodimlar soni va formasi",
+   "Mehmonxona lobbi hajmi",
+   "Avtoturargoh joylari soni"
+  ]
+ },
+ {
+  "id": 116,
+  "subject": "Menejmentga kirish",
+  "question": "GOPPAR nimani anglatadi?",
+  "correctAnswer": "Gross Operating Profit Per Available Room (Mavjud har bir xona uchun yalpi operatsion foyda)",
+  "wrong": [
+   "General Occupancy Percentage And Revenue",
+   "Global Operational Pricing And Reporting",
+   "Gross Overall Pricing And Revenue"
+  ]
+ },
+ {
+  "id": 117,
+  "subject": "Menejmentga kirish",
+  "question": "Segmentatsiya narxlash strategiyasiga qanday ta’sir qiladi?",
+  "correctAnswer": "Xulq-atvor va talabga qarab turli mijoz guruhlari uchun turli narx belgilash imkonini beradi",
+  "wrong": [
+   "Barcha mehmonlar uchun bir xil narx belgilaydi",
+   "Raqobatni yo‘q qiladi",
+   "Xizmat sifatini pasaytiradi"
+  ]
+ },
+ {
+  "id": 118,
+  "subject": "Menejmentga kirish",
+  "question": "Overbooking (ortiqcha bron qilish)ning ahamiyati nimada?",
+  "correctAnswer": "Bekor qilishlar va kelmasliklarni qoplash orqali bandlikni maksimal darajada saqlash",
+  "wrong": [
+   "Xona mavjudligini doimiy kamaytirish",
+   "Xodimlar yuklamasini oshirish",
+   "Mehmonlarga bepul xonalar berish"
+  ]
+ },
+ {
+  "id": 119,
+  "subject": "Menejmentga kirish",
+  "question": "OTA nimani anglatadi?",
+  "correctAnswer": "Online Travel Agency (Onlayn sayohat agentligi)",
+  "wrong": [
+   "Official Tourism Administration",
+   "Operational Travel Account",
+   "Online Tour Agreement"
+  ]
+ },
+ {
+  "id": 120,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun bron oynalari (booking windows) prognozlashda muhim?",
+  "correctAnswer": "Mehmonlar qanchalik oldindan bron qilishini ko‘rsatib, kelajak talabni bashorat qilishga yordam beradi",
+  "wrong": [
+   "Mehmonxona interyer dizaynini belgilaydi",
+   "Marketing strategiyasini almashtiradi",
+   "Mavsumiy narxlarni belgilab qo‘yadi"
+  ]
+ },
+ {
+  "id": 121,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona inventarini bir nechta platformalarda taqsimlashga qaysi vosita yordam beradi?",
+  "correctAnswer": "Channel Manager",
+  "wrong": [
+   "Housekeeping jadvali",
+   "Ish haqi tizimi",
+   "Front desk jurnali"
+  ]
+ },
+ {
+  "id": 122,
+  "subject": "Menejmentga kirish",
+  "question": "“Rate parity” nimani anglatadi?",
+  "correctAnswer": "Barcha taqsimot kanallarida bir xil xona narxini saqlash",
+  "wrong": [
+   "Har bir veb-saytda turli narx taklif qilish",
+   "Faqat past mavsumda narxni pasaytirish",
+   "Bozor tahlilisiz narx belgilash"
+  ]
+ },
+ {
+  "id": 123,
+  "subject": "Menejmentga kirish",
+  "question": "Qaysi narxlash modeli mijoz tomonidan qabul qilingan qiymatga asoslanadi?",
+  "correctAnswer": "Value-based pricing (Qiymatga asoslangan narxlash)",
+  "wrong": [
+   "Cost-plus pricing",
+   "Fixed pricing",
+   "Mavsumiy chegirma narxlash"
+  ]
+ },
+ {
+  "id": 124,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun mijozlarni segmentatsiya qilish daromad strategiyasida qo‘llaniladi?",
+  "correctAnswer": "Turli mijoz guruhlari uchun moslashtirilgan narx va marketing strategiyalarini ishlab chiqish uchun",
+  "wrong": [
+   "Sodiq mijozlarni yo‘q qilish uchun",
+   "Operatsion xarajatlarni oshirish uchun",
+   "Barcha mehmonlar uchun xizmatlarni standartlashtirish uchun"
+  ]
+ },
+ {
+  "id": 125,
+  "subject": "Menejmentga kirish",
+  "question": "Upselling (yuqori sotish) va cross-sellingning (o'zaro savdo) maqsadi nima?",
+  "correctAnswer": "Mehmonlarni yuqori qiymatli xonalar yoki qo‘shimcha xizmatlarni sotib olishga undab, umumiy daromadni oshirish",
+  "wrong": [
+   "Mehmonlar sonini kamaytirish",
+   "Reklama kampaniyalarini bekor qilish",
+   "Xona narxlarini doimiy pasaytirish"
+  ]
+ },
+ {
+  "id": 126,
+  "subject": "Menejmentga kirish",
+  "question": "Channel manager daromad boshqaruvini qanday qo‘llab-quvvatlaydi?",
+  "correctAnswer": "Barcha taqsimot kanallarida xona mavjudligi va narxlarni avtomatik yangilash orqali",
+  "wrong": [
+   "Housekeeping smenalarini boshqarish orqali",
+   "Xodimlar maoshini hisoblash orqali",
+   "Restoran inventarini nazorat qilish orqali"
+  ]
+ },
+ {
+  "id": 127,
+  "subject": "Menejmentga kirish",
+  "question": "MinLOS nimani anglatadi?",
+  "correctAnswer": "Minimum Length of Stay (Minimal qolish muddati)",
+  "wrong": [
+   "Maximum Level of Service",
+   "Minimum Level of Sales",
+   "Management Line of Strategy"
+  ]
+ },
+ {
+  "id": 128,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun mehmonxonalar turli mijoz segmentlari uchun turli narxlar qo‘llaydi?",
+  "correctAnswer": "To‘lovga tayyorlik darajasiga mos narx belgilab, daromadni maksimal oshirish uchun",
+  "wrong": [
+   "Mijozlarni chalg‘itish uchun",
+   "Xizmat sifatini pasaytirish uchun",
+   "Raqobatni yo‘q qilish uchun"
+  ]
+ },
+ {
+  "id": 129,
+  "subject": "Menejmentga kirish",
+  "question": "Oxirgi daqiqadagi bronlar narxlash strategiyasiga qanday ta’sir qiladi?",
+  "correctAnswer": "Bandlik va talabga qarab narxlar oshishi yoki pasayishiga olib kelishi mumkin",
+  "wrong": [
+   "Prognozlash zaruratini yo‘q qiladi",
+   "Butun mavsum uchun narxlarni belgilab qo‘yadi",
+   "Mijoz qoniqishini kamaytiradi"
+  ]
+ },
+ {
+  "id": 130,
+  "subject": "Menejmentga kirish",
+  "question": "Bayramlar va tadbirlar talab prognoziga qanday ta’sir qiladi?",
+  "correctAnswer": "Talab naqshlarini oshiradi yoki o‘zgartiradi, narx va inventar moslashtirishni talab qiladi",
+  "wrong": [
+   "Marketing zaruratini kamaytiradi",
+   "Mavsumiylikni yo‘q qiladi",
+   "Talabni doimiy barqaror qiladi"
+  ]
+ },
+ {
+  "id": 131,
+  "subject": "Menejmentga kirish",
+  "question": "Narxlash qarorlarini optimallashtirishga qaysi turdagi tahlil yordam beradi?",
+  "correctAnswer": "Tarixiy va real vaqt ma’lumotlariga asoslangan prognozli (predictive) tahlil",
+  "wrong": [
+   "Tasodifiy taxmin qilish",
+   "Xodimlar davomat hisobotlari",
+   "Interyer dizayn tahlili"
+  ]
+ },
+ {
+  "id": 132,
+  "subject": "Menejmentga kirish",
+  "question": "Unconstrained demand nimani anglatadi?",
+  "correctAnswer": "Xona sig‘imi cheklovlarisiz umumiy potensial talab",
+  "wrong": [
+   "Mavjud xodimlar soni",
+   "Mehmonxona xonalari umumiy soni",
+   "Minimal bandlik darajasi"
+  ]
+ },
+ {
+  "id": 133,
+  "subject": "Menejmentga kirish",
+  "question": "Sun’iy intellekt (AI) daromad boshqaruv tizimlarini qanday yaxshilaydi?",
+  "correctAnswer": "Katta ma’lumotlar to‘plamini tahlil qilib, talabni prognoz qilish va narxlarni avtomatlashtirish orqali",
+  "wrong": [
+   "Barcha mehmonxona xodimlarini almashtirish orqali",
+   "Mijoz segmentatsiyasini bekor qilish orqali",
+   "Xona narxlarini doimiy belgilash orqali"
+  ]
+ },
+ {
+  "id": 134,
+  "subject": "Menejmentga kirish",
+  "question": "Advance purchase rates (Oldindan sotib olish stavkalari) nima?",
+  "correctAnswer": "Oldindan bron qilib, to‘lovni amalga oshirgan mehmonlar uchun chegirmali narxlar",
+  "wrong": [
+   "Faqat check-in dan keyin mavjud narxlar",
+   "Overbooking paytidagi narxlar",
+   "Bepul reklama narxlari"
+  ]
+ },
+ {
+  "id": 135,
+  "subject": "Menejmentga kirish",
+  "question": "Displacement analysis nima uchun qo‘llaniladi?",
+  "correctAnswer": "Bir bronni qabul qilish ko‘proq foydali biznesni siqib chiqarmasligini baholash uchun",
+  "wrong": [
+   "Housekeeping xarajatlarini kamaytirish uchun",
+   "Xodimlar maoshini hisoblash uchun",
+   "Mehmonxona dizayn standartlarini belgilash uchun"
+  ]
+ },
+ {
+  "id": 136,
+  "subject": "Menejmentga kirish",
+  "question": "Guruh biznesi tranzit (individual) biznesdan narxlashda qanday farq qiladi?",
+  "correctAnswer": "Guruh biznesida kelishilgan narxlar va blok bronlar qo‘llaniladi, tranzit narxlar esa individual belgilanadi",
+  "wrong": [
+   "Guruh biznesi har doim yuqori narx to‘laydi",
+   "Tranzit biznes shartnoma talab qiladi",
+   "Narxlashda farq yo‘q"
+  ]
+ },
+ {
+  "id": 137,
+  "subject": "Menejmentga kirish",
+  "question": "Rate integrityni saqlashning ahamiyati nimada?",
+  "correctAnswer": "Kanallar bo‘yicha izchil narxni ta’minlab, brend qiymatini himoya qilish",
+  "wrong": [
+   "Xodimlar yuklamasini oshirish",
+   "Xona mavjudligini kamaytirish",
+   "Segmentatsiyani bekor qilish"
+  ]
+ },
+ {
+  "id": 138,
+  "subject": "Menejmentga kirish",
+  "question": "Sodiqlik dasturlari narxlash strategiyasiga qanday ta’sir qiladi?",
+  "correctAnswer": "Doimiy mehmonlar uchun maqsadli chegirma va imtiyozlar taklif qilish orqali",
+  "wrong": [
+   "Barcha mijozlar uchun narxni belgilab qo‘yish orqali",
+   "Reklama kampaniyalarini bekor qilish orqali",
+   "Xizmat sifatini pasaytirish orqali"
+  ]
+ },
+ {
+  "id": 139,
+  "subject": "Menejmentga kirish",
+  "question": "Haddan tashqari chegirmalarning xavfi nimada?",
+  "correctAnswer": "Rentabellikning pasayishi va brend pozitsiyasiga salbiy ta’sir",
+  "wrong": [
+   "Uzoq muddatli daromad barqarorligini oshiradi",
+   "Yuqori hashamatli imidjni kuchaytiradi",
+   "Raqobatni yo‘q qiladi"
+  ]
+ },
+ {
+  "id": 140,
+  "subject": "Menejmentga kirish",
+  "question": "Xizmatlarni birlashtirish (bundling) daromadga qanday ta’sir qiladi?",
+  "correctAnswer": "Xonalarni qo‘shimcha xizmatlar bilan birlashtirib, umumiy xarajatni oshiradi",
+  "wrong": [
+   "Mijoz qoniqishini kamaytiradi",
+   "Marketing zaruratini yo‘q qiladi",
+   "Xona narxlarini doimiy belgilaydi"
+  ]
+ },
+ {
+  "id": 141,
+  "subject": "Menejmentga kirish",
+  "question": "Forecasting accuracy report nima?",
+  "correctAnswer": "Prognoz qilingan talabni haqiqiy natijalar bilan taqqoslab, prognoz sifatini baholovchi hisobot",
+  "wrong": [
+   "Xodimlar davomat jadvali",
+   "Restoran savdo hisoboti",
+   "Housekeeping tekshiruv ro‘yxati"
+  ]
+ },
+ {
+  "id": 142,
+  "subject": "Menejmentga kirish",
+  "question": "Peak (cho'qqi) va shoulder (elka) davrlar nima?",
+  "correctAnswer": "Peak davr — eng yuqori talab, shoulder davr — yuqori va past mavsum oralig‘idagi o‘rtacha talab davri",
+  "wrong": [
+   "Har ikkisi ham past talab davri",
+   "Xodimlar smenasi almashinuvi",
+   "Restoran xizmat soatlari"
+  ]
+ },
+ {
+  "id": 143,
+  "subject": "Menejmentga kirish",
+  "question": "Fixed va variable xarajatlar nimani anglatadi?",
+  "correctAnswer": "Fixed xarajatlar doimiy, variable xarajatlar esa bandlik yoki savdo hajmiga qarab o‘zgaradi",
+  "wrong": [
+   "Fixed xarajatlar har kuni o‘zgaradi, variable xarajatlar doimiy",
+   "Ikkalasi ham har doim bir xil",
+   "Faqat marketing xarajatlariga taalluqli"
+  ]
+ },
+ {
+  "id": 144,
+  "subject": "Menejmentga kirish",
+  "question": "Mobil bronlardan foydalanish kanal boshqaruviga qanday ta’sir qiladi?",
+  "correctAnswer": "Raqamli kanallarda mobil taqsimot va narxlash strategiyalarini optimallashtirishni talab qiladi",
+  "wrong": [
+   "Onlayn sayohat agentliklarini yo‘q qiladi",
+   "Xona narxlarini doimiy belgilaydi",
+   "Daromad boshqaruv tizimlariga ehtiyojni kamaytiradi"
+  ]
+ },
+ {
+  "id": 145,
+  "subject": "Menejmentga kirish",
+  "question": "Taktik va strategik narxlash o‘rtasidagi farq nima?",
+  "correctAnswer": "Taktik narxlash qisqa muddatli o‘zgarishlarni, strategik narxlash esa uzoq muddatli daromad maqsadlarini ko‘zlaydi",
+  "wrong": [
+   "Taktik narxlash bozor talabini e’tiborga olmaydi",
+   "Strategik narxlash faqat chegirmalarga tegishli",
+   "Taktik narxlash raqobatchi tahlilini bekor qiladi"
+  ]
+ },
+ {
+  "id": 146,
+  "subject": "Menejmentga kirish",
+  "question": "Rate fencing (tarif to'siqlari) qanday ishlaydi?",
+  "correctAnswer": "Mehmonlarni segmentatsiya qilish va daromadni himoya qilish uchun cheklovlar yoki shartlar belgilash orqali",
+  "wrong": [
+   "Barcha mijozlarga bir xil narx taklif qilish orqali",
+   "Mavsumiy talabni e’tiborsiz qoldirish orqali",
+   "Operatsion xarajatlarni kamaytirish orqali"
+  ]
+ },
+ {
+  "id": 147,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmondo‘stlik sohasida narx elastikligi nima?",
+  "correctAnswer": "Narx o‘zgarishiga mijoz talabi qanchalik javob berishini ifodalaydi",
+  "wrong": [
+   "Xodimlar moslashuvchanligi o‘lchovi",
+   "Daromadning umumiy xarajatlarga nisbati",
+   "Interyer dizaynini rejalashtirish usuli"
+  ]
+ },
+ {
+  "id": 148,
+  "subject": "Menejmentga kirish",
+  "question": "Brending narx qabul qilinishida qanday rol o‘ynaydi?",
+  "correctAnswer": "Kuchli brend mehmonxonaga qabul qilingan qiymat asosida yuqori narx belgilash imkonini beradi",
+  "wrong": [
+   "Brending bandlikni kamaytiradi",
+   "Brending operatsion xarajatlarni belgilaydi",
+   "Brending daromad boshqaruvini keraksiz qiladi"
+  ]
+ },
+ {
+  "id": 149,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona sanoatida meta-qidiruv tizimlari nima?",
+  "correctAnswer": "Turli bron saytlaridagi narxlarni taqqoslash uchun jamlovchi platformalar",
+  "wrong": [
+   "Ichki hisobot vositalari",
+   "Xodimlar jadval dasturi",
+   "Sodiqlik dasturini boshqarish tizimi"
+  ]
+ },
+ {
+  "id": 150,
+  "subject": "Menejmentga kirish",
+  "question": "RMS (Revenue Management System) ning asosiy tarkibiy qismlari nimalar?",
+  "correctAnswer": "Prognozlash, narxlash, inventar nazorati va tahlil vositalari",
+  "wrong": [
+   "Housekeeping jadvali va xodimlar ro‘yxati",
+   "Restoran menyusi va oziq-ovqat xarajatlari",
+   "Front desk xodimlari"
+  ]
+ },
+ {
+  "id": 151,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona faoliyatida beziyon tahlili nima?",
+  "correctAnswer": "Umumiy xarajatlarni qoplash uchun zarur bandlik yoki daromad darajasini hisoblash",
+  "wrong": [
+   "Mehmon qoniqishini aniqlash",
+   "Brend xabardorligini o‘lchash",
+   "Bayram tadbirlarini prognoz qilish"
+  ]
+ },
+ {
+  "id": 152,
+  "subject": "Menejmentga kirish",
+  "question": "Kichik mehmonxonalarda daromad boshqaruvini joriy etishdagi qiyinchiliklar nimalar?",
+  "correctAnswer": "Cheklangan ma’lumotlar, kam xodim va ilg‘or texnologiyaning yetishmasligi",
+  "wrong": [
+   "Haddan tashqari yuqori foyda",
+   "Juda ko‘p taqsimot kanallari",
+   "Yuqori mijoz sodiqligi"
+  ]
+ },
+ {
+  "id": 153,
+  "subject": "Menejmentga kirish",
+  "question": "CRS (Central Reservation System) nima?",
+  "correctAnswer": "Barcha kanallar bo‘yicha xona mavjudligi va bronlarni boshqaruvchi dasturiy platforma",
+  "wrong": [
+   "Ish haqi boshqaruv tizimi",
+   "Mehmonxona interyer dizayn vositasi",
+   "Housekeeping tekshiruv ro‘yxati"
+  ]
+ },
+ {
+  "id": 154,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmondo‘stlikda bilvosita taqsimot kanallari nima?",
+  "correctAnswer": "OTAlar va turagentlar kabi uchinchi tomon platformalari orqali xonalarni sotish",
+  "wrong": [
+   "Faqat front desk orqali bron qilish",
+   "Ichki xodimlar bronlari",
+   "Faqat to‘g‘ridan-to‘g‘ri veb-sayt bronlari"
+  ]
+ },
+ {
+  "id": 155,
+  "subject": "Menejmentga kirish",
+  "question": "Inventarni taqsimlashda aniq prognozlash nima uchun muhim?",
+  "correctAnswer": "Xonalarni samarali taqsimlab, daromad va bandlikni maksimal oshirish uchun",
+  "wrong": [
+   "Housekeeping xodimlarini kamaytirish uchun",
+   "Xona narxlarini doimiy belgilash uchun",
+   "Marketing zaruratini yo‘q qilish uchun"
+  ]
+ },
+ {
+  "id": 156,
+  "subject": "Menejmentga kirish",
+  "question": "Bronlash egri chizig'i (booking curve) nima?",
+  "correctAnswer": "Mehmon kelishidan oldin bronlar vaqt o‘tishi bilan qanday to‘planishini ko‘rsatuvchi grafik",
+  "wrong": [
+   "Xodimlar smena jadvali",
+   "Xona tozalash vaqti jadvali",
+   "Mavsumiy bezak rejasi"
+  ]
+ },
+ {
+  "id": 157,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxonalar kanal samaradorligini qanday baholaydi?",
+  "correctAnswer": "Har bir kanal bo‘yicha daromad, bronlar va xarajatlarni tahlil qilish orqali",
+  "wrong": [
+   "Xodimlar davomatini hisoblash orqali",
+   "Interyer dizaynini taqqoslash orqali",
+   "Restoran menyusini kuzatish orqali"
+  ]
+ },
+ {
+  "id": 158,
+  "subject": "Menejmentga kirish",
+  "question": "Customer Lifetime Value (CLV) nimani anglatadi?",
+  "correctAnswer": "Mehmonxona mehmondan butun hamkorlik davomida kutadigan umumiy daromad",
+  "wrong": [
+   "Bir oy ichidagi turar joy soni",
+   "Eng arzon xona narxi",
+   "O‘rtacha bandlik darajasi"
+  ]
+ },
+ {
+  "id": 159,
+  "subject": "Menejmentga kirish",
+  "question": "Raqobatbardosh bozorlarda dinamik narxlash nima uchun zarur?",
+  "correctAnswer": "Talab, raqobat va bozor sharoitlariga qarab narxlarni real vaqt rejimida moslashtirish uchun",
+  "wrong": [
+   "Yil davomida qat’iy narxni saqlash uchun",
+   "Reklama kampaniyalarini bekor qilish uchun",
+   "Mavjud xonalar sonini kamaytirish uchun"
+  ]
+ },
+ {
+  "id": 160,
+  "subject": "Menejmentga kirish",
+  "question": "Taktik aksiyalar (promotions) nima?",
+  "correctAnswer": "Bandlik yoki daromadni tez oshirish uchun mo‘ljallangan qisqa muddatli marketing takliflari",
+  "wrong": [
+   "Doimiy narx pasaytirish",
+   "Mavsumiy xodim o‘zgarishlari",
+   "Uzoq muddatli strategik narxlash rejasi"
+  ]
+ },
+ {
+  "id": 161,
+  "subject": "Menejmentga kirish",
+  "question": "RevPAR va TRevPAR o‘rtasidagi farq nima?",
+  "correctAnswer": "RevPAR — mavjud har bir xona uchun daromadni, TRevPAR esa mehmonxonaning barcha bo‘limlari daromadini hisobga olgan holda mavjud xona uchun umumiy daromadni o‘lchaydi",
+  "wrong": [
+   "RevPAR barcha daromadni, TRevPAR faqat xona daromadini o‘lchaydi",
+   "Ikkalasi bir xil",
+   "RevPAR faqat restoran uchun qo‘llaniladi"
+  ]
+ },
+ {
+  "id": 162,
+  "subject": "Menejmentga kirish",
+  "question": "Markazlashtirilgan inventar nazoratining afzalliklari nimada?",
+  "correctAnswer": "Yaxshi muvofiqlashtirish, ortiqcha bronni kamaytirish va kanallar bo‘yicha daromadni optimallashtirish",
+  "wrong": [
+   "Housekeeping xarajatlarini oshirish",
+   "Barcha mehmonlar uchun qat’iy narx",
+   "Mijoz qoniqishini kamaytirish"
+  ]
+ },
+ {
+  "id": 163,
+  "subject": "Menejmentga kirish",
+  "question": "Bekor qilish siyosatining daromadga ta’siri qanday?",
+  "correctAnswer": "Kelmasliklar va kech bekor qilishlar tufayli yo‘qotiladigan daromadni kamaytirib, daromadni himoya qiladi",
+  "wrong": [
+   "Har doim rentabellikni kamaytiradi",
+   "Prognozlashni keraksiz qiladi",
+   "Xona narxlarini doimiy belgilaydi"
+  ]
+ },
+ {
+  "id": 164,
+  "subject": "Menejmentga kirish",
+  "question": "Early bird chegirmalari daromad strategiyasini qanday qo‘llab-quvvatlaydi?",
+  "correctAnswer": "Oldindan bronlarni rag‘batlantirib, pul oqimini yaxshilaydi va talabni rejalashtirishni osonlashtiradi",
+  "wrong": [
+   "Xodimlar yuklamasini kamaytiradi",
+   "Yuqori talab davrlarini yo‘q qiladi",
+   "Yil bo‘yi narxlarni standartlashtiradi"
+  ]
+ },
+ {
+  "id": 165,
+  "subject": "Menejmentga kirish",
+  "question": "Daromad tizimlarida narxni optimallashtirish qanday modellashtiriladi?",
+  "correctAnswer": "Algoritmlar va tarixiy ma’lumotlardan foydalanib, daromadni maksimal oshiradigan xona narxlarini belgilash orqali",
+  "wrong": [
+   "Narxlarni tasodifiy o‘zgartirish orqali",
+   "Barcha mavsumlar uchun narxlarni qat’iy belgilash orqali",
+   "Xodimlar xarajatlarini kamaytirish orqali"
+  ]
+ },
+ {
+  "id": 166,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona daromad menejeri uchun zarur ko‘nikmalar qaysilar?",
+  "correctAnswer": "Tahliliy fikrlash, prognozlash, narxlash strategiyasi va bozor tahlili",
+  "wrong": [
+   "Oshpazlik va housekeeping",
+   "Faqat front desk operatsiyalari",
+   "Faqat tadbir rejalashtirish"
+  ]
+ },
+ {
+  "id": 167,
+  "subject": "Menejmentga kirish",
+  "question": "Nima uchun benchmarking daromad boshqaruvida muhim?",
+  "correctAnswer": "Raqobatchilar bilan natijalarni solishtirib, yaxshilash imkoniyatlarini aniqlash uchun",
+  "wrong": [
+   "Xona mavjudligini kamaytirish uchun",
+   "Marketing xarajatlarini yo‘q qilish uchun",
+   "Narxlarni doimiy belgilash uchun"
+  ]
+ },
+ {
+  "id": 168,
+  "subject": "Menejmentga kirish",
+  "question": "Yield (hosildorlik) management nima?",
+  "correctAnswer": "Tez buziluvchan xona inventaridan maksimal daromad olish uchun narx va inventarni moslashtirish amaliyoti",
+  "wrong": [
+   "Xodimlar jadvalini tuzish usuli",
+   "Oziq-ovqat va ichimlik xarajat tizimi",
+   "Qat’iy mavsumiy narxlash strategiyasi"
+  ]
+ },
+ {
+  "id": 169,
+  "subject": "Menejmentga kirish",
+  "question": "Yield (hosildorlik) management va revenue (daromad) management o‘rtasidagi farq nima?",
+  "correctAnswer": "Yield management asosan xona daromadiga e’tibor qaratadi, revenue management esa mehmonxonaning barcha daromad manbalarini qamrab oladi",
+  "wrong": [
+   "Yield management narxlash strategiyasini e’tiborga olmaydi",
+   "Revenue management faqat kichik mehmonxonalar uchun",
+   "Farqi yo‘q"
+  ]
+ },
+ {
+  "id": 170,
+  "subject": "Menejmentga kirish",
+  "question": "Bozorda narxni joylashtirish nimani anglatadi??",
+  "correctAnswer": "Xona narxlarini brend qiymati va maqsadli bozor qabul qilinishiga mos belgilash",
+  "wrong": [
+   "Eng past narxni taklif qilish",
+   "Yil bo‘yi narxni o‘zgartirmaslik",
+   "Raqobatchi narxlarini e’tiborga olmaslik"
+  ]
+ },
+ {
+  "id": 171,
+  "subject": "Menejmentga kirish",
+  "question": "Narx kannibalizatsiyasining odatiy belgisi nima?",
+  "correctAnswer": "Bir segmentda narxni pasaytirish boshqa segment daromadini kamaytirishi",
+  "wrong": [
+   "Narx o‘zgarmasdan bandlik oshishi",
+   "Premium paketlar taklif qilish",
+   "Yuqori mehmon qoniqishi"
+  ]
+ },
+ {
+  "id": 172,
+  "subject": "Menejmentga kirish",
+  "question": "Raqobatchi narxlarini monitoring qilish uchun qaysi vositalar ishlatiladi?",
+  "correctAnswer": "Rate shopping dasturlari, meta-qidiruv tizimlari va OTA monitoring vositalari",
+  "wrong": [
+   "Ish haqi tizimi",
+   "Restoran menyusi",
+   "Housekeeping jadvali"
+  ]
+ },
+ {
+  "id": 173,
+  "subject": "Menejmentga kirish",
+  "question": "Bandlik prognozi nima?",
+  "correctAnswer": "Ma’lum davrda sotiladigan xonalar foizini bashorat qilish",
+  "wrong": [
+   "Xodimlar jadvalini tuzish",
+   "Mehmon qoniqishini o‘lchash",
+   "Room service xarajatini aniqlash"
+  ]
+ },
+ {
+  "id": 174,
+  "subject": "Menejmentga kirish",
+  "question": "Total revenue per guest (TRevPAG) nimani anglatadi?",
+  "correctAnswer": "Mehmondan olingan umumiy daromad (xona, F&B va boshqa xizmatlar)",
+  "wrong": [
+   "Faqat xona daromadi",
+   "Mavjud xona uchun daromad",
+   "Housekeeping foydasi"
+  ]
+ },
+ {
+  "id": 175,
+  "subject": "Menejmentga kirish",
+  "question": "PMS (Property Management System) ning vazifasi nima?",
+  "correctAnswer": "Bronlar, check-in/check-out va umumiy mehmonxona operatsiyalarini boshqarish",
+  "wrong": [
+   "Faqat xodimlar jadvali",
+   "Ijtimoiy tarmoq sharhlarini kuzatish",
+   "Yillik soliqlarni hisoblash"
+  ]
+ },
+ {
+  "id": 176,
+  "subject": "Menejmentga kirish",
+  "question": "Mehmonxona onlayn sayohat agentliklariga qaramlikni qanday kamaytirishi mumkin?",
+  "correctAnswer": "O‘z veb-sayti, sodiqlik dasturi va marketing orqali to‘g‘ridan-to‘g‘ri bronlarni rag‘batlantirish",
+  "wrong": [
+   "Onlayn kanallarni butunlay yopish",
+   "Barcha narxlarni doimiy oshirish",
+   "Xodimlar sonini kamaytirish"
+  ]
+ },
+ {
+  "id": 177,
+  "subject": "Menejmentga kirish",
+  "question": "Gibrid narxlash strategiyasi nima?",
+  "correctAnswer": "Dinamik, qiymatga asoslangan va segmentli narxlash kabi bir nechta yondashuvni birlashtirish",
+  "wrong": [
+   "Yil bo‘yi qat’iy narx",
+   "Faqat chegirmalar taklif qilish",
+   "Talab o‘zgarishini e’tiborga olmaslik"
+  ]
+ },
+ {
+  "id": 178,
+  "subject": "Menejmentga kirish",
+  "question": "Xona turlari segmentatsiyasi narxlashda qanday qo‘llaniladi?",
+  "correctAnswer": "Xona hajmi, qulayliklari va talabga qarab turli narx belgilash",
+  "wrong": [
+   "Barcha xonalarni bir xil narxlash",
+   "Mijoz xohishlarini e’tiborga olmaslik",
+   "Faqat suitelarni qimmatroq qilish"
+  ]
+ },
+ {
+  "id": 179,
+  "subject": "Menejmentga kirish",
+  "question": "Erta ketish to‘lovlari narxlashga qanday integratsiya qilinadi?",
+  "correctAnswer": "Bron qilingan sanadan oldin chiqib ketgan mehmonlardan to‘lov undirish orqali",
+  "wrong": [
+   "Erta chiqish uchun chegirma berish orqali",
+   "Narxlarni doimiy pasaytirish orqali",
+   "Xodim maoshiga qo‘shish orqali"
+  ]
+ },
+ {
+  "id": 180,
+  "subject": "Menejmentga kirish",
+  "question": "Eng yaxshi tarif kafolati nima uchun qo‘llaniladi?",
+  "correctAnswer": "Mehmonlarga eng past narx kafolatini berib, to‘g‘ridan-to‘g‘ri bronni rag‘batlantirish uchun",
+  "wrong": [
+   "Barcha kanallarda narxni belgilash uchun",
+   "Bandlikni kamaytirish uchun",
+   "OTA hamkorligini bekor qilish uchun"
+  ]
+ },
+ {
+  "id": 181,
+  "subject": "Menejmentga kirish",
+  "question": "Mavsumiy trendlar prognozlashda qanday qo‘llaniladi?",
+  "correctAnswer": "Yuqori, o‘rta va past talab davrlariga qarab narx va inventarni moslashtirish orqali",
+  "wrong": [
+   "Tarixiy ma’lumotni e’tiborga olmaslik",
+   "Yuqori mavsumda xizmatni kamaytirish",
+   "Yil bo‘yi qat’iy narx saqlash"
+  ]
+ },
+ {
+  "id": 182,
+  "subject": "Menejmentga kirish",
+  "question": "Iqtisodiy holat mehmonxona narx qarorlariga qanday ta’sir qiladi?",
+  "correctAnswer": "Talab kutilmalariga ta’sir qilib, narxlarni moslashtirish imkonini beradi",
+  "wrong": [
+   "Narxlarni doimiy belgilaydi",
+   "Faqat xodim jadvalini belgilaydi",
+   "Marketingni keraksiz qiladi"
+  ]
+ },
+ {
+  "id": 183,
+  "subject": "Menejmentga kirish",
+  "question": "Maxsus tadbir sanalari daromad strategiyasiga qanday ta’sir qiladi?",
+  "correctAnswer": "Talabni oshirib, narxlarni ko‘tarish va bandlikni optimallashtirish imkonini beradi",
+  "wrong": [
+   "Marketing xarajatini kamaytiradi",
+   "Prognozlashni keraksiz qiladi",
+   "Yil bo‘yi narxni belgilaydi"
+  ]
+ },
+ {
+  "id": 184,
+  "subject": "Menejmentga kirish",
+  "question": "Geo-pricing mehmonxona daromadiga qanday foyda keltiradi?",
+  "correctAnswer": "Mehmonning geografik joylashuvi va to‘lovga tayyorligiga qarab narxni moslashtirish orqali",
+  "wrong": [
+   "Bandlikni doimiy kamaytiradi",
+   "Barcha mehmonlar uchun narxni belgilaydi",
+   "Onlayn kanallarni bekor qiladi"
+  ]
+ },
+ {
+  "id": 185,
+  "subject": "Menejmentga kirish",
+  "question": "MICE biznesi uchun asosiy narxlash ko‘rsatkichlari qaysilar?",
+  "correctAnswer": "ADR, kelishilgan guruh narxlari va har bir tadbir ishtirokchisiga to‘g‘ri keladigan umumiy daromad",
+  "wrong": [
+   "Housekeeping xodimlari soni",
+   "Xona tozalash vaqti",
+   "Faqat sodiqlik ballari"
+  ]
+ },
+ {
+  "id": 186,
+  "subject": "Menejmentga kirish",
+  "question": "Sharh (review) ballarining narxlash strategiyasiga ta’siri qanday?",
+  "correctAnswer": "Yuqori ballar premium narxni asoslaydi, past ballar esa chegirma talab qilishi mumkin",
+  "wrong": [
+   "Faqat marketingga ta’sir qiladi",
+   "Prognozlashni keraksiz qiladi",
+   "Bandlikni kamaytiradi"
+  ]
+ },
+ {
+  "id": 187,
+  "subject": "Menejmentga kirish",
+  "question": "Ko‘rsatmaslik (No-show) tendensiyalarini tahlil qilish nima uchun muhim?",
+  "correctAnswer": "Daromad yo‘qotilishini kamaytirish va ortiqcha bron qilish strategiyasini rejalashtirish uchun",
+  "wrong": [
+   "Xodimlar sonini kamaytirish",
+   "Narxlarni doimiy belgilash",
+   "OTA hamkorligini bekor qilish"
+  ]
+ },
+ {
+  "id": 188,
+  "subject": "Menejmentga kirish",
+  "question": "Narx savatchalari nima?",
+  "correctAnswer": "Narx darajasi, mavjudlik yoki bron shartlariga ko‘ra guruhlangan xona narxlari",
+  "wrong": [
+   "Faqat chegirma kodlari",
+   "Mavsumiy xodim smenalari",
+   "Sodiqlik dasturi bosqichlari"
+  ]
+ },
+ {
+  "id": 189,
+  "subject": "Menejmentga kirish",
+  "question": "Strategik boshqaruvning asosiy maqsadi nima?",
+  "correctAnswer": "Uzoq muddatli maqsadlarni belgilash va ularga erishish uchun resurslarni taqsimlash",
+  "wrong": [
+   "Kundalik operatsion vazifalarni boshqarish",
+   "Xodimlar sonini kamaytirish",
+   "Mahsulot narxini doimiy belgilash"
+  ]
+ },
+ {
+  "id": 190,
+  "subject": "Menejmentga kirish",
+  "question": "SWOT tahlili kompaniyaga nimani aniqlashga yordam beradi?",
+  "correctAnswer": "Kuchli tomonlar, zaif tomonlar, imkoniyatlar va tahdidlar",
+  "wrong": [
+   "Savdo, ishchi kuchi, ishlab chiqarish va texnologiya",
+   "Faqat xodim jadvali",
+   "Qisqa muddatli daromad trendi"
+  ]
+ },
+ {
+  "id": 191,
+  "subject": "Menejmentga kirish",
+  "question": "Korporativ strategiya va biznes strategiyasi o‘rtasidagi farq nima?",
+  "correctAnswer": "Korporativ strategiya umumiy kompaniya yo‘nalishiga, biznes strategiyasi esa alohida biznes birliklariga qaratiladi",
+  "wrong": [
+   "Ikkalasi bir xil",
+   "Korporativ strategiya faqat xodim rollarini belgilaydi",
+   "Biznes strategiyasi bozor trendlarini e’tiborga olmaydi"
+  ]
+ },
+ {
+  "id": 192,
+  "subject": "Menejmentga kirish",
+  "question": "Strategik boshqaruvda raqobat ustunligining roli qanday?",
+  "correctAnswer": "Kompaniyaga raqobatchilardan ustun natijalarga erishishga yordam beradi",
+  "wrong": [
+   "Ishlab chiqarish xarajatlarini doimiy kamaytiradi",
+   "Narxni yil bo‘yi belgilaydi",
+   "Marketingni keraksiz qiladi"
+  ]
+ },
+ {
+  "id": 193,
+  "subject": "Menejmentga kirish",
+  "question": "PESTEL modeli strategik rejalashtirishga qanday yordam beradi?",
+  "correctAnswer": "Siyosiy, iqtisodiy, ijtimoiy, texnologik, ekologik va huquqiy omillarni tahlil qilish orqali",
+  "wrong": [
+   "Ish haqi xarajatini hisoblash orqali",
+   "Xodim smenasini tuzish orqali",
+   "Operatsion jarayonlarni belgilash orqali"
+  ]
+ },
+ {
+  "id": 194,
+  "subject": "Menejmentga kirish",
+  "question": "Gorizontal muloqot qaysi darajada bo‘ladi?",
+  "correctAnswer": "Bir xil bo‘g‘indagi bo‘limlar o‘rtasida",
+  "wrong": [
+   "Rahbar–xodim",
+   "Davlat–korxona",
+   "Korxona–mijoz"
+  ]
+ },
+ {
+  "id": 195,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Insonning ongli mavjudot sifatidagi asosiy xususiyati qanday?",
+  "correctAnswer": "Ong va hissiyot",
+  "wrong": [
+   "Jismonaylik",
+   "Ijtimoiy munosabatlar",
+   "Madaniyat"
+  ]
+ },
+ {
+  "id": 196,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Insonning shaxsiy xususiyatlari va xulq-atvori qaysi fan doirasida o‘rganiladi?",
+  "correctAnswer": "Psixologiya",
+  "wrong": [
+   "Falsafa",
+   "Biologiya",
+   "Sotsiologiya"
+  ]
+ },
+ {
+  "id": 197,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Insonning ijtimoiy roli uning qanday xususiyatiga ta’sir ko‘rsatadi?",
+  "correctAnswer": "Ongi",
+  "wrong": [
+   "Jismonayligi",
+   "Emotsiyalar",
+   "Barcha javoblar to‘g‘ri"
+  ]
+ },
+ {
+  "id": 198,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Insonning axloqiy qadriyatlari qaysi nuqtai nazardan ko‘rib chiqiladi?",
+  "correctAnswer": "Falsafiy",
+  "wrong": [
+   "Biologik",
+   "Psixologik",
+   "Ijtimoiy"
+  ]
+ },
+ {
+  "id": 199,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Evolyusiya nuqtai nazaridan insonning mohiyatini qanday tushunish mumkin?",
+  "correctAnswer": "Inson jismoniy va ruhiy jihatdan rivojlangan",
+  "wrong": [
+   "Inson tabiatdan ajralgan",
+   "Inson faqat ijtimoiy munosabatlarda yashaydi",
+   "Insonning mohiyati faqat madaniyatda"
+  ]
+ },
+ {
+  "id": 200,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Insonning ruhiy holati uning qanday xususiyatiga ta’sir ko‘rsatadi?",
+  "correctAnswer": "Tashqi ko‘rinish",
+  "wrong": [
+   "Ongli qarorlar",
+   "Ijtimoiy munosabatlar",
+   "Barcha javoblar to‘g‘ri"
+  ]
+ },
+ {
+  "id": 201,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "“Madaniyatlararo muloqot” fanining asosiy maqsadi nima?",
+  "correctAnswer": "Turli madaniyatlar o'rtasidagi aloqalarni o'rganish",
+  "wrong": [
+   "O'z madaniyatini boshqalarga majburan o'rgatish",
+   "Madaniyatlarni birlashtirish",
+   "Maktabda faqat bitta madaniyatni o'rgatish"
+  ]
+ },
+ {
+  "id": 202,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda o'zaro hurmat qanday ahamiyatga ega?",
+  "correctAnswer": "U ijobiy munosabatlarni rivojlantiradi",
+  "wrong": [
+   "U muammolarni yanada kuchaytiradi",
+   "U faqat bir madaniyatni afzal ko'radi",
+   "U hech qanday ahamiyatga ega emas"
+  ]
+ },
+ {
+  "id": 203,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatga moslashish jarayoni nima?",
+  "correctAnswer": "Yangi madaniyatga mos kelish uchun o'z odat va qadriyatlarini o'zgartirish",
+  "wrong": [
+   "O'z madaniyatini yo'qotish",
+   "Yangi madaniyatni to'liq qabul qilish",
+   "Faqat yangi madaniyatni tan olish"
+  ]
+ },
+ {
+  "id": 204,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatga moslashish jarayonida qanday bosqichlar mavjud?",
+  "correctAnswer": "Qabul qilish, qarshilik, integratsiya",
+  "wrong": [
+   "Qiyinchilik, muvaffaqiyat, yutqazish",
+   "O'rganish, unutish, qabul qilish",
+   "Tanishuv, baholash, qabul qilish"
+  ]
+ },
+ {
+  "id": 205,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatga moslashish jarayonida \"madaniy shok\" nima?",
+  "correctAnswer": "Yangi madaniyatga moslashishda yuzaga keladigan noqulaylik va stress",
+  "wrong": [
+   "Yangi madaniyatni to'liq qabul qilish",
+   "Faqat ijobiy his-tuyg'ular",
+   "O'z madaniyatini yo'qotish jarayoni"
+  ]
+ },
+ {
+  "id": 206,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatga moslashishda ijtimoiy aloqalar qanday rol o'ynaydi?",
+  "correctAnswer": "Yangi do'stlar orttirish va qo'llab-quvvatlovchi tarmoq yaratish",
+  "wrong": [
+   "Faqat o'z madaniyati bilan yashash",
+   "Ijtimoiy aloqalarni inkor etish",
+   "Faqat iqtisodiy aloqalar"
+  ]
+ },
+ {
+  "id": 207,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatga moslashish jarayonida madaniyatlararo muloqotning ahamiyati nima?",
+  "correctAnswer": "Turli madaniyatlar o'rtasida tushunishni va hamjihatlikni oshirish",
+  "wrong": [
+   "Faqat bitta madaniyatni afzal ko'rish",
+   "Madaniyatlarni taqqoslamaslik",
+   "Hech qanday ahamiyatga ega emas"
+  ]
+ },
+ {
+  "id": 208,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyat nima?",
+  "correctAnswer": "Jamiyatning urf-odatlari, an'analari va qadriyatlari",
+  "wrong": [
+   "Faqat san'at va adabiyot",
+   "Faqat iqtisodiy faoliyat",
+   "Faqat tarixiy voqealar"
+  ]
+ },
+ {
+  "id": 209,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatning asosiy komponentlari qaysilar?",
+  "correctAnswer": "Til, urf-odatlar, san'at",
+  "wrong": [
+   "Faqat urf-odatlar",
+   "Faqat iqtisod",
+   "Faqat tarix"
+  ]
+ },
+ {
+  "id": 210,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri madaniyatning o'zgarishiga sabab bo'lishi mumkin?",
+  "correctAnswer": "Ijtimoiy o'zgarishlar",
+  "wrong": [
+   "Faqat iqtisodiy omillar",
+   "Faqat tabiiy ofatlar",
+   "Faqat siyosiy voqealar"
+  ]
+ },
+ {
+  "id": 211,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Tilning asosiy vazifasi nima?",
+  "correctAnswer": "O'zaro muloqot qilish",
+  "wrong": [
+   "O'yin-kulgi uchun",
+   "Faqat yozma hujjatlarni tayyorlash",
+   "Faqat bilimlarni saqlash"
+  ]
+ },
+ {
+  "id": 212,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi tilning o'ziga xosligi uni boshqa tillardan ajratadi?",
+  "correctAnswer": "Grammatik qoidalari",
+  "wrong": [
+   "Lug'at boyligi",
+   "Fonetik xususiyatlari",
+   "Barcha javoblar to'g'ri"
+  ]
+ },
+ {
+  "id": 213,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Kommunikatsiya jarayoni qaysi bosqichlardan iborat?",
+  "correctAnswer": "Xabar, manba, qabul qiluvchi",
+  "wrong": [
+   "Faqat manba va qabul qiluvchi",
+   "Faqat xabar va manba",
+   "Faqat qabul qiluvchi"
+  ]
+ },
+ {
+  "id": 214,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi kommunikatsiya turi yuzma-yuz muloqotga kiradi?",
+  "correctAnswer": "Shaxsiy uchrashuv",
+  "wrong": [
+   "Elektron pochta orqali muloqot",
+   "Video konferensiya",
+   "Telefon orqali muloqot"
+  ]
+ },
+ {
+  "id": 215,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Individualizm nima?",
+  "correctAnswer": "Faqat iqtisodiy muvaffaqiyatga qaratilgan yondashuv",
+  "wrong": [
+   "Jamiyat manfaatlarini birinchi o'ringa qo'yish",
+   "Shaxsiy erkinlik va mustaqillikni ta'kidlaydigan yondashuv",
+   "Faqat guruhlarning manfaatlarini himoya qilish"
+  ]
+ },
+ {
+  "id": 216,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Kollektivizm qanday tushuniladi?",
+  "correctAnswer": "Shaxsiy erkinlikni ta'kidlaydi",
+  "wrong": [
+   "Guruh manfaatlarini birinchi o'ringa qo'yadi",
+   "Faqat iqtisodiy o'sishga e'tibor beradi",
+   "Faqat tarixiy an'analarga asoslanadi"
+  ]
+ },
+ {
+  "id": 217,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri individualizmga xos xususiyatdir?",
+  "correctAnswer": "Shaxsiy muvaffaqiyatga e'tibor berish",
+  "wrong": [
+   "Guruhga bog'lanish",
+   "Jamiyatning an'analariga rioya qilish",
+   "Barcha javoblar to'g'ri emas"
+  ]
+ },
+ {
+  "id": 218,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlar tipologiyasi qaysi muallif tomonidan ishlab chiqilgan?",
+  "correctAnswer": "Carl Jung",
+  "wrong": [
+   "Edward T. Hall",
+   "Sigmund Freud",
+   "Geert Hofstede"
+  ]
+ },
+ {
+  "id": 219,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Hofstede modelida qaysi o'lchov individualizm va kollektivizmni aniqlaydi?",
+  "correctAnswer": "Masofalanish",
+  "wrong": [
+   "Avtoritarizm",
+   "Individualizm vs. Kollektivizm",
+   "O'z-o'zini ifoda etish"
+  ]
+ },
+ {
+  "id": 220,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi madaniyat kollektivizmga ko'proq mos keladi?",
+  "correctAnswer": "Yaponiya",
+  "wrong": [
+   "AQSh",
+   "Shvetsiya",
+   "Kanada"
+  ]
+ },
+ {
+  "id": 221,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Kommunikatsiyaning qaysi turi og'zaki muloqotni o'z ichiga oladi?",
+  "correctAnswer": "Vizual kommunikatsiya",
+  "wrong": [
+   "Yozma kommunikatsiya",
+   "Verbal kommunikatsiya",
+   "Nonverbal kommunikatsiya"
+  ]
+ },
+ {
+  "id": 222,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Yozma kommunikatsiya qaysi shakllarda bo'lishi mumkin?",
+  "correctAnswer": "Elektron pochta va xatlar",
+  "wrong": [
+   "Telefon orqali suhbat",
+   "Yuzma-yuz uchrashuv",
+   "Barcha javoblar to'g'ri emas"
+  ]
+ },
+ {
+  "id": 223,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi kommunikatsiya turi tana tilini va mimikani o'z ichiga oladi?",
+  "correctAnswer": "Rasmiy kommunikatsiya",
+  "wrong": [
+   "Verbal kommunikatsiya",
+   "Yozma kommunikatsiya",
+   "Nonverbal kommunikatsiya"
+  ]
+ },
+ {
+  "id": 224,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Rasmiy kommunikatsiya qaysi kontekstda ko'proq qo'llaniladi?",
+  "correctAnswer": "Do'stlar bilan suhbatda",
+  "wrong": [
+   "Ish joyida va tashkilotlarda",
+   "Oila ichida",
+   "O'yin-kulgi muhitida"
+  ]
+ },
+ {
+  "id": 225,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qanday qilib vizual kommunikatsiya amalga oshiriladi?",
+  "correctAnswer": "Grafika, diagramma yoki rasm yordamida",
+  "wrong": [
+   "Ovozli muloqot orqali",
+   "Yozma matn orqali",
+   "Raqs orqali"
+  ]
+ },
+ {
+  "id": 226,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi kommunikatsiya turi ko'proq noaniqlik va tushunmovchilikka olib kelishi mumkin?",
+  "correctAnswer": "Nonverbal kommunikatsiya",
+  "wrong": [
+   "Verbal kommunikatsiya",
+   "Yozma kommunikatsiya",
+   "Rasmiy kommunikatsiya"
+  ]
+ },
+ {
+  "id": 227,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Verbal kommunikatsiya nimani anglatadi?",
+  "correctAnswer": "Ovozli va yozma muloqot",
+  "wrong": [
+   "Faqat yozma muloqot",
+   "Faqat og'zaki muloqot",
+   "Tana tili orqali muloqot"
+  ]
+ },
+ {
+  "id": 228,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi holatda verbal kommunikatsiya samarali bo'ladi?",
+  "correctAnswer": "Suhbatdoshni diqqat bilan tinglashda",
+  "wrong": [
+   "O'z fikrlaringizni faqat o'zingiz biladigan tarzda ifodalashda",
+   "Har doim yuqori ovozda gapirishda",
+   "Muloqotda qatnashmaslikda"
+  ]
+ },
+ {
+  "id": 229,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Verbal kommunikatsiyaning qaysi elementi muhim hisoblanadi?",
+  "correctAnswer": "Ovoz balandligi",
+  "wrong": [
+   "Yozuv shakli",
+   "Ovoz ohangi",
+   "Barcha javoblar to'g'ri"
+  ]
+ },
+ {
+  "id": 230,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Og'zaki muloqotda qaysi jihatlar muhim?",
+  "correctAnswer": "Tana tili va mimika",
+  "wrong": [
+   "Faqat so'zlar",
+   "Yozma qoidalar",
+   "Faqat ovoz balandligi"
+  ]
+ },
+ {
+  "id": 231,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Suhbatda qanday qilib aniq va tushunarli fikr bildirish mumkin?",
+  "correctAnswer": "Qisqa va aniq so'zlar ishlatish orqali",
+  "wrong": [
+   "Murakkab va uzoq jumlalar tuzish orqali",
+   "Har doim yangi so'zlardan foydalanish orqali",
+   "Suhbatdoshga e'tibor bermaslik orqali"
+  ]
+ },
+ {
+  "id": 232,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Nonverbal kommunikatsiya nimani anglatadi?",
+  "correctAnswer": "So'zlardan tashqari barcha kommunikatsiya turlari",
+  "wrong": [
+   "Faqat yozma muloqot",
+   "Faqat og'zaki muloqot",
+   "Ovoz balandligi orqali muloqot"
+  ]
+ },
+ {
+  "id": 233,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi nonverbal kommunikatsiya elementi tana tiliga kiradi?",
+  "correctAnswer": "Qo'l harakatlari",
+  "wrong": [
+   "Ovoz ohangi",
+   "So'zlar",
+   "Yozuv"
+  ]
+ },
+ {
+  "id": 234,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Nonverbal kommunikatsiyaning qaysi turi hissiy holatni ifodalashda muhimdir?",
+  "correctAnswer": "Mimika",
+  "wrong": [
+   "Yozma nutq",
+   "Ovoz balandligi",
+   "Muloqot davomiyligi"
+  ]
+ },
+ {
+  "id": 235,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Tana tilida qaysi elementlar ko'proq e'tibor berilishi kerak?",
+  "correctAnswer": "Qo'l harakatlari va yuz ifodalari",
+  "wrong": [
+   "Ovoz balandligi va tezligi",
+   "Yozma qoidalar",
+   "Faqat so'zlar"
+  ]
+ },
+ {
+  "id": 236,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Nonverbal kommunikatsiyaning eng muhim vazifalaridan biri nima?",
+  "correctAnswer": "Fikrlarni aniq ifodalash",
+  "wrong": [
+   "Suhbatdoshni chalg'itish",
+   "Hissiy holatlarni yashirish",
+   "Suhbatni uzish"
+  ]
+ },
+ {
+  "id": 237,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qanday nonverbal signallar suhbatda ishonchni oshirishi mumkin?",
+  "correctAnswer": "Yuz ifodalarini ochiq tutish va ko'z bilan aloqa qilish",
+  "wrong": [
+   "Qochish yoki qochish harakatlari",
+   "Tez-tez telefon tekshirish",
+   "Ovoz balandligini pasaytirish"
+  ]
+ },
+ {
+  "id": 238,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Shaxsning kontekstual shakllanishi nimani anglatadi?",
+  "correctAnswer": "Shaxsning ijtimoiy va madaniy kontekstga asoslangan shakllanishi",
+  "wrong": [
+   "Faqat biologik omillar",
+   "Faqat psixologik omillar",
+   "O'z-o'zini tarbiyalash jarayoni"
+  ]
+ },
+ {
+  "id": 239,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi omil shaxsning kontekstual shakllanishida muhim rol o'ynaydi?",
+  "correctAnswer": "Oila va jamiyat ta'siri",
+  "wrong": [
+   "Shaxsiy xususiyatlar",
+   "Ta'lim darajasi",
+   "Faqat iqtisodiy holat"
+  ]
+ },
+ {
+  "id": 240,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Shaxsning kontekstual shakllanishida qaysi jarayonlar muhim?",
+  "correctAnswer": "Ijtimoiy munosabatlar va tajribalar",
+  "wrong": [
+   "Faqat o'qish",
+   "Sport bilan shug'ullanish",
+   "Yozuv va san'at"
+  ]
+ },
+ {
+  "id": 241,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatning shaxs shakllanishidagi roli qanday?",
+  "correctAnswer": "Shaxsning fikrlash va xulq-atvorini shakllantirishda ta'sir ko'rsatadi",
+  "wrong": [
+   "Faqat an'anaviy qadriyatlarni saqlash",
+   "Faqat ijtimoiy normalarni belgilaydi",
+   "Hech qanday ta'sir ko'rsatmaydi"
+  ]
+ },
+ {
+  "id": 242,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Kontekstual shakllanish jarayonida qaysi omil shaxsning o'zini anglashiga yordam beradi?",
+  "correctAnswer": "Oila va do'stlar bilan muloqot",
+  "wrong": [
+   "Ijtimoiy tarmoqlar",
+   "O'ziga bo'lgan ishonch",
+   "Faqat o'z-o'zini rivojlantirish"
+  ]
+ },
+ {
+  "id": 243,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qanday ijtimoiy omillar shaxsning kontekstual shakllanishiga ta'sir qiladi?",
+  "correctAnswer": "Ta'lim, iqtisodiy holat va madaniyat",
+  "wrong": [
+   "Faqat iqtisodiy holat",
+   "Faqat ta'lim",
+   "Hech qanday ijtimoiy omil ta'sir qilmaydi"
+  ]
+ },
+ {
+  "id": 244,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotlar texnologiyasi nima?",
+  "correctAnswer": "Turli guruhlar o'rtasida axborot va fikr almashish jarayoni",
+  "wrong": [
+   "Faqat yozma axborot almashish",
+   "Faqat telefon orqali aloqa",
+   "Shaxsiy muloqot"
+  ]
+ },
+ {
+  "id": 245,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotlarni samarali amalga oshirish uchun qanday vositalar kerak?",
+  "correctAnswer": "Internet va raqamli platformalar",
+  "wrong": [
+   "Faqat telefon",
+   "Qog'oz va qalam",
+   "Faqat yuzma-yuz uchrashuvlar"
+  ]
+ },
+ {
+  "id": 246,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi platformalar guruhlararo muloqot uchun keng qo'llaniladi?",
+  "correctAnswer": "Zoom, Microsoft Teams, Slack",
+  "wrong": [
+   "Facebook va Instagram",
+   "TikTok va YouTube",
+   "Faqat email"
+  ]
+ },
+ {
+  "id": 247,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotda qanday omil muhim hisoblanadi?",
+  "correctAnswer": "Aniq va tushunarli maqsadlar belgilash",
+  "wrong": [
+   "Ovoz balandligi",
+   "Faqat yozma hujjatlar",
+   "Guruh a'zolarining shaxsiy hayoti"
+  ]
+ },
+ {
+  "id": 248,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muammolarni hal qilishda qanday yondashuvlar qo'llaniladi?",
+  "correctAnswer": "Jamoaviy fikrlash va muhokama",
+  "wrong": [
+   "Faqat rahbarning qarori",
+   "Har bir a'zoning alohida fikri",
+   "Muammolarni e'tiborsiz qoldirish"
+  ]
+ },
+ {
+  "id": 249,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotda qanday xatolar ko'p uchraydi?",
+  "correctAnswer": "Aniq maqsad belgilamaslik",
+  "wrong": [
+   "Har doim yozma aloqa qilish",
+   "Faqat bitta fikrni qabul qilish",
+   "Jamoaviy ishga e'tibor bermaslik"
+  ]
+ },
+ {
+  "id": 250,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotda tinglashning ahamiyati nimada?",
+  "correctAnswer": "Boshqalar fikrini tushunish va hurmat qilish",
+  "wrong": [
+   "Faqat o'z fikrini ifodalash",
+   "O'z fikrini yangilash",
+   "Faqat o'z fikrini kuchaytirish"
+  ]
+ },
+ {
+  "id": 251,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotda qanday yordamchi vositalar mavjud?",
+  "correctAnswer": "Kalendar va eslatmalar",
+  "wrong": [
+   "Faqat qog'oz va qalam",
+   "Faqat telefon qo'ng'iroqlari",
+   "Faqat elektron pochta"
+  ]
+ },
+ {
+  "id": 252,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotda qanday ijtimoiy tarmoqlar foydali bo'lishi mumkin?",
+  "correctAnswer": "Professional tarmoqlar (LinkedIn)",
+  "wrong": [
+   "Faqat shaxsiy profillar",
+   "O'yin platformalari",
+   "Faqat ko'ngilochar tarmoqlar"
+  ]
+ },
+ {
+  "id": 253,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Guruhlararo muloqotni yaxshilash uchun qanday strategiyalar qo'llanilishi mumkin?",
+  "correctAnswer": "Ochiq va samimiy muloqotni rag'batlantirish",
+  "wrong": [
+   "Muloqotni cheklash",
+   "Faqat rahbarlarning fikrlarini tinglash",
+   "Muloqotni faqat yozma shaklda olib boorish"
+  ]
+ },
+ {
+  "id": 254,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Pedagogning ijodiylik hissi nima?",
+  "correctAnswer": "O'quvchilarning qiziqishini uyg'otish va yangi g'oyalar yaratish qobiliyati",
+  "wrong": [
+   "Faqat dars rejasini bajarish",
+   "Faqat nazorat qilish",
+   "O'z fikrini doimo boshqalarga majburan qabul qildirish"
+  ]
+ },
+ {
+  "id": 255,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiy pedagogik muloqotning asosiy maqsadi nima?",
+  "correctAnswer": "O'quvchilarning ijodkorligini rivojlantirish",
+  "wrong": [
+   "O'quvchilarni faqat nazorat qilish",
+   "Faqat darsni o'tkazish",
+   "O'z fikrini doimo to'g'ri deb bilish"
+  ]
+ },
+ {
+  "id": 256,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Pedagogning ijodiy muloqotini rivojlantirish uchun qanday usullar qo'llanilishi mumkin?",
+  "correctAnswer": "Interaktiv o'yinlar va muhokamalar",
+  "wrong": [
+   "Traditsion ta'lim usullari",
+   "Faqat yozma ishlar",
+   "O'quvchilar bilan aloqa qilmaslik"
+  ]
+ },
+ {
+  "id": 257,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiy muloqotda qanday omillar muhim hisoblanadi?",
+  "correctAnswer": "Ochiqlik, samimiyat va hurmat",
+  "wrong": [
+   "Faqat o'z fikrini ifodalash",
+   "O'quvchilarni e'tiborsiz qoldirish",
+   "Faqat dars rejasiga rioya qilish"
+  ]
+ },
+ {
+  "id": 258,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Pedagog ijodkorligini oshirish uchun qaysi faoliyatlar foydali?",
+  "correctAnswer": "Seminarlar va treninglarda qatnashish",
+  "wrong": [
+   "Faqat o'qitish",
+   "O'z bilimlarini yangilamaslik",
+   "Faqat nazorat qilish"
+  ]
+ },
+ {
+  "id": 259,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiylik hissini boshqarish uchun qanday strategiyalar qo'llaniladi?",
+  "correctAnswer": "Muloqotni rag'batlantirish va o'zaro fikr almashishni qo'llab-quvvatlash",
+  "wrong": [
+   "Har bir fikrni inkor etish",
+   "Faqat o'z fikrini kuchaytirish",
+   "O'quvchilarni faqat tinglovchi sifatida ko'rish"
+  ]
+ },
+ {
+  "id": 260,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiy pedagogik muloqotda qanday savollar berish samarali?",
+  "correctAnswer": "Ochiq savollar, o'quvchilarning fikrini ochishga yordam beradigan savollar",
+  "wrong": [
+   "Yopiq savollar",
+   "Faqat oddiy savollar",
+   "Savol bermaslik"
+  ]
+ },
+ {
+  "id": 261,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiy pedagogik muhitni yaratishda qanday rol o'ynaydi?",
+  "correctAnswer": "Xavfsiz va qulay muhit yaratish",
+  "wrong": [
+   "Faqat nazorat qilish",
+   "O'quvchilarni e'tiborsiz qoldirish",
+   "Faqat o'z fikrini ifodalash"
+  ]
+ },
+ {
+  "id": 262,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Pedagogning ijodiyligi o'quvchilarga qanday ta'sir qiladi?",
+  "correctAnswer": "O'quvchilarni motivatsiya qiladi va ijodkorligini rivojlantiradi",
+  "wrong": [
+   "O'quvchilarni qiziqtirmaydi",
+   "Faqat darsga e'tibor bermaydi",
+   "O'quvchilarni passiv holga olib keladi"
+  ]
+ },
+ {
+  "id": 263,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Ijodiy muloqotni boshqarishda qanday vositalar qo'llanilishi mumkin?",
+  "correctAnswer": "Raqamli platformalar, interaktiv metodlar, guruh ishlari",
+  "wrong": [
+   "Faqat an'anaviy darslar",
+   "Faqat yozma ishlar",
+   "O'z fikrini hech kimga aytmaslik"
+  ]
+ },
+ {
+  "id": 264,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Rahbarning muloqotdagi asosiy vazifasi nima?",
+  "correctAnswer": "Xodimlarga yo'l-yo'riq berish va ularni motivatsiya qilish",
+  "wrong": [
+   "O'z fikrini doimo to'g'ri deb bilish",
+   "Faqat nazorat qilish",
+   "O'z ishini bajarish"
+  ]
+ },
+ {
+  "id": 265,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Munosabat shkalasi nima?",
+  "correctAnswer": "Xodimlar va rahbar o'rtasidagi aloqa darajasi",
+  "wrong": [
+   "Xodimlar o'rtasidagi raqobat darajasi",
+   "Faqat ish jarayonining tezligi",
+   "O'zaro hurmat darajasi"
+  ]
+ },
+ {
+  "id": 266,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Xodimlar muloqotida qanday elementlar muhim hisoblanadi?",
+  "correctAnswer": "Tinglash, tushunish va javob berish",
+  "wrong": [
+   "Faqat fikr almashish",
+   "Faqat o'z fikrini ifodalash",
+   "O'zaro raqobat"
+  ]
+ },
+ {
+  "id": 267,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Rahbar xodimlar bilan samarali muloqot qilish uchun qanday usullarni qo'llashi kerak?",
+  "correctAnswer": "Ochiq savollar berish va fikrlarini tinglash",
+  "wrong": [
+   "Faqat buyruqlar berish",
+   "O'z fikrini majburan qabul qildirish",
+   "Faqat yozma ko'rsatmalar berish"
+  ]
+ },
+ {
+  "id": 268,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Xodimlar o'rtasida ijobiy munosabatlarni rivojlantirish uchun nima qilish kerak?",
+  "correctAnswer": "Guruh ishlari va jamoaviy tadbirlar o'tkazish",
+  "wrong": [
+   "Raqobatni kuchaytirish",
+   "O'zaro aloqa qilmaslik",
+   "Faqat individual ish olib borish"
+  ]
+ },
+ {
+  "id": 269,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Muloqotda rahbarning rolini qanday baholaysiz?",
+  "correctAnswer": "Motivator va yo'l-yo'riq ko'rsatuvchi",
+  "wrong": [
+   "Faqat nazorat qiluvchi",
+   "O'z fikrini doimo to'g'ri deb biluvchi",
+   "Faqat ishni boshqaruvchi"
+  ]
+ },
+ {
+  "id": 270,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Xodimlarning muloqotdagi ishtirokini qanday rag'batlantirish mumkin?",
+  "correctAnswer": "Ochiq muhokamalar tashkil etish",
+  "wrong": [
+   "Faqat buyruqlar berish",
+   "O'z fikrlarini e'tiborsiz qoldirish",
+   "Yozma ko'rsatmalar berish"
+  ]
+ },
+ {
+  "id": 271,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Rahbar va xodimlar o'rtasidagi ishonchni qanday oshirish mumkin?",
+  "correctAnswer": "Ochiqlik, samimiyat va do'stona munosabatlar o'rnatish",
+  "wrong": [
+   "Xodimlarni e'tiborsiz qoldirish",
+   "Faqat ish jarayoniga e'tibor berish",
+   "O'zaro raqobatni kuchaytirish"
+  ]
+ },
+ {
+  "id": 272,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Muloqotda qanday xato ko'p uchraydi?",
+  "correctAnswer": "Tinglashni e'tiborsiz qoldirish",
+  "wrong": [
+   "O'zaro fikr almashish",
+   "Ijobiy munosabatlar o'rnatish",
+   "O'z fikrini ifodalash"
+  ]
+ },
+ {
+  "id": 273,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Rahbar xodimlar bilan yaxshi munosabat o'rnatganda qanday natijalar bo'ladi?",
+  "correctAnswer": "Ish samaradorligi oshadi",
+  "wrong": [
+   "Xodimlar o'rtasida raqobat kuchayadi",
+   "Ish joyida muammolar ko'payadi",
+   "O'zaro aloqa pasayadi"
+  ]
+ },
+ {
+  "id": 274,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiya nima?",
+  "correctAnswer": "Til va madaniyat o'rtasidagi munosabatlarni o'rganish",
+  "wrong": [
+   "Faqat tilshunoslik",
+   "Faqat madaniyatshunoslik",
+   "Tilni o'rganish jarayoni"
+  ]
+ },
+ {
+  "id": 275,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiyaning asosiy maqsadi nima?",
+  "correctAnswer": "Madaniyat va til o'rtasidagi aloqalarni aniqlash",
+  "wrong": [
+   "Tilning grammatik qoidalarini o'rganish",
+   "Faqat tarixiy til o'zgarishlarini tahlil qilish",
+   "Faqat yozma adabiyotlarni o'rganish"
+  ]
+ },
+ {
+  "id": 276,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qanday madaniy elementlar lingvokulturologiyada o'rganiladi?",
+  "correctAnswer": "An'analar, urf-odatlar, e'tiqodlar",
+  "wrong": [
+   "Faqat til qoidalari",
+   "Faqat san'at asarlari",
+   "Faqat iqtisodiy jihatlar"
+  ]
+ },
+ {
+  "id": 277,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiyada qaysi tushuncha \"madaniy kod\" deb ataladi?",
+  "correctAnswer": "Madaniyatni ifodalovchi belgilar to'plami",
+  "wrong": [
+   "Tilning grammatik qoidalari",
+   "Faqat tarixiy faktlar",
+   "Faqat yozma til"
+  ]
+ },
+ {
+  "id": 278,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiyada \"lingvistik identitet\" nima?",
+  "correctAnswer": "Odamlarning o'z tiliga va madaniyatiga bo'lgan munosabati",
+  "wrong": [
+   "Tilning grammatik qoidalari",
+   "Faqat tilni o'rganish jarayoni",
+   "Faqat madaniy meros"
+  ]
+ },
+ {
+  "id": 279,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiya qanday sohalar bilan bog'liq?",
+  "correctAnswer": "Tilshunoslik, madaniyatshunoslik, antropologiya",
+  "wrong": [
+   "Faqat psixologiya",
+   "Faqat iqtisodiyot",
+   "Faqat siyosat"
+  ]
+ },
+ {
+  "id": 280,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniy kontekstda so'zlarning ma'nosi qanday o'zgarishi mumkin?",
+  "correctAnswer": "Madaniyatga bog'liq ravishda",
+  "wrong": [
+   "Faqat tarixiy kontekstda",
+   "Faqat mantiqiy kontekstda",
+   "Faqat grammatik kontekstda"
+  ]
+ },
+ {
+  "id": 281,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiyada qaysi atama \"interkultural muloqot\" deb ataladi?",
+  "correctAnswer": "Turli madaniyatlar o'rtasidagi aloqa",
+  "wrong": [
+   "Faqat bir madaniyat ichidagi aloqa",
+   "Faqat til o'rganuvchilar o'rtasidagi aloqa",
+   "Faqat yozma adabiyotlar o'rtasidagi aloqa"
+  ]
+ },
+ {
+  "id": 282,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qanday omillar lingvokulturologiyada til va madaniyat o'rtasidagi aloqani belgilaydi?",
+  "correctAnswer": "Ijtimoiy, iqtisodiy va siyosiy omillar",
+  "wrong": [
+   "Faqat tarixiy omillar",
+   "Faqat individual omillar",
+   "Faqat ekologik omillar"
+  ]
+ },
+ {
+  "id": 283,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Lingvokulturologiya qaysi muammolarni o'rganadi?",
+  "correctAnswer": "Madaniy an'analar, stereotiplar va ularning tilga ta'siri",
+  "wrong": [
+   "Faqat tilning grammatik muammolari",
+   "Faqat iqtisodiy muammolar",
+   "Faqat siyosiy muammolar"
+  ]
+ },
+ {
+  "id": 284,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda eng muhim omil nima hisoblanadi?",
+  "correctAnswer": "Ta'lim darajasi",
+  "wrong": [
+   "O'zaro hurmat",
+   "An'analar",
+   "Till"
+  ]
+ },
+ {
+  "id": 285,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri madaniyatlararo muloqotda stereotiplarni kamaytirishga yordam beradi?",
+  "correctAnswer": "Madaniyatlarni taqqoslash",
+  "wrong": [
+   "Boshqa madaniyatlarni o'rganish",
+   "Faqat o'z madaniyatingizga e'tibor berish",
+   "O'z fikrlaringizni qat'iy saqlash"
+  ]
+ },
+ {
+  "id": 286,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda \"aktiv tinglash\" nima deganidir?",
+  "correctAnswer": "O'zaro fikr almashish va tushunishga harakat qilish",
+  "wrong": [
+   "Boshqa odamning fikrlarini faqat eshitish",
+   "Faqat gapirish",
+   "Telefon orqali muloqot qilish"
+  ]
+ },
+ {
+  "id": 287,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri madaniyatlararo to'qnashuvlarni hal qilish uchun samarali strategiya hisoblanadi?",
+  "correctAnswer": "Muammolarni inkor etish",
+  "wrong": [
+   "O'zaro dialog o'tkazish",
+   "Qattiq qarorlar qabul qilish",
+   "O'z fikrlaringizni boshqalarga majburan qabul ettirish"
+  ]
+ },
+ {
+  "id": 288,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda \"kross-kulturalizm\" tushunchasi nimani anglatadi?",
+  "correctAnswer": "Turli madaniyatlar o'rtasidagi aloqalar va o'zaro ta'sirlar",
+  "wrong": [
+   "Faqat bir madaniyatni o'rganish",
+   "Madaniyatlarni birlashtirish",
+   "Madaniyatlar orasidagi farqlarni inkor etish"
+  ]
+ },
+ {
+  "id": 289,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri madaniyatlararo muloqotda noqulay vaziyatlarni bartaraf etish uchun foydali bo'lishi mumkin?",
+  "correctAnswer": "Muammolarni ochiq muhokama qilmaslik",
+  "wrong": [
+   "Faqat o'z fikrlaringizni aytish",
+   "Boshqa odamlarni xafa qilish",
+   "Kichik guruhlarda muhokama o'tkazish"
+  ]
+ },
+ {
+  "id": 290,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda \"emotsional intellekt\" nima deganidir?",
+  "correctAnswer": "O'z hissiyotlaringizni va boshqalarning hissiyotlarini tushunish qobiliyati",
+  "wrong": [
+   "Faqat hissiyotlarni ifodalash",
+   "Hissiyotlarni inkor etish",
+   "Faqat mantiqiy fikrlash"
+  ]
+ },
+ {
+  "id": 291,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Qaysi biri madaniyatlararo muloqotda muhim bo'lgan \"nonverbal kommunikatsiya\" misolidir?",
+  "correctAnswer": "Jismoniy harakatlar va mimikalar",
+  "wrong": [
+   "So'z bilan gapirish",
+   "Email orqali yozish",
+   "Telefon orqali gaplashish"
+  ]
+ },
+ {
+  "id": 292,
+  "subject": "Madaniyatlararo muloqot",
+  "question": "Madaniyatlararo muloqotda qaysi usul eng samarali deb hisoblanadi?",
+  "correctAnswer": "O'zaro hurmat va ochiqlik asosida muloqot qilish",
+  "wrong": [
+   "O'z fikrlaringizni majburan qabul ettirish",
+   "Faqat bir tomonlama muloqot",
+   "Muammolarni yashirish"
+  ]
+ }
+]
