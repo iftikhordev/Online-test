@@ -1,0 +1,1224 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Test Platformasi</title>
+    
+    <!-- TailwindCSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    
+    <!-- Canvas Confetti CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Light Mode (default) */
+        :root {
+            --bg-primary: #f0f4f8;
+            --bg-secondary: #ffffff;
+            --bg-card: #ffffff;
+            --text-primary: #1a202c;
+
+            --text-secondary: #4a5568;
+            --text-accent: #3182ce;
+            --border-color: #e2e8f0;
+            --shadow: rgba(0, 0, 0, 0.1);
+            --gradient-start: #667eea;
+            --gradient-end: #764ba2;
+            --success: #48bb78;
+            --danger: #f56565;
+            --warning: #ed8936;
+        }
+        
+        /* Dark Mode */
+        body.dark-mode {
+            --bg-primary: #1a202c;
+            --bg-secondary: #2d3748;
+            --bg-card: #2d3748;
+            --text-primary: #f7fafc;
+            --text-secondary: #cbd5e0;
+            --text-accent: #63b3ed;
+            --border-color: #4a5568;
+            --shadow: rgba(0, 0, 0, 0.3);
+            --gradient-start: #667eea;
+            --gradient-end: #764ba2;
+            --success: #68d391;
+            --danger: #fc8181;
+            --warning: #f6ad55;
+        }
+        
+        body {
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+        
+        .glass-card {
+            background: var(--bg-card);
+            backdrop-filter: blur(10px);
+
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px var(--shadow);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            padding: 12px 32px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px var(--shadow);
+        }
+        
+        .question-option {
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            padding: 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        
+        .question-option:hover {
+            border-color: var(--text-accent);
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        .question-option.selected {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            color: white;
+            border-color: var(--gradient-end);
+        }
+        
+        .question-nav-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            border: 2px solid var(--border-color);
+            background: var(--bg-card);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .question-nav-btn:hover {
+            transform: scale(1.1);
+            border-color: var(--text-accent);
+        }
+        
+        .question-nav-btn.answered {
+            background: var(--success);
+            color: white;
+            border-color: var(--success);
+        }
+
+        
+        .question-nav-btn.current {
+            background: var(--text-accent);
+            color: white;
+            border-color: var(--text-accent);
+        }
+        
+        .theme-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: var(--bg-card);
+            border: 2px solid var(--border-color);
+            border-radius: 50px;
+            padding: 8px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 4px 12px var(--shadow);
+        }
+        
+        .theme-toggle:hover {
+            transform: scale(1.05);
+        }
+        
+        .hidden {
+            display: none !important;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        
+        .timer {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-accent);
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+            transition: width 0.3s ease;
+        }
+        
+        .celebration-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .celebration-content {
+            text-align: center;
+            color: white;
+
+            animation: scaleIn 0.8s ease-out;
+        }
+        
+        @keyframes scaleIn {
+            from { transform: scale(0.5); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        
+        .leaderboard-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .leaderboard-table th,
+        .leaderboard-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .leaderboard-table th {
+            background: var(--bg-secondary);
+            font-weight: 700;
+        }
+        
+        .leaderboard-table tr:hover {
+            background: var(--bg-secondary);
+        }
+        
+        .medal {
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Theme Toggle -->
+    <div class="theme-toggle" onclick="toggleTheme()">
+        <i class="fas fa-moon" id="theme-icon"></i>
+        <span id="theme-text">Tungi rejim</span>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 max-w-6xl">
+        
+        <!-- Registration Screen -->
+        <div id="registration-screen" class="fade-in">
+            <div class="glass-card p-8 max-w-md mx-auto mt-20">
+                <div class="text-center mb-8">
+                    <div class="gradient-bg w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-graduation-cap text-4xl text-white"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold mb-2">Online Test Platformasi</h1>
+                    <p class="text-gray-500">Bilimingizni sinab ko'ring</p>
+                </div>
+                
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-semibold mb-2">To'liq ismingiz</label>
+                        <input type="text" id="user-name" 
+                               class="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                               placeholder="Ismingizni kiriting"
+                               style="background: var(--bg-card); color: var(--text-primary);">
+                    </div>
+                    
+                    <button onclick="startTest()" class="btn-primary w-full mt-6">
+                        <i class="fas fa-play mr-2"></i>
+                        Testni boshlash
+                    </button>
+
+                    
+                    <button onclick="showLeaderboard()" class="w-full px-6 py-3 border-2 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700"
+                            style="border-color: var(--border-color);">
+                        <i class="fas fa-trophy mr-2"></i>
+                        Natijalar jadvali
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Screen -->
+        <div id="test-screen" class="hidden">
+            <!-- Header -->
+            <div class="glass-card p-6 mb-6">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div>
+                        <h2 class="text-2xl font-bold">Online Test</h2>
+                        <p class="text-sm" style="color: var(--text-secondary);">
+                            <i class="fas fa-user mr-2"></i>
+                            <span id="current-user"></span>
+                        </p>
+                    </div>
+                    
+                    <div class="flex items-center gap-6">
+                        <div class="text-center">
+                            <p class="text-sm" style="color: var(--text-secondary);">Vaqt</p>
+                            <div class="timer" id="timer">00:00</div>
+                        </div>
+                        
+                        <div class="text-center">
+                            <p class="text-sm" style="color: var(--text-secondary);">Savol</p>
+                            <div class="text-2xl font-bold">
+
+                                <span id="current-question-num">1</span> / <span id="total-questions">200</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Progress Bar -->
+                <div class="progress-bar mt-4">
+                    <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <!-- Question Display -->
+            <div class="glass-card p-8 mb-6">
+                <div class="mb-6">
+                    <div class="flex items-start gap-4">
+                        <span class="bg-blue-500 text-white px-4 py-2 rounded-lg font-bold text-lg" id="question-number">1</span>
+                        <p class="text-lg font-semibold flex-1" id="question-text">Savol yuklanmoqda...</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-3" id="options-container">
+                    <!-- Options will be dynamically added here -->
+                </div>
+            </div>
+
+            <!-- Navigation -->
+            <div class="glass-card p-6 mb-6">
+                <div class="flex justify-between items-center mb-4">
+                    <button onclick="previousQuestion()" id="prev-btn" class="px-6 py-3 bg-gray-500 text-white rounded-lg font-semibold hover:bg-gray-600 disabled:opacity-50">
+                        <i class="fas fa-arrow-left mr-2"></i>
+                        Oldingi
+                    </button>
+
+                    
+                    <button onclick="nextQuestion()" id="next-btn" class="px-6 py-3 bg-blue-500 text-white rounded-lg font-semibold hover:bg-blue-600">
+                        Keyingi
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    
+                    <button onclick="submitTest()" id="submit-btn" class="hidden px-6 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600">
+                        <i class="fas fa-check mr-2"></i>
+                        Testni yakunlash
+                    </button>
+                </div>
+                
+                <!-- Quick Navigation -->
+                <div class="border-t pt-4" style="border-color: var(--border-color);">
+                    <p class="text-sm font-semibold mb-3">Tez o'tish:</p>
+                    <div class="grid grid-cols-10 sm:grid-cols-15 md:grid-cols-20 gap-2" id="question-nav">
+                        <!-- Question navigation buttons will be added here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div class="glass-card p-6 text-center">
+                    <div class="text-3xl font-bold text-green-500" id="answered-count">0</div>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">Javob berilgan</p>
+                </div>
+                
+                <div class="glass-card p-6 text-center">
+
+                    <div class="text-3xl font-bold text-orange-500" id="unanswered-count">200</div>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">Javob berilmagan</p>
+                </div>
+                
+                <div class="glass-card p-6 text-center">
+                    <div class="text-3xl font-bold text-blue-500" id="progress-percent">0%</div>
+                    <p class="text-sm mt-2" style="color: var(--text-secondary);">Jarayon</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results Screen -->
+        <div id="results-screen" class="hidden">
+            <div class="glass-card p-8 mb-6">
+                <div class="text-center mb-8">
+                    <div class="w-24 h-24 mx-auto mb-4 rounded-full flex items-center justify-center" id="result-icon-container">
+                        <i class="fas fa-trophy text-5xl" id="result-icon"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-2">Test yakunlandi!</h2>
+                    <p class="text-xl" style="color: var(--text-secondary);" id="result-user-name"></p>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="text-center p-4 rounded-lg" style="background: var(--bg-secondary);">
+                        <div class="text-3xl font-bold text-blue-500" id="total-score">0</div>
+                        <p class="text-sm mt-2" style="color: var(--text-secondary);">Umumiy ball</p>
+                    </div>
+
+                    
+                    <div class="text-center p-4 rounded-lg" style="background: var(--bg-secondary);">
+                        <div class="text-3xl font-bold text-green-500" id="correct-answers">0</div>
+                        <p class="text-sm mt-2" style="color: var(--text-secondary);">To'g'ri javoblar</p>
+                    </div>
+                    
+                    <div class="text-center p-4 rounded-lg" style="background: var(--bg-secondary);">
+                        <div class="text-3xl font-bold text-red-500" id="incorrect-answers">0</div>
+                        <p class="text-sm mt-2" style="color: var(--text-secondary);">Noto'g'ri javoblar</p>
+                    </div>
+                    
+                    <div class="text-center p-4 rounded-lg" style="background: var(--bg-secondary);">
+                        <div class="text-3xl font-bold text-purple-500" id="percentage">0%</div>
+                        <p class="text-sm mt-2" style="color: var(--text-secondary);">Foiz</p>
+                    </div>
+                </div>
+                
+                <!-- Performance Message -->
+                <div class="p-6 rounded-lg mb-8" id="performance-message" style="background: var(--bg-secondary);">
+                    <h3 class="text-xl font-bold mb-2">Baholash</h3>
+                    <p id="performance-text"></p>
+                </div>
+                
+                <!-- Charts -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div class="p-6 rounded-lg" style="background: var(--bg-secondary);">
+
+                        <h3 class="text-lg font-bold mb-4 text-center">Javoblar taqsimoti</h3>
+                        <canvas id="answersChart"></canvas>
+                    </div>
+                    
+                    <div class="p-6 rounded-lg" style="background: var(--bg-secondary);">
+                        <h3 class="text-lg font-bold mb-4 text-center">Natija foizi</h3>
+                        <canvas id="percentageChart"></canvas>
+                    </div>
+                </div>
+                
+                <!-- Actions -->
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button onclick="restartTest()" class="btn-primary">
+                        <i class="fas fa-redo mr-2"></i>
+                        Qaytadan boshlash
+                    </button>
+                    
+                    <button onclick="showLeaderboard()" class="px-6 py-3 border-2 rounded-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-700"
+                            style="border-color: var(--border-color);">
+                        <i class="fas fa-trophy mr-2"></i>
+                        Natijalar jadvali
+                    </button>
+                    
+                    <button onclick="downloadResult()" class="px-6 py-3 bg-green-500 text-white rounded-lg font-semibold hover:bg-green-600">
+                        <i class="fas fa-download mr-2"></i>
+                        Yuklab olish
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- Leaderboard Screen -->
+        <div id="leaderboard-screen" class="hidden">
+            <div class="glass-card p-8">
+                <div class="text-center mb-8">
+                    <div class="gradient-bg w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-trophy text-4xl text-white"></i>
+                    </div>
+                    <h2 class="text-3xl font-bold mb-2">Natijalar jadvali</h2>
+                    <p style="color: var(--text-secondary);">Eng yaxshi natijalar</p>
+                </div>
+                
+                <div class="overflow-x-auto mb-6">
+                    <table class="leaderboard-table">
+                        <thead>
+                            <tr>
+                                <th>O'rin</th>
+                                <th>Ism</th>
+                                <th>Ball</th>
+                                <th>Foiz</th>
+                                <th>Sana</th>
+                            </tr>
+                        </thead>
+                        <tbody id="leaderboard-body">
+                            <!-- Leaderboard entries will be added here -->
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="text-center">
+                    <button onclick="backToHome()" class="btn-primary">
+                        <i class="fas fa-home mr-2"></i>
+                        Bosh sahifaga qaytish
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 mt-12">
+        <p class="font-semibold text-lg mb-1">Iftikhor Software Solutions Inc.</p>
+        <p class="text-sm" style="color: var(--text-secondary);">© 2026 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // ==================== GLOBAL VARIABLES ====================
+        
+        // Complete question bank (500 questions - DEMO DATA)
+        // Replace this with your actual questions from Word documents
+        const QUESTION_BANK = [
+            // Tourism Management (Fan 1) - 200 questions
+            {id: 1, subject: "Turizm loyihasini boshqarish", question: "Turizm nima?", correctAnswer: "Sayohat va dam olish faoliyati"},
+            {id: 2, subject: "Turizm loyihasini boshqarish", question: "Turizm sanoatining asosiy maqsadi nima?", correctAnswer: "Xizmat ko'rsatish va daromad olish"},
+            {id: 3, subject: "Turizm loyihasini boshqarish", question: "Turizmning asosiy turlari qanday?", correctAnswer: "Ichki va tashqi turizm"},
+            {id: 4, subject: "Turizm loyihasini boshqarish", question: "Ekologik turizm nima?", correctAnswer: "Tabiatni saqlagan holda sayohat qilish"},
+            {id: 5, subject: "Turizm loyihasini boshqarish", question: "Turizm marketing nima?", correctAnswer: "Turizm xizmatlarini reklama qilish"},
+
+            // Management (Fan 2) - 150 questions
+            {id: 6, subject: "Menejmentga kirish", question: "Menejment nima?", correctAnswer: "Boshqaruv san'ati va jarayoni"},
+            {id: 7, subject: "Menejmentga kirish", question: "Menejerning asosiy vazifasi nima?", correctAnswer: "Resurslarni samarali boshqarish"},
+            {id: 8, subject: "Menejmentga kirish", question: "Strategik rejalashtirish nima?", correctAnswer: "Uzoq muddatli maqsadlar belgilash"},
+            {id: 9, subject: "Menejmentga kirish", question: "Tashkiliy tuzilma nima?", correctAnswer: "Kompaniyaning ichki tuzilishi"},
+            {id: 10, subject: "Menejmentga kirish", question: "Motivatsiya nima?", correctAnswer: "Xodimlarni rag'batlantirish"},
+            // Intercultural Communication (Fan 3) - 150 questions
+            {id: 11, subject: "Madaniyatlararo muloqot", question: "Madaniyatlararo muloqot nima?", correctAnswer: "Turli madaniyatlar o'rtasida muloqot"},
+            {id: 12, subject: "Madaniyatlararo muloqot", question: "Til to'sig'i nima?", correctAnswer: "Turli tillar tufayli tushunmaslik"},
+            {id: 13, subject: "Madaniyatlararo muloqot", question: "Nonverbal muloqot nima?", correctAnswer: "So'zsiz muloqot usullari"},
+            {id: 14, subject: "Madaniyatlararo muloqot", question: "Madaniy adaptatsiya nima?", correctAnswer: "Yangi madaniyatga moslashish"},
+            {id: 15, subject: "Madaniyatlararo muloqot", question: "Etnosentrizm nima?", correctAnswer: "O'z madaniyatini ustun deb bilish"},
+
+            // Adding more demo questions to reach closer to 500
+            {id: 16, subject: "Turizm loyihasini boshqarish", question: "Turizm resursları nima?", correctAnswer: "Tabiiy va madaniy ob'ektlar"},
+            {id: 17, subject: "Turizm loyihasini boshqarish", question: "Mehmonxona xizmatlari nimalarni o'z ichiga oladi?", correctAnswer: "Turar joy va ovqatlanish"},
+            {id: 18, subject: "Turizm loyihasini boshqarish", question: "Turizm agentligi nima qiladi?", correctAnswer: "Sayohatlarni tashkil qiladi"},
+            {id: 19, subject: "Turizm loyihasini boshqarish", question: "Viza nima?", correctAnswer: "Boshqa davlatga kirish uchun ruxsatnoma"},
+            {id: 20, subject: "Turizm loyihasini boshqarish", question: "Turist gid vazifasi nima?", correctAnswer: "Turistlarga yo'l ko'rsatish va ma'lumot berish"},
+            // Add 480 more questions here by replacing this comment with your actual questions
+            // Format: {id: N, subject: "Subject", question: "Question text?", correctAnswer: "Correct answer text"}
+        ];
+        
+        // Generate wrong options for each question
+        const WRONG_OPTIONS = [
+            "Bu javob noto'g'ri",
+            "Bu ham noto'g'ri javob",
+            "Bu variant xato",
+            "Bu javob mos kelmaydi",
+            "Bu noto'g'ri variant",
+            "Bu javob to'g'ri emas",
+            "Bu xato javob",
+            "Bu mos kelmaydi"
+        ];
+        
+        // App State
+        let currentUser = null;
+        let testQuestions = [];
+        let currentQuestionIndex = 0;
+        let userAnswers = {};
+        let startTime = null;
+        let timerInterval = null;
+
+        let testDuration = 0;
+        
+        // ==================== INITIALIZATION ====================
+        
+        // Load theme preference
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark') {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Kunduzgi rejim';
+            }
+        });
+        
+        // ==================== THEME TOGGLE ====================
+        
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            
+            if (isDark) {
+                document.getElementById('theme-icon').className = 'fas fa-sun';
+                document.getElementById('theme-text').textContent = 'Kunduzgi rejim';
+                localStorage.setItem('theme', 'dark');
+            } else {
+                document.getElementById('theme-icon').className = 'fas fa-moon';
+                document.getElementById('theme-text').textContent = 'Tungi rejim';
+                localStorage.setItem('theme', 'light');
+            }
+        }
+        
+        // ==================== QUESTION GENERATION ====================
+        
+        function generateTestQuestions() {
+            // Shuffle the question bank
+            const shuffled = [...QUESTION_BANK].sort(() => Math.random() - 0.5);
+
+            
+            // Select first 200 questions (or all if less than 200)
+            const selectedQuestions = shuffled.slice(0, Math.min(200, shuffled.length));
+            
+            // Randomize options for each question
+            testQuestions = selectedQuestions.map((q, index) => {
+                // Create 4 options: 1 correct + 3 wrong
+                const options = [
+                    { text: q.correctAnswer, isCorrect: true },
+                    { text: getRandomWrongOption(), isCorrect: false },
+                    { text: getRandomWrongOption(), isCorrect: false },
+                    { text: getRandomWrongOption(), isCorrect: false }
+                ];
+                
+                // Shuffle options so correct answer is not always first
+                const shuffledOptions = options.sort(() => Math.random() - 0.5);
+                
+                return {
+                    id: index + 1,
+                    originalId: q.id,
+                    subject: q.subject,
+                    question: q.question,
+                    options: shuffledOptions.map((opt, i) => ({
+                        id: String.fromCharCode(65 + i), // A, B, C, D
+                        text: opt.text,
+                        isCorrect: opt.isCorrect
+                    }))
+                };
+            });
+        }
+        
+        function getRandomWrongOption() {
+            return WRONG_OPTIONS[Math.floor(Math.random() * WRONG_OPTIONS.length)];
+        }
+        
+        // ==================== TEST START ====================
+
+        
+        function startTest() {
+            const userName = document.getElementById('user-name').value.trim();
+            
+            if (!userName) {
+                alert("Iltimos, ismingizni kiriting!");
+                return;
+            }
+            
+            currentUser = userName;
+            
+            // Generate test questions
+            generateTestQuestions();
+            
+            // Initialize state
+            currentQuestionIndex = 0;
+            userAnswers = {};
+            startTime = Date.now();
+            
+            // Show test screen
+            document.getElementById('registration-screen').classList.add('hidden');
+            document.getElementById('test-screen').classList.remove('hidden');
+            document.getElementById('test-screen').classList.add('fade-in');
+            
+            // Display user name
+            document.getElementById('current-user').textContent = currentUser;
+            document.getElementById('total-questions').textContent = testQuestions.length;
+            
+            // Start timer
+            startTimer();
+            
+            // Render question navigation
+            renderQuestionNavigation();
+            
+            // Display first question
+            displayQuestion();
+        }
+        
+        // ==================== TIMER ====================
+
+        
+        function startTimer() {
+            timerInterval = setInterval(() => {
+                testDuration = Math.floor((Date.now() - startTime) / 1000);
+                const minutes = Math.floor(testDuration / 60);
+                const seconds = testDuration % 60;
+                document.getElementById('timer').textContent = 
+                    `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+            }, 1000);
+        }
+        
+        // ==================== QUESTION DISPLAY ====================
+        
+        function displayQuestion() {
+            const question = testQuestions[currentQuestionIndex];
+            
+            // Update question number
+            document.getElementById('question-number').textContent = currentQuestionIndex + 1;
+            document.getElementById('current-question-num').textContent = currentQuestionIndex + 1;
+            document.getElementById('question-text').textContent = question.question;
+            
+            // Render options
+            const optionsContainer = document.getElementById('options-container');
+            optionsContainer.innerHTML = '';
+            
+            question.options.forEach(option => {
+                const optionDiv = document.createElement('div');
+                optionDiv.className = 'question-option';
+                optionDiv.innerHTML = `
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-lg">${option.id}.</span>
+                        <span>${option.text}</span>
+                    </div>
+                `;
+
+                
+                // Check if this option was previously selected
+                if (userAnswers[currentQuestionIndex] === option.id) {
+                    optionDiv.classList.add('selected');
+                }
+                
+                optionDiv.onclick = () => selectOption(option.id);
+                optionsContainer.appendChild(optionDiv);
+            });
+            
+            // Update navigation buttons
+            updateNavigationButtons();
+            
+            // Update progress
+            updateProgress();
+            
+            // Update question navigation highlight
+            updateQuestionNavigation();
+        }
+        
+        function selectOption(optionId) {
+            userAnswers[currentQuestionIndex] = optionId;
+            
+            // Update UI
+            const options = document.querySelectorAll('.question-option');
+            options.forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.textContent.startsWith(optionId + '.')) {
+                    opt.classList.add('selected');
+                }
+            });
+            
+            // Update stats
+            updateProgress();
+            updateQuestionNavigation();
+        }
+        
+        // ==================== NAVIGATION ====================
+
+        
+        function previousQuestion() {
+            if (currentQuestionIndex > 0) {
+                currentQuestionIndex--;
+                displayQuestion();
+            }
+        }
+        
+        function nextQuestion() {
+            if (currentQuestionIndex < testQuestions.length - 1) {
+                currentQuestionIndex++;
+                displayQuestion();
+            }
+        }
+        
+        function jumpToQuestion(index) {
+            currentQuestionIndex = index;
+            displayQuestion();
+        }
+        
+        function updateNavigationButtons() {
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const submitBtn = document.getElementById('submit-btn');
+            
+            // Previous button
+            prevBtn.disabled = currentQuestionIndex === 0;
+            
+            // Next vs Submit button
+            if (currentQuestionIndex === testQuestions.length - 1) {
+                nextBtn.classList.add('hidden');
+                submitBtn.classList.remove('hidden');
+            } else {
+                nextBtn.classList.remove('hidden');
+                submitBtn.classList.add('hidden');
+            }
+        }
+        
+        // ==================== QUESTION NAVIGATION ====================
+
+        
+        function renderQuestionNavigation() {
+            const navContainer = document.getElementById('question-nav');
+            navContainer.innerHTML = '';
+            
+            testQuestions.forEach((q, index) => {
+                const btn = document.createElement('button');
+                btn.className = 'question-nav-btn';
+                btn.textContent = index + 1;
+                btn.onclick = () => jumpToQuestion(index);
+                navContainer.appendChild(btn);
+            });
+        }
+        
+        function updateQuestionNavigation() {
+            const buttons = document.querySelectorAll('.question-nav-btn');
+            buttons.forEach((btn, index) => {
+                btn.classList.remove('answered', 'current');
+                
+                if (index === currentQuestionIndex) {
+                    btn.classList.add('current');
+                } else if (userAnswers[index] !== undefined) {
+                    btn.classList.add('answered');
+                }
+            });
+        }
+        
+        // ==================== PROGRESS TRACKING ====================
+        
+        function updateProgress() {
+            const answeredCount = Object.keys(userAnswers).length;
+            const unansweredCount = testQuestions.length - answeredCount;
+            const progressPercent = Math.round((answeredCount / testQuestions.length) * 100);
+            
+            document.getElementById('answered-count').textContent = answeredCount;
+            document.getElementById('unanswered-count').textContent = unansweredCount;
+
+            document.getElementById('progress-percent').textContent = progressPercent + '%';
+            document.getElementById('progress-fill').style.width = progressPercent + '%';
+        }
+        
+        // ==================== TEST SUBMISSION ====================
+        
+        function submitTest() {
+            const answeredCount = Object.keys(userAnswers).length;
+            
+            if (answeredCount < testQuestions.length) {
+                const proceed = confirm(
+                    `Siz ${testQuestions.length - answeredCount} ta savolga javob bermadingiz. ` +
+                    `Baribir yakunlashni xohlaysizmi?`
+                );
+                if (!proceed) return;
+            }
+            
+            // Stop timer
+            clearInterval(timerInterval);
+            
+            // Calculate results
+            calculateResults();
+        }
+        
+        // ==================== RESULTS CALCULATION ====================
+        
+        function calculateResults() {
+            let correctCount = 0;
+            let incorrectCount = 0;
+            
+            testQuestions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                if (userAnswer) {
+                    const selectedOption = question.options.find(opt => opt.id === userAnswer);
+                    if (selectedOption && selectedOption.isCorrect) {
+                        correctCount++;
+                    } else {
+                        incorrectCount++;
+                    }
+                }
+            });
+
+            
+            const percentage = Math.round((correctCount / testQuestions.length) * 100);
+            
+            // Save to leaderboard
+            saveToLeaderboard(correctCount, percentage);
+            
+            // Display results
+            displayResults(correctCount, incorrectCount, percentage);
+            
+            // Check for celebration
+            if (correctCount >= 40) { // Minimum passing score
+                triggerCelebration();
+            }
+        }
+        
+        // ==================== RESULTS DISPLAY ====================
+        
+        function displayResults(correct, incorrect, percentage) {
+            // Hide test screen, show results screen
+            document.getElementById('test-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.remove('hidden');
+            document.getElementById('results-screen').classList.add('fade-in');
+            
+            // Update result values
+            document.getElementById('result-user-name').textContent = currentUser;
+            document.getElementById('total-score').textContent = correct;
+            document.getElementById('correct-answers').textContent = correct;
+            document.getElementById('incorrect-answers').textContent = incorrect;
+            document.getElementById('percentage').textContent = percentage + '%';
+            
+            // Performance message
+            let message = '';
+            let iconClass = '';
+            let iconColor = '';
+
+            
+            if (percentage >= 90) {
+                message = "A'lo natija! Siz ajoyib bilim ko'rsatdingiz. Davom eting va yanada yuqori cho'qqilarga erishing!";
+                iconClass = 'fa-trophy text-yellow-500';
+                iconColor = 'background: linear-gradient(135deg, #f59e0b, #d97706);';
+            } else if (percentage >= 75) {
+                message = "Yaxshi natija! Siz ko'p savolarga to'g'ri javob berdingiz. Yana bir oz harakat qilsangiz, mukammal natijaga erishasiz!";
+                iconClass = 'fa-star text-blue-500';
+                iconColor = 'background: linear-gradient(135deg, #3b82f6, #2563eb);';
+            } else if (percentage >= 60) {
+                message = "Yaxshi urinish! O'rtacha natijaga erishdingiz. Ko'proq mashq qilsangiz, yanada yaxshi natijalar olasiz.";
+                iconClass = 'fa-check-circle text-green-500';
+                iconColor = 'background: linear-gradient(135deg, #10b981, #059669);';
+            } else {
+                message = "Qo'shimcha o'rganish kerak. Materialni qayta ko'rib chiqing va yana bir bor sinab ko'ring!";
+                iconClass = 'fa-book text-orange-500';
+                iconColor = 'background: linear-gradient(135deg, #f97316, #ea580c);';
+            }
+            
+            document.getElementById('performance-text').textContent = message;
+            document.getElementById('result-icon').className = 'fas ' + iconClass;
+            document.getElementById('result-icon-container').style = iconColor;
+            
+            // Render charts
+            renderCharts(correct, incorrect, percentage);
+        }
+        
+        // ==================== CHARTS ====================
+
+        
+        function renderCharts(correct, incorrect, percentage) {
+            const isDark = document.body.classList.contains('dark-mode');
+            const textColor = isDark ? '#f7fafc' : '#1a202c';
+            
+            // Answers Distribution Chart
+            const answersCtx = document.getElementById('answersChart').getContext('2d');
+            new Chart(answersCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ["To'g'ri javoblar", "Noto'g'ri javoblar"],
+                    datasets: [{
+                        data: [correct, incorrect],
+                        backgroundColor: ['#10b981', '#ef4444'],
+                        borderWidth: 2,
+                        borderColor: isDark ? '#2d3748' : '#ffffff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                color: textColor,
+                                padding: 15,
+                                font: { size: 12 }
+                            }
+                        }
+                    }
+                }
+            });
+            
+            // Percentage Chart
+            const percentageCtx = document.getElementById('percentageChart').getContext('2d');
+            new Chart(percentageCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Natija'],
+
+                    datasets: [{
+                        label: 'Foiz',
+                        data: [percentage],
+                        backgroundColor: ['#8b5cf6'],
+                        borderWidth: 2,
+                        borderColor: '#7c3aed',
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 100,
+                            ticks: { color: textColor },
+                            grid: { color: isDark ? '#4a5568' : '#e2e8f0' }
+                        },
+                        x: {
+                            ticks: { color: textColor },
+                            grid: { display: false }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            labels: { color: textColor }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // ==================== CELEBRATION EFFECT ====================
+        
+        function triggerCelebration() {
+            // Create celebration overlay
+            const overlay = document.createElement('div');
+            overlay.className = 'celebration-overlay';
+            overlay.innerHTML = `
+
+                <div class="celebration-content">
+                    <i class="fas fa-trophy text-8xl text-yellow-400 mb-6"></i>
+                    <h1 class="text-5xl font-bold mb-4">Tabriklaymiz, ${currentUser}!</h1>
+                    <p class="text-2xl mb-6">Siz a'lo natijaga erishdingiz!</p>
+                    <p class="text-xl mb-8 max-w-2xl mx-auto">
+                        Sizning bilimingiz va mehnatsevarligingiz maqtovga sazovor! 
+                        O'qishingizda, karerангizda va kelajakdagi barcha ishlatingizda omad tilaymiz. 
+                        Har doim oldinga intiling va muvaffaqiyatga erishing!
+                    </p>
+                    <button onclick="closeCelebration()" class="btn-primary text-xl px-8 py-4">
+                        <i class="fas fa-check mr-2"></i>
+                        Rahmat!
+                    </button>
+                </div>
+            `;
+            document.body.appendChild(overlay);
+            
+            // Confetti animation
+            const duration = 5000;
+            const animationEnd = Date.now() + duration;
+            const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 10000 };
+            
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+            
+            const interval = setInterval(function() {
+                const timeLeft = animationEnd - Date.now();
+                
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                
+                const particleCount = 50 * (timeLeft / duration);
+                
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 }
+                });
+                confetti({
+                    ...defaults,
+                    particleCount,
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 }
+                });
+            }, 250);
+        }
+        
+        function closeCelebration() {
+            const overlay = document.querySelector('.celebration-overlay');
+            if (overlay) {
+                overlay.remove();
+            }
+        }
+        
+        // ==================== LEADERBOARD ====================
+        
+        function saveToLeaderboard(score, percentage) {
+            const leaderboard = JSON.parse(localStorage.getItem('leaderboard') || '[]');
+            
+            const entry = {
+                name: currentUser,
+                score: score,
+                percentage: percentage,
+                date: new Date().toLocaleDateString('uz-UZ'),
+                timestamp: Date.now()
+            };
+            
+            leaderboard.push(entry);
+            
+            // Sort by score (descending)
+            leaderboard.sort((a, b) => b.score - a.score);
+
+            
+            // Keep top 100
+            if (leaderboard.length > 100) {
+                leaderboard.length = 100;
+            }
+            
+            localStorage.setItem('leaderboard', JSON.stringify(leaderboard));
+        }
+        
+        function showLeaderboard() {
+            const leaderboard = JSON.parse(localStorage.getItem('leaderboard') || '[]');
+            
+            // Hide all screens
+            document.getElementById('registration-screen').classList.add('hidden');
+            document.getElementById('test-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.add('hidden');
+            
+            // Show leaderboard
+            document.getElementById('leaderboard-screen').classList.remove('hidden');
+            document.getElementById('leaderboard-screen').classList.add('fade-in');
+            
+            // Render leaderboard
+            const tbody = document.getElementById('leaderboard-body');
+            tbody.innerHTML = '';
+            
+            if (leaderboard.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5" class="text-center py-8" style="color: var(--text-secondary);">
+                            Hozircha hech qanday natija yo'q
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            
+            leaderboard.forEach((entry, index) => {
+                const row = document.createElement('tr');
+                
+                let medal = '';
+                if (index === 0) medal = '<span class="medal">🥇</span>';
+                else if (index === 1) medal = '<span class="medal">🥈</span>';
+                else if (index === 2) medal = '<span class="medal">🥉</span>';
+                
+                row.innerHTML = `
+                    <td class="font-bold">${medal} ${index + 1}</td>
+                    <td>${entry.name}</td>
+                    <td class="font-bold text-green-500">${entry.score}</td>
+                    <td class="font-bold text-blue-500">${entry.percentage}%</td>
+                    <td>${entry.date}</td>
+                `;
+                
+                tbody.appendChild(row);
+            });
+        }
+        
+        // ==================== UTILITY FUNCTIONS ====================
+        
+        function backToHome() {
+            document.getElementById('leaderboard-screen').classList.add('hidden');
+            document.getElementById('results-screen').classList.add('hidden');
+            document.getElementById('registration-screen').classList.remove('hidden');
+            document.getElementById('registration-screen').classList.add('fade-in');
+        }
+        
+        function restartTest() {
+            if (confirm('Yangi test boshlashni xohlaysizmi?')) {
+                document.getElementById('results-screen').classList.add('hidden');
+                startTest();
+            }
+        }
+
+        
+        function downloadResult() {
+            const correct = document.getElementById('correct-answers').textContent;
+            const incorrect = document.getElementById('incorrect-answers').textContent;
+            const percentage = document.getElementById('percentage').textContent;
+            
+            const resultText = `
+╔═══════════════════════════════════════════════╗
+║          ONLINE TEST PLATFORMASI              ║
+║           TEST NATIJALARI                     ║
+╚═══════════════════════════════════════════════╝
+
+Foydalanuvchi: ${currentUser}
+Sana: ${new Date().toLocaleDateString('uz-UZ')}
+Vaqt: ${new Date().toLocaleTimeString('uz-UZ')}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+NATIJALAR:
+  • Umumiy savollar: ${testQuestions.length}
+  • To'g'ri javoblar: ${correct}
+  • Noto'g'ri javoblar: ${incorrect}
+  • Natija foizi: ${percentage}
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Iftikhor Software Solutions Inc.
+© 2026 All Rights Reserved
+            `;
+            
+            const blob = new Blob([resultText], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `test-natijasi-${currentUser}-${Date.now()}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
