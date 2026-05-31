@@ -1,0 +1,913 @@
+<!DOCTYPE html>
+<html lang="uz" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test Savollari — 60 ta Savol</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ══════════════════════════════════════════════════════════════
+   THEME VARIABLES
+══════════════════════════════════════════════════════════════ */
+[data-theme="dark"] {
+  --bg: #0e0f13;
+  --surface: #16181f;
+  --card: #1c1f2a;
+  --border: #2a2d3a;
+  --accent: #e8c07d;
+  --accent2: #7fa6e0;
+  --correct: #4caf87;
+  --wrong: #e05c5c;
+  --text: #dce1ee;
+  --muted: #7a8099;
+  --shadow: rgba(0,0,0,0.5);
+  --overlay-bg: rgba(14,15,19,0.95);
+  --score-bar-bg: rgba(14,15,19,0.92);
+}
+[data-theme="light"] {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --card: #ffffff;
+  --border: #e0e3ed;
+  --accent: #b07a1a;
+  --accent2: #3a72c4;
+  --correct: #2e8a61;
+  --wrong: #c0392b;
+  --text: #1a1d2e;
+  --muted: #8892aa;
+  --shadow: rgba(0,0,0,0.12);
+  --overlay-bg: rgba(244,245,248,0.97);
+  --score-bar-bg: rgba(255,255,255,0.95);
+}
+ 
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+ 
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+  transition: background .3s, color .3s;
+}
+[data-theme="dark"] body {
+  background-image: radial-gradient(ellipse at 20% 20%, rgba(126,166,224,0.06) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 80%, rgba(232,192,125,0.05) 0%, transparent 60%);
+}
+[data-theme="light"] body {
+  background-image: radial-gradient(ellipse at 20% 20%, rgba(58,114,196,0.04) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 80%, rgba(176,122,26,0.04) 0%, transparent 60%);
+}
+ 
+/* ══ THEME TOGGLE ═══════════════════════════════════════════ */
+.topbar {
+  display: flex; justify-content: flex-end; align-items: center;
+  padding: 14px 24px 0;
+  gap: 12px;
+}
+.theme-btn, .leaderboard-btn {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  padding: 7px 16px;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px; font-weight: 600;
+  color: var(--text);
+  display: flex; align-items: center; gap: 7px;
+  transition: all .2s;
+  box-shadow: 0 2px 8px var(--shadow);
+}
+.theme-btn:hover, .leaderboard-btn:hover { border-color: var(--accent); transform: translateY(-1px); }
+.leaderboard-btn { color: var(--accent2); }
+ 
+/* ══ HERO ════════════════════════════════════════════════════ */
+.hero {
+  text-align: center;
+  padding: 48px 24px 36px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -1px; left: 50%; transform: translateX(-50%);
+  width: 120px; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(232,192,125,0.1);
+  border: 1px solid rgba(232,192,125,0.25);
+  color: var(--accent);
+  font-size: 12px; font-weight: 600;
+  letter-spacing: 2px; text-transform: uppercase;
+  padding: 6px 16px; border-radius: 100px;
+  margin-bottom: 18px;
+}
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 5vw, 3rem);
+  font-weight: 900; line-height: 1.15;
+  margin-bottom: 12px;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.hero p { color: var(--muted); font-size: 14.5px; max-width: 520px; margin: 0 auto 22px; }
+.stats { display: flex; gap: 28px; justify-content: center; flex-wrap: wrap; }
+.stat-item { text-align: center; }
+.stat-num { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--accent); line-height: 1; }
+.stat-label { font-size: 11.5px; color: var(--muted); margin-top: 4px; }
+ 
+/* ══ PROGRESS ════════════════════════════════════════════════ */
+.progress-wrap { max-width: 720px; margin: 0 auto; padding: 22px 24px 0; }
+.progress-bar-bg { height: 4px; background: var(--border); border-radius: 4px; margin-bottom: 7px; }
+.progress-bar-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  transition: width 0.5s cubic-bezier(.4,0,.2,1);
+}
+.progress-text { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); margin-bottom: 24px; }
+ 
+/* ══ MAIN ════════════════════════════════════════════════════ */
+.main { max-width: 720px; margin: 0 auto; padding: 22px 24px 100px; }
+ 
+/* ══ QUESTION CARD ═══════════════════════════════════════════ */
+.question-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 13px; padding: 26px; margin-bottom: 13px;
+  animation: fadeUp .32s ease both;
+  position: relative; overflow: hidden;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: background .3s, border-color .3s;
+}
+.question-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+  opacity: 0; transition: opacity .3s;
+}
+.question-card.answered::before { opacity: 1; }
+@keyframes fadeUp { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+ 
+.q-meta { display: flex; align-items: center; gap: 9px; margin-bottom: 13px; flex-wrap: wrap; }
+.q-num {
+  font-family: 'Playfair Display', serif; font-size: 10.5px; font-weight: 700;
+  color: var(--accent); letter-spacing: 1.4px;
+  background: rgba(232,192,125,0.1); border: 1px solid rgba(232,192,125,0.2);
+  padding: 3px 9px; border-radius: 100px;
+}
+.q-topic { font-size: 10.5px; color: var(--muted); letter-spacing: 0.9px; text-transform: uppercase; }
+.q-text { font-size: 15px; font-weight: 500; color: var(--text); line-height: 1.6; margin-bottom: 18px; }
+ 
+/* ══ OPTIONS ═════════════════════════════════════════════════ */
+.options { display: flex; flex-direction: column; gap: 8.5px; }
+.option-btn {
+  display: flex; align-items: flex-start; gap: 11px;
+  background: var(--surface); border: 1.5px solid var(--border);
+  border-radius: 9px; padding: 11px 14px;
+  cursor: pointer; font-family: 'DM Sans', sans-serif;
+  font-size: 13.8px; color: var(--text); text-align: left;
+  transition: all .2s ease; width: 100%; position: relative; overflow: hidden;
+}
+.option-btn:hover:not(:disabled) { border-color: var(--accent2); transform: translateX(2px); }
+.option-btn:disabled { cursor: default; transform: none !important; }
+.option-letter {
+  width: 25px; height: 25px; flex-shrink: 0; border-radius: 7px;
+  background: rgba(127,166,224,0.1); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11.5px; font-weight: 700; color: var(--accent2);
+  transition: all .2s; margin-top: 1px;
+}
+.option-btn.correct { border-color: var(--correct); background: rgba(76,175,135,0.08); }
+.option-btn.correct .option-letter { background: var(--correct); color: #fff; border-color: var(--correct); }
+.option-btn.wrong { border-color: var(--wrong); background: rgba(224,92,92,0.08); }
+.option-btn.wrong .option-letter { background: var(--wrong); color: #fff; border-color: var(--wrong); }
+ 
+.feedback-msg {
+  margin-top: 11px; padding: 9px 13px;
+  border-radius: 7px; font-size: 12.8px; font-weight: 500;
+  display: none;
+}
+.feedback-msg.show { display: block; animation: fadeUp .3s ease; }
+.feedback-msg.correct-msg { background: rgba(76,175,135,0.1); color: var(--correct); border: 1px solid rgba(76,175,135,0.25); }
+.feedback-msg.wrong-msg { background: rgba(224,92,92,0.1); color: var(--wrong); border: 1px solid rgba(224,92,92,0.25); }
+ 
+/* ══ SCORE BAR ═══════════════════════════════════════════════ */
+.score-bar {
+  position: sticky; bottom: 0;
+  background: var(--score-bar-bg);
+  backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--border);
+  padding: 11px 24px;
+  display: flex; align-items: center; justify-content: center; gap: 22px;
+  z-index: 100; flex-wrap: wrap;
+}
+.score-item { text-align: center; }
+.score-num { font-size: 1.3rem; font-weight: 700; line-height: 1; }
+.score-num.s-correct { color: var(--correct); }
+.score-num.s-wrong   { color: var(--wrong); }
+.score-num.s-remain  { color: var(--accent); }
+.score-label { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
+.reset-btn {
+  background: rgba(232,192,125,0.1); border: 1px solid rgba(232,192,125,0.3);
+  color: var(--accent); padding: 7px 17px; border-radius: 8px;
+  font-family: 'DM Sans', sans-serif; font-size: 12.5px; font-weight: 600;
+  cursor: pointer; transition: all .2s;
+}
+.reset-btn:hover { background: rgba(232,192,125,0.18); transform: scale(1.02); }
+ 
+/* ══ OVERLAY BASE ════════════════════════════════════════════ */
+.overlay {
+  display: none; position: fixed; inset: 0;
+  background: var(--overlay-bg);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  z-index: 200; align-items: center; justify-content: center;
+  padding: 14px; overflow-y: auto;
+}
+.overlay.show { display: flex; animation: fadeUp .38s ease; }
+ 
+/* ══ NAME MODAL ══════════════════════════════════════════════ */
+.name-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; padding: 40px 34px; text-align: center;
+  max-width: 420px; width: 100%;
+  box-shadow: 0 20px 60px var(--shadow);
+  position: relative;
+}
+.name-box::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+.name-emoji { font-size: 2.8rem; margin-bottom: 13px; }
+.name-title { font-family: 'Playfair Display', serif; font-size: 1.65rem; font-weight: 900; color: var(--accent); margin-bottom: 8px; }
+.name-sub { color: var(--muted); font-size: 13.5px; margin-bottom: 22px; }
+.name-input {
+  width: 100%; padding: 12px 15px; border-radius: 9px;
+  border: 1.5px solid var(--border); background: var(--surface);
+  color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 14.5px;
+  margin-bottom: 13px; outline: none; transition: border-color .2s;
+}
+.name-input:focus { border-color: var(--accent2); }
+.name-btn {
+  width: 100%; padding: 12px; border-radius: 9px; border: none;
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
+  color: #0e0f13; font-family: 'DM Sans', sans-serif;
+  font-size: 14.5px; font-weight: 700; cursor: pointer; transition: opacity .2s;
+}
+.name-btn:hover { opacity: .88; }
+ 
+/* ══ RESULT OVERLAY ══════════════════════════════════════════ */
+.result-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; padding: 36px 30px; text-align: center;
+  max-width: 680px; width: 100%;
+  box-shadow: 0 20px 60px var(--shadow);
+  position: relative; max-height: 92vh; overflow-y: auto;
+}
+.result-box::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+.result-emoji { font-size: 2.8rem; margin-bottom: 11px; }
+.result-title { font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 900; color: var(--text); margin-bottom: 4px; }
+.result-name { font-size: 1.05rem; color: var(--accent); font-weight: 600; margin-bottom: 13px; line-height: 1.5; }
+.result-score-big {
+  font-family: 'Playfair Display', serif; font-size: 3.3rem; font-weight: 900;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1; margin: 9px 0 4px;
+}
+.result-detail { color: var(--muted); font-size: 13px; margin-bottom: 18px; }
+.result-detail span { color: var(--text); font-weight: 600; }
+ 
+/* ── CHART AREA ──────────────────────────────────────── */
+.chart-section { margin: 16px 0; }
+.chart-title { font-size: 12.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.9px; text-transform: uppercase; margin-bottom: 11px; }
+.bar-chart { display: flex; flex-direction: column; gap: 7.5px; }
+.bar-row { display: flex; align-items: center; gap: 9px; }
+.bar-label { font-size: 10.5px; color: var(--muted); width: 140px; text-align: right; flex-shrink: 0; }
+.bar-track { flex: 1; height: 17px; background: var(--border); border-radius: 8px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 8px; transition: width 1s cubic-bezier(.4,0,.2,1); }
+.bar-val { font-size: 10.5px; font-weight: 700; color: var(--text); width: 30px; text-align: left; flex-shrink: 0; }
+ 
+/* Donut */
+.donut-wrap { display: flex; align-items: center; justify-content: center; gap: 22px; margin: 13px 0; flex-wrap: wrap; }
+.donut-svg { width: 115px; height: 115px; }
+.donut-legend { display: flex; flex-direction: column; gap: 7.5px; text-align: left; }
+.legend-row { display: flex; align-items: center; gap: 7.5px; font-size: 12.5px; }
+.legend-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+ 
+/* ── RECOMMENDATIONS ──────────────────────────────── */
+.rec-section {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 11px; padding: 15px; margin: 15px 0; text-align: left;
+}
+.rec-title { font-size: 11.5px; font-weight: 700; color: var(--accent); letter-spacing: 0.9px; text-transform: uppercase; margin-bottom: 9px; }
+.rec-item { display: flex; align-items: flex-start; gap: 9px; margin-bottom: 6.5px; font-size: 12.5px; color: var(--text); }
+.rec-icon { flex-shrink: 0; font-size: 14.5px; margin-top: 1px; }
+ 
+.divider { height: 1px; background: var(--border); margin: 15px 0; }
+.result-actions { display: flex; gap: 9px; }
+.result-btn {
+  flex: 1; padding: 11px; border-radius: 9px; border: none;
+  font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 700;
+  cursor: pointer; transition: all .2s;
+}
+.result-btn.primary { background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #0e0f13; }
+.result-btn.secondary { background: var(--surface); border: 1.5px solid var(--border); color: var(--text); }
+.result-btn:hover { opacity: .88; transform: translateY(-1px); }
+ 
+/* ══ LEADERBOARD OVERLAY ════════════════════════════════════ */
+.lb-box {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 18px; padding: 34px 26px;
+  max-width: 520px; width: 100%;
+  box-shadow: 0 20px 60px var(--shadow);
+  position: relative; max-height: 88vh; overflow-y: auto;
+}
+.lb-box::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  border-radius: 18px 18px 0 0;
+  background: linear-gradient(90deg, var(--accent2), var(--accent));
+}
+.lb-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+.lb-title { font-family: 'Playfair Display', serif; font-size: 1.45rem; font-weight: 900; color: var(--accent); }
+.lb-close { background: var(--surface); border: 1px solid var(--border); border-radius: 7px; padding: 6px 13px; cursor: pointer; color: var(--text); font-size: 12.5px; font-family: 'DM Sans', sans-serif; }
+.lb-close:hover { border-color: var(--wrong); color: var(--wrong); }
+ 
+.lb-table { width: 100%; border-collapse: collapse; }
+.lb-table th { font-size: 10.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.9px; text-transform: uppercase; padding: 0 7px 9px; text-align: left; border-bottom: 1px solid var(--border); }
+.lb-table td { padding: 9px 7px; font-size: 13.5px; border-bottom: 1px solid var(--border); }
+.lb-table tr:last-child td { border-bottom: none; }
+.lb-rank { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--accent); }
+.lb-medal { font-size: 15.5px; }
+.lb-score-pill {
+  display: inline-block; padding: 3px 9px; border-radius: 18px;
+  font-size: 11.5px; font-weight: 700;
+}
+.lb-empty { text-align: center; color: var(--muted); padding: 30px; font-size: 13.5px; }
+ 
+/* ══ CONFETTI ═══════════════════════════════════════════════ */
+.confetti-container {
+  position: fixed; inset: 0; pointer-events: none; z-index: 9999; overflow: hidden;
+}
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #f0f;
+  animation: confetti-fall 3s linear forwards;
+}
+@keyframes confetti-fall {
+  to { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+}
+ 
+/* ══ FOOTER ════════════════════════════════════════════════ */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 26px 24px;
+  text-align: center;
+}
+.footer-brand { font-family: 'Playfair Display', serif; font-size: 1.02rem; font-weight: 700; color: var(--accent); margin-bottom: 6px; }
+.footer-sub { font-size: 11.5px; color: var(--muted); line-height: 1.6; }
+.footer-divider { width: 56px; height: 1px; background: var(--border); margin: 11px auto; }
+ 
+@media (max-width: 600px) {
+  .question-card { padding: 19px 15px; }
+  .score-bar { gap: 13px; }
+  .result-box, .lb-box, .name-box { padding: 26px 17px; }
+  .result-actions { flex-direction: column; }
+  .bar-label { width: 95px; font-size: 10px; }
+}
+</style>
+</head>
+<body>
+ 
+<div class="confetti-container" id="confettiContainer"></div>
+ 
+<!-- TOPBAR -->
+<div class="topbar">
+  <button class="leaderboard-btn" onclick="openLB()">🏆 Reyting</button>
+  <button class="theme-btn" id="themeToggle" onclick="toggleTheme()">🌙 Tun rejimi</button>
+</div>
+ 
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-badge">📚 Imtihon Tayyorlash</div>
+  <h1>Test Savollari To'plami</h1>
+  <p>Turizm Loyihasini Boshqarish, Menejmentga Kirish va Madaniyatlararo Muloqot fanlari bo'yicha. Har safar yangi random tartibda!</p>
+  <div class="stats">
+    <div class="stat-item"><div class="stat-num" id="totalQ">60</div><div class="stat-label">Savol</div></div>
+    <div class="stat-item"><div class="stat-num">3</div><div class="stat-label">Fan</div></div>
+    <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">Variant</div></div>
+  </div>
+</div>
+ 
+<!-- PROGRESS -->
+<div class="progress-wrap">
+  <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressFill" style="width:0%"></div></div>
+  <div class="progress-text">
+    <span id="progressLeft">0 / 60 javob berildi</span>
+    <span id="progressPct">0%</span>
+  </div>
+</div>
+ 
+<!-- QUESTIONS -->
+<div class="main" id="questionList"></div>
+ 
+<!-- SCORE BAR -->
+<div class="score-bar">
+  <div class="score-item"><div class="score-num s-correct" id="sCorrect">0</div><div class="score-label">✓ To'g'ri</div></div>
+  <div class="score-item"><div class="score-num s-wrong" id="sWrong">0</div><div class="score-label">✗ Noto'g'ri</div></div>
+  <div class="score-item"><div class="score-num s-remain" id="sRemain">60</div><div class="score-label">◎ Qolgan</div></div>
+  <button class="reset-btn" onclick="resetQuiz()">↺ Qayta</button>
+</div>
+ 
+<!-- NAME MODAL -->
+<div class="overlay" id="nameOverlay">
+  <div class="name-box">
+    <div class="name-emoji">🎓</div>
+    <div class="name-title">Tabriklaymiz!</div>
+    <div class="name-sub">Testni tugatdingiz. Natijani saqlash uchun ismingizni kiriting.</div>
+    <input class="name-input" id="nameInput" type="text" placeholder="Ismingiz..." maxlength="35" onkeydown="if(event.key==='Enter')saveName()"/>
+    <button class="name-btn" onclick="saveName()">Natijani ko'rish →</button>
+  </div>
+</div>
+ 
+<!-- RESULT OVERLAY -->
+<div class="overlay" id="resultOverlay">
+  <div class="result-box">
+    <div class="result-emoji" id="resEmoji">🎉</div>
+    <div class="result-title" id="resTitle">Natijangiz</div>
+    <div class="result-name" id="resName"></div>
+    <div class="result-score-big" id="resScore">0/60</div>
+    <div class="result-detail" id="resDetail"></div>
+ 
+    <!-- DONUT CHART -->
+    <div class="chart-section">
+      <div class="chart-title">Umumiy natija</div>
+      <div class="donut-wrap">
+        <svg class="donut-svg" viewBox="0 0 120 120" id="donutSvg">
+          <circle cx="60" cy="60" r="48" fill="none" stroke="var(--border)" stroke-width="16"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="var(--correct)" stroke-width="16"
+            stroke-dasharray="0 302" stroke-dashoffset="75" stroke-linecap="round"
+            id="donutCorrect" style="transition: stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+          <circle cx="60" cy="60" r="48" fill="none" stroke="var(--wrong)" stroke-width="16"
+            stroke-dasharray="0 302" stroke-dashoffset="75" stroke-linecap="round"
+            id="donutWrong" style="transition: stroke-dasharray 1.2s cubic-bezier(.4,0,.2,1)"/>
+          <text x="60" y="56" text-anchor="middle" font-size="17" font-family="Playfair Display,serif" font-weight="900" fill="var(--text)" id="donutPct">0%</text>
+          <text x="60" y="72" text-anchor="middle" font-size="9" font-family="DM Sans,sans-serif" fill="var(--muted)">natija</text>
+        </svg>
+        <div class="donut-legend">
+          <div class="legend-row"><div class="legend-dot" style="background:var(--correct)"></div><span id="lgCorrect">0 to'g'ri</span></div>
+          <div class="legend-row"><div class="legend-dot" style="background:var(--wrong)"></div><span id="lgWrong">0 noto'g'ri</span></div>
+          <div class="legend-row"><div class="legend-dot" style="background:var(--accent2)"></div><span id="lgPct">0% ball</span></div>
+        </div>
+      </div>
+    </div>
+ 
+    <!-- BAR CHART BY TOPIC -->
+    <div class="chart-section">
+      <div class="chart-title">Fanlar bo'yicha natija</div>
+      <div class="bar-chart" id="barChart"></div>
+    </div>
+ 
+    <!-- RECOMMENDATIONS -->
+    <div class="rec-section">
+      <div class="rec-title">💡 Tavsiyalar</div>
+      <div id="recList"></div>
+    </div>
+ 
+    <div class="divider"></div>
+    <div class="result-actions">
+      <button class="result-btn secondary" onclick="openLB()">🏆 Reytingni ko'r</button>
+      <button class="result-btn primary" onclick="resetQuiz()">↺ Qayta boshlash</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- LEADERBOARD OVERLAY -->
+<div class="overlay" id="lbOverlay">
+  <div class="lb-box">
+    <div class="lb-header">
+      <div class="lb-title">🏆 Reyting Jadvali</div>
+      <button class="lb-close" onclick="closeLB()">✕ Yopish</button>
+    </div>
+    <div id="lbContent"></div>
+  </div>
+</div>
+ 
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">Iftikhor Software Solutions Inc.</div>
+  <div class="footer-divider"></div>
+  <div class="footer-sub">© 2026 Iftikhor Software Solutions Inc. Barcha huquqlar himoyalangan.<br>
+  Bu platforma ta'lim maqsadlarida yaratilgan va innovatsion dasturiy yechimlar bilan ta'minlangan.</div>
+</footer>
+ 
+<script>
+// ══════════════════════════════════════════════════════════════════
+//  THEME
+// ══════════════════════════════════════════════════════════════════
+function toggleTheme() {
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme') === 'dark';
+  html.setAttribute('data-theme', isDark ? 'light' : 'dark');
+  document.getElementById('themeToggle').textContent = isDark ? '🌙 Tun rejimi' : '☀️ Kun rejimi';
+  localStorage.setItem('quiz-theme', isDark ? 'light' : 'dark');
+}
+(function initTheme() {
+  const saved = localStorage.getItem('quiz-theme') || 'dark';
+  document.documentElement.setAttribute('data-theme', saved);
+  document.getElementById('themeToggle').textContent = saved === 'dark' ? '☀️ Kun rejimi' : '🌙 Tun rejimi';
+})();
+ 
+// ══════════════════════════════════════════════════════════════════
+//  RAW QUESTIONS (60+ from all 3 files)
+// ══════════════════════════════════════════════════════════════════
+const RAW = [
+  // TURIZM - 20 savollar
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida loyiha maqsadining asosiy vazifasi qaysi?",opts:["Loyihaning nimaga erishishini aniq belgilab, reja va resurslarni shu natijaga yo'naltiradi","Faqat umumiy niyatni bildiradi, rejalashtirishga ta'sir ko'rsatmaydi","Asosan reklama matnini chiroyli qilish uchun yoziladigan qism hisoblanadi","Loyiha yakunida hisobot uchun kerak bo'ladigan formal hujjat xolos"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihalarida loyiha hayotiy sikli nima uchun muhim?",opts:["Bosqichma-bosqich boshqaruvni ta'minlab, resurs, vaqt va risklarni tizimli nazorat qiladi","Faqat loyiha tugagandan keyin arxivlash uchun qo'llaniladigan tasnifdir","Faqat moliyaviy audit jarayonida ishlatiladigan texnik tushunchadir","Loyiha natijasiga ta'sir qilmaydi, faqat nazariy model sifatida qoladi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha boshqaruvida tashabbus (initiation) bosqichining asosiy natijasi qaysi?",opts:["Loyiha nizomi (charter) va dastlabki asoslantirish shakllanadi","Barcha ish paketlari va batafsil smeta tayyor bo'ladi","Yakuniy hisobot va 'lessons learned' rasmiylashtiriladi","Barcha pudratchilar bilan shartnomalar imzolanib bo'ladi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Loyiha' tushunchasining eng to'g'ri ta'rifi qaysi?",opts:["Ma'lum vaqt va resurslar doirasida noyob natija yaratishga qaratilgan vaqtinchalik faoliyat","Har kuni takrorlanadigan turistik xizmat jarayoni va operatsion ishlar majmuasi","Faqat kompaniyaning marketing bo'limi olib boradigan doimiy kampaniya","Faqat davlat dasturlari doirasida bajariladigan majburiy ishlar to'plami"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida Triple Constraint nimalardan iborat?",opts:["Muddat, xarajat va ko'lam/sifat o'rtasidagi bog'liqlik","Faqat marketing, savdo va reklama xarajatlari majmui","Faqat tashqi hamkorlar, investitsiya va kredit shartlari","Faqat ichki tartib-qoidalar va xodimlar intizomi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Dastur (program)' bilan 'loyiha (project)' farqi qaysi?",opts:["Dastur bir-biriga bog'liq loyihalar portfeli bo'lib, strategik natijaga xizmat qiladi","Dastur faqat kichik loyihalarga nisbatan ishlatiladigan atama hisoblanadi","Loyiha strategik boshqaruv, dastur esa faqat operatsion ishdir","Ikkalasi bir xil tushuncha bo'lib, faqat nomlanishi turlicha"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida ko'lam (scope) nimani bildiradi?",opts:["Loyihada bajarilishi kerak bo'lgan ishlar va yetkaziladigan natijalar chegarasi","Faqat loyiha reklamasida ishlatiladigan mavzu va shiorlar to'plami","Loyiha jamoasi soni va ularning ish jadvali haqida qisqa ma'lumot","Faqat smetadagi xarajat bandlari ro'yxati va to'lov grafiklari"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Deliverable' (natija) nima?",opts:["Loyiha yakunida yoki bosqichida topshiriladigan aniq mahsulot/xizmat/hujjat","Faqat loyiha davomida gaplashib qo'yiladigan umumiy va'dalar majmui","Faqat budjetda ko'rsatilgan xarajatlar ro'yxatiga beriladigan nom","Faqat loyiha rahbari tayyorlaydigan shaxsiy prezentatsiya materiali"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Scope creep' nimani anglatadi?",opts:["Rasmiy tasdiqsiz ko'lamning sekin-asta kengayib ketishi","Jadvalni optimallashtirish natijasida ishlar tezroq bajarilishi","Xarajatlar kamayib, loyiha rentabelligi oshib borishi","Jamoa motivatsiyasi oshib, ko'proq ish qilishga intilishi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida SMART maqsad talabi nimani anglatadi?",opts:["Aniq, o'lchanadigan, erishiladigan, dolzarb va muddatli maqsad qo'yish","Faqat 'ambitsiyali' maqsad qo'yib, raqamlarni ko'rsatmaslik ham mumkin","Faqat marketingda chiroyli eshitiladigan shior tanlashni anglatadi","Faqat IT loyihalarida qo'llaniladi, turizmda ishlatilmaydi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha boshqaruvining 'operatsion boshqaruv'dan farqi qaysi?",opts:["Loyiha vaqtinchalik va noyob natijaga yo'naltirilgan, operatsiya esa doimiy jarayon","Operatsiya har doim qisqa muddatli bo'lib, loyiha esa doimiy davom etadi","Loyiha faqat xizmat ko'rsatish, operatsiya esa faqat qurilish ishlarini anglatadi","Ikkalasi farqsiz, faqat tashkilot nomi boshqacha bo'ladi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida 'Business case' vazifasi qaysi?",opts:["Loyiha qiymati, foydasi, xarajati va alternativalarni asoslab berish","Faqat jamoa uchun motivatsion nutq yozib berish va ruhlantirish","Faqat dizayn variantlari ichidan eng chiroylisini tanlash","Faqat qonunchilikka oid ruxsatnomalarni sanab chiqish"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha doirasida 'Assumption' nimani bildiradi?",opts:["Hozircha tekshirilmagan, ammo rejalashtirishda qabul qilingan faraz","Aniq isbotlangan fakt bo'lib, hech qachon o'zgarib ketmaydi","Faqat moliyaviy hisobotda ko'rsatiladigan raqamli ko'rsatkich","Manfaatdor tomonlar bilan kelishilmagan, shuning uchun kiritilmaydigan fikr"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Turizm loyihasida 'Milestone' nima?",opts:["Jadvaldagi muhim nazorat nuqtasi bo'lib, odatda 0 davomiylikka ega","Har doim 2–3 hafta davom etadigan katta ish paketi hisoblanadi","Faqat xodimlar uchun mukofot beriladigan bayram kuni","Faqat marketing kampaniyasining postlar soni bo'yicha ko'rsatkich"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha boshqaruvida 'go/no-go' qarori qachon muhim?",opts:["Bosqich yakunida natija va risklarni baholab, keyingi bosqichga o'tishda","Faqat loyiha o'rtasida jamoa charchagan paytda motivatsiya uchun","Faqat loyiha tugagach, arxivlashdan oldin","Faqat reklama boshlangan kundan so'ng"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha tashabbuskorining (sponsor) asosiy roli qaysi?",opts:["Strategik qo'llab-quvvatlash va resurs/vakolat ta'minlash, to'siqlarni olib tashlash","Har kuni barcha vazifalarni mikro-boshqarib, jamoa o'rniga qaror qilish","Faqat reklama matnlarini tekshirib, dizaynni tanlash bilan cheklanish","Faqat yakuniy hisobotga imzo qo'yish, jarayonga aralashmaslik"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"Loyiha maqsadini noto'g'ri qo'yish nimaga olib keladi?",opts:["Ko'lam chalkashadi, resurslar noto'g'ri taqsimlanadi va natija sifati pasayadi","Har doim budjet kamayib, foyda ortib boradi, chunki maqsad erkin bo'ladi","Jadval avtomatik ravishda tezlashadi va risklar o'z-o'zidan yo'qoladi","Loyiha hujjatlari kamroq bo'ladi, shuning uchun hammasi osonlashadi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"WBS (Work Breakdown Structure)ning asosiy vazifasi qaysi?",opts:["Ishlarni ierarxik tarzda bo'lib, ko'lamni boshqariladigan paketlarga ajratadi","Faqat jamoa a'zolarining telefon raqamlarini bir jadvalga yig'ib beradi","Faqat reklama kanallari bo'yicha postlar sonini sanab chiqadi","Faqat smetadagi xarajatlarni kutilgan foyda bilan almashtirib ko'rsatadi"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Critical path' nimani bildiradi?",opts:["Loyihaning minimal davomiyligini belgilovchi eng uzun bog'liq vazifalar zanjiri","Faqat eng ko'p pul sarflanadigan xarajat bandlari ro'yxati","Faqat turistlar oqimi eng yuqori bo'ladigan mavsumiy davr","Faqat reklama kampaniyasi postlarining haftalik rejalari"]},
+  {topic:"Turizm Loyihasini Boshqarish",q:"'Float/Slack' nimani anglatadi?",opts:["Kritik bo'lmagan vazifalarda kechikish mumkin bo'lgan vaqt zaxirasi","Har doim kritik yo'l vazifalariga qo'shiladigan majburiy vaqt","Faqat xarajatlarni kamaytirish uchun budjetdan ajratiladigan pul","Faqat turistlar uchun bepul bonus xizmatlar ro'yxati"]},
+ 
+  // MENEJMENT - 20 savollar  
+  {topic:"Menejmentga Kirish",q:"Menejment fanining predmeti sifatida nima o'rganiladi?",opts:["Tashkilotlarda boshqaruv jarayoni va uni amalga oshirish mexanizmlari","Mahsulotni texnik ishlab chiqish","Soliq tizimini yuritish","Valyuta kurslarini belgilash"]},
+  {topic:"Menejmentga Kirish",q:"Menejmentning obyekti asosan nimalardan iborat?",opts:["Tashkilot, jamoa va boshqariladigan tizimlar","Tovarlarning fizik xususiyatlari","Faqat davlat budjeti","Faqat tabiiy resurslar"]},
+  {topic:"Menejmentga Kirish",q:"Menejment subyekti deganda nimani tushunasiz?",opts:["Boshqaruvni amalga oshiruvchi shaxs yoki organ","Ishlab chiqariladigan mahsulot","Xomashyo","Bozor segmenti"]},
+  {topic:"Menejmentga Kirish",q:"Menejmentda 'rejalashtirish' funksiyasi nimani bildiradi?",opts:["Maqsadlar va ularga erishish yo'llarini belgilash","Xodimlarni jazolash","Ishdan bo'shatish","Faqat hujjat arxivlash"]},
+  {topic:"Menejmentga Kirish",q:"Boshqaruv samaradorligi eng ko'p qaysi mezon bilan baholanadi?",opts:["Maqsadga erishish va resurs tejamkorligi","Faqat reklama soni","Faqat xodimlar soni","Faqat bino maydoni"]},
+  {topic:"Menejmentga Kirish",q:"Ilmiy boshqaruv maktabining asosiy g'oyasi nimaga qaratilgan?",opts:["Mehnat jarayonini standartlash va unumdorlikni oshirish","Xodimlarni erkin qoldirish","Boshqaruvni bekor qilish","Bozorni yopish"]},
+  {topic:"Menejmentga Kirish",q:"A. Fayol menejmentning nechta asosiy funksiyasini ajratgan?",opts:["5 ta (rejalashtirish, tashkil etish, buyruq, muvofiqlashtirish, nazorat)","2 ta","10 ta","1 ta"]},
+  {topic:"Menejmentga Kirish",q:"M. Veber nazariyasida 'byurokratiya' nimani anglatadi?",opts:["Qoidalarga asoslangan rasmiy boshqaruv tizimi","Tartibsiz boshqaruv","Tasodifiy rahbarlik","Faoliyatsizlik"]},
+  {topic:"Menejmentga Kirish",q:"Insoniy munosabatlar maktabi nimaga urg'u beradi?",opts:["Xodimlarning psixologik va ijtimoiy omillari","Faqat texnika","Faqat kapital","Faqat eksport"]},
+  {topic:"Menejmentga Kirish",q:"Tizimli yondashuvning asosiy mohiyati:",opts:["Tashkilotni o'zaro bog'liq elementlar tizimi sifatida ko'rish","Faqat bo'limlar bo'yicha ajratish","Faqat shaxsiy qaror","Faqat tashqi muhit"]},
+  {topic:"Menejmentga Kirish",q:"Chiziqli tuzilmaning afzalligi nimada?",opts:["Buyruq zanjiri aniq va mas'uliyat markazlashgan","Ko'p rahbarlilik","Nazorat yo'qligi","Vakolatlar chalkashligi"]},
+  {topic:"Menejmentga Kirish",q:"Matritsali tuzilmaning asosiy xususiyati:",opts:["Xodim ikki rahbarga bo'ysunishi mumkin","Faqat bitta rahbar","Vakolat yo'q","Faqat tashqi boshqaruv"]},
+  {topic:"Menejmentga Kirish",q:"Markazlashgan boshqaruv nimani bildiradi?",opts:["Qarorlar yuqori darajada qabul qilinadi","Qarorlar yo'q","Faqat quyi bo'g'in","Faqat bozor qabul qiladi"]},
+  {topic:"Menejmentga Kirish",q:"Delegatsiya jarayoni nimaga xizmat qiladi?",opts:["Vakolatlarni quyi bo'g'inga topshirish orqali samaradorlikni oshirish","Nazoratni yo'qotish","Mas'uliyatni bekor qilish","Bo'limlarni yopish"]},
+  {topic:"Menejmentga Kirish",q:"Kommunikatsiya jarayonining asosiy elementi qaysi?",opts:["Xabar (message)","Soliq","Patent","Inventar"]},
+  {topic:"Menejmentga Kirish",q:"Shovqin (noise) tushunchasi:",opts:["Axborot uzatilishida buzilish keltiruvchi omillar","Motivatsiya","Reja","Nazorat"]},
+  {topic:"Menejmentga Kirish",q:"Motivatsiya deganda nimani tushunasiz?",opts:["Xodimlarni maqsadga yo'naltirib faollashtirish jarayoni","Faqat ish haqi berish","Faqat buyruq berish","Faqat jazolash"]},
+  {topic:"Menejmentga Kirish",q:"A. Maslouning ehtiyojlar ierarxiyasida eng yuqori darajadagi ehtiyoj qaysi?",opts:["O'z-o'zini amalga oshirish","Fiziologik ehtiyoj","Xavfsizlik","Ijtimoiy ehtiyoj"]},
+  {topic:"Menejmentga Kirish",q:"'McGregor X va Y' nazariyasida X nazariyasiga ko'ra xodim:",opts:["Ishdan qochadi, nazorat va majburlash zarur","Ishni sevadi va o'z-o'zini boshqaradi","Faqat ijodiy ishlaydi","Har doim rahbarsiz ishlaydi"]},
+  {topic:"Menejmentga Kirish",q:"Nazorat jarayonining asosiy bosqichlari:",opts:["Mezon belgilash, o'lchash, taqqoslash, tuzatish","Faqat hisobot yozish","Faqat xodimlarni baholash","Faqat moliyaviy audit"]},
+ 
+  // MADANIYAT - 20 savollar
+  {topic:"Madaniyatlararo Muloqot",q:"'Madaniyatlararo muloqot' fanining asosiy maqsadi nima?",opts:["Turli madaniyatlar o'rtasidagi aloqalarni o'rganish","O'z madaniyatini boshqalarga majburan o'rgatish","Madaniyatlarni birlashtirish","Maktabda faqat bitta madaniyatni o'rgatish"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatlararo muloqotda o'zaro hurmat qanday ahamiyatga ega?",opts:["U ijobiy munosabatlarni rivojlantiradi","U muammolarni yanada kuchaytiradi","U faqat bir madaniyatni afzal ko'radi","U hech qanday ahamiyatga ega emas"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatga moslashish jarayonida 'madaniy shok' nima?",opts:["Yangi madaniyatga moslashishda yuzaga keladigan noqulaylik va stress","Yangi madaniyatni to'liq qabul qilish","Faqat ijobiy his-tuyg'ular","O'z madaniyatini yo'qotish jarayoni"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyat nima?",opts:["Jamiyatning urf-odatlari, an'analari va qadriyatlari","Faqat san'at va adabiyot","Faqat iqtisodiy faoliyat","Faqat tarixiy voqealar"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatning asosiy komponentlari qaysilar?",opts:["Til, urf-odatlar, san'at","Faqat urf-odatlar","Faqat iqtisod","Faqat tarix"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Tilning asosiy vazifasi nima?",opts:["O'zaro muloqot qilish","O'yin-kulgi uchun","Faqat yozma hujjatlarni tayyorlash","Faqat bilimlarni saqlash"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Kommunikatsiya jarayoni qaysi bosqichlardan iborat?",opts:["Xabar, manba, qabul qiluvchi","Faqat manba va qabul qiluvchi","Faqat xabar va manba","Faqat qabul qiluvchi"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatlararo muloqotda noverbal kommunikatsiya nimani anglatadi?",opts:["So'zsiz xabar uzatish: imo-ishoralar, mimika, tana harakatlari","Faqat yozma xabarlar","Faqat telefon orqali muloqot","Faqat internet orqali aloqa"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Hofstede nazariyasida 'individualizm' va 'kollektivizm' nimani ifodalaydi?",opts:["Shaxs manfaati va guruh manfaati o'rtasidagi madaniy farqni","Faqat iqtisodiy tizim turlarini","Faqat siyosiy tuzumlar o'rtasidagi farqni","Faqat diniy e'tiqodlar o'rtasidagi farqni"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Stereotip nima va madaniyatlararo muloqotga ta'siri qanday?",opts:["Bir guruh haqida soddalashtirilgan fikr bo'lib, tushunmovchilik keltirib chiqarishi mumkin","Boshqa madaniyat haqida doimo to'g'ri bo'lgan xulosalar","Faqat ijobiy ta'sir ko'rsatadigan madaniy belgilar","Faqat ilmiy tadqiqot natijalari asosidagi fikrlar"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Insonning ongli mavjudot sifatidagi asosiy xususiyati qanday?",opts:["Ong va hissiyot","Jismonaylik","Ijtimoiy munosabatlar","Madaniyat"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Insonning shaxsiy xususiyatlari va xulq-atvori qaysi fan doirasida o'rganiladi?",opts:["Psixologiya","Falsafa","Biologiya","Sotsiologiya"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatga moslashish jarayonida qanday bosqichlar mavjud?",opts:["Qabul qilish, qarshilik, integratsiya","Qiyinchilik, muvaffaqiyat, yutqazish","O'rganish, unutish, qabul qilish","Tanishuv, baholash, qabul qilish"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatga moslashishda ijtimoiy aloqalar qanday rol o'ynaydi?",opts:["Yangi do'stlar orttirish va qo'llab-quvvatlovchi tarmoq yaratish","Faqat o'z madaniyati bilan yashash","Ijtimoiy aloqalarni inkor etish","Faqat iqtisodiy aloqalar"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Madaniyatga moslashish jarayonida madaniyatlararo muloqotning ahamiyati nima?",opts:["Turli madaniyatlar o'rtasida tushunishni va hamjihatlikni oshirish","Faqat bitta madaniyatni afzal ko'rish","Madaniyatlarni taqqoslamaslik","Hech qanday ahamiyatga ega emas"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Qaysi biri madaniyatning o'zgarishiga sabab bo'lishi mumkin?",opts:["Ijtimoiy o'zgarishlar","Faqat iqtisodiy omillar","Faqat tabiiy ofatlar","Faqat siyosiy voqealar"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Qaysi tilning o'ziga xosligi uni boshqa tillardan ajratadi?",opts:["Grammatik qoidalari, lug'at boyligi va fonetik xususiyatlari","Faqat grammatik qoidalari","Faqat lug'at boyligi","Faqat fonetik xususiyatlari"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Insonning ijtimoiy roli uning qanday xususiyatiga ta'sir ko'rsatadi?",opts:["Ongi, jismonayligi va emotsiyalariga","Faqat ongiga","Faqat jismonayligiga","Faqat emotsiyalariga"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Insonning axloqiy qadriyatlari qaysi nuqtai nazardan ko'rib chiqiladi?",opts:["Falsafiy nuqtai nazardan","Biologik nuqtai nazardan","Psixologik nuqtai nazardan","Ijtimoiy nuqtai nazardan"]},
+  {topic:"Madaniyatlararo Muloqot",q:"Evolyusiya nuqtai nazaridan insonning mohiyatini qanday tushunish mumkin?",opts:["Inson jismoniy va ruhiy jihatdan rivojlangan","Inson tabiatdan ajralgan","Inson faqat ijtimoiy munosabatlarda yashaydi","Insonning mohiyati faqat madaniyatda"]},
+];
+ 
+// ══════════════════════════════════════════════════════════════════
+//  UTILITIES
+// ══════════════════════════════════════════════════════════════════
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  STATE
+// ══════════════════════════════════════════════════════════════════
+let questions = [];
+let answered = 0, correct = 0, wrong = 0;
+let currentUserName = '';
+let topicStats = {};
+ 
+const LETTER_LABELS = ['A', 'B', 'C', 'D'];
+ 
+function buildQuestions() {
+  const shuffledQ = shuffle(RAW);
+  topicStats = {};
+  return shuffledQ.map((q, idx) => {
+    const correctAnswer = q.opts[0];
+    const shuffledOpts = shuffle(q.opts);
+    if (!topicStats[q.topic]) topicStats[q.topic] = { correct: 0, total: 0 };
+    topicStats[q.topic].total++;
+    return { ...q, correctAnswer, shuffledOpts, index: idx + 1, done: false };
+  });
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  RENDER QUESTIONS
+// ══════════════════════════════════════════════════════════════════
+function render() {
+  const list = document.getElementById('questionList');
+  list.innerHTML = '';
+  questions.forEach((q, qi) => {
+    const card = document.createElement('div');
+    card.className = 'question-card';
+    card.id = `card-${qi}`;
+    const topicColor = q.topic === 'Turizm Loyihasini Boshqarish' ? '#e8c07d' :
+                       q.topic === 'Menejmentga Kirish' ? '#7fa6e0' : '#a6c984';
+    card.innerHTML = `
+      <div class="q-meta">
+        <span class="q-num">${q.index}–savol</span>
+        <span class="q-topic" style="color:${topicColor}">${q.topic}</span>
+      </div>
+      <div class="q-text">${q.q}</div>
+      <div class="options" id="opts-${qi}">
+        ${q.shuffledOpts.map((opt, oi) => `
+          <button class="option-btn" onclick="answer(${qi},${oi})">
+            <span class="option-letter">${LETTER_LABELS[oi]}</span>
+            <span>${opt}</span>
+          </button>
+        `).join('')}
+      </div>
+      <div class="feedback-msg" id="fb-${qi}"></div>
+    `;
+    list.appendChild(card);
+  });
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  ANSWER LOGIC
+// ══════════════════════════════════════════════════════════════════
+function answer(qi, oi) {
+  const q = questions[qi];
+  if (q.done) return;
+  q.done = true;
+  const chosen = q.shuffledOpts[oi];
+  const isCorrect = chosen === q.correctAnswer;
+  const btns = document.querySelectorAll(`#opts-${qi} .option-btn`);
+  btns.forEach((btn, i) => {
+    btn.disabled = true;
+    if (q.shuffledOpts[i] === q.correctAnswer) btn.classList.add('correct');
+    else if (i === oi && !isCorrect) btn.classList.add('wrong');
+  });
+  const fb = document.getElementById(`fb-${qi}`);
+  if (isCorrect) {
+    fb.className = 'feedback-msg correct-msg show';
+    fb.textContent = '✓ To\'g\'ri javob!';
+    correct++;
+    topicStats[q.topic].correct++;
+  } else {
+    fb.className = 'feedback-msg wrong-msg show';
+    fb.textContent = `✗ Noto'g'ri. To'g'ri javob: "${q.correctAnswer}"`;
+    wrong++;
+  }
+  document.getElementById(`card-${qi}`).classList.add('answered');
+  answered++;
+  updateStats();
+  if (answered === questions.length) {
+    setTimeout(() => {
+      document.getElementById('nameOverlay').classList.add('show');
+    }, 800);
+  }
+}
+ 
+function updateStats() {
+  document.getElementById('sCorrect').textContent = correct;
+  document.getElementById('sWrong').textContent = wrong;
+  document.getElementById('sRemain').textContent = questions.length - answered;
+  const pct = Math.round((answered / questions.length) * 100);
+  document.getElementById('progressFill').style.width = pct + '%';
+  document.getElementById('progressLeft').textContent = `${answered} / ${questions.length} javob berildi`;
+  document.getElementById('progressPct').textContent = pct + '%';
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  NAME MODAL → RESULT
+// ══════════════════════════════════════════════════════════════════
+function saveName() {
+  const input = document.getElementById('nameInput');
+  const name = input.value.trim();
+  if (!name) {
+    alert('Iltimos, ismingizni kiriting!');
+    return;
+  }
+  currentUserName = name;
+  document.getElementById('nameOverlay').classList.remove('show');
+  saveToLeaderboard(name, correct, questions.length);
+  showResult();
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  CONFETTI ANIMATION
+// ══════════════════════════════════════════════════════════════════
+function launchConfetti() {
+  const container = document.getElementById('confettiContainer');
+  container.innerHTML = '';
+  const colors = ['#e8c07d', '#7fa6e0', '#4caf87', '#e05c5c', '#a6c984', '#f39c12'];
+  for (let i = 0; i < 100; i++) {
+    const confetti = document.createElement('div');
+    confetti.className = 'confetti';
+    confetti.style.left = Math.random() * 100 + 'vw';
+    confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+    confetti.style.animationDelay = Math.random() * 0.5 + 's';
+    confetti.style.animationDuration = (2 + Math.random() * 2) + 's';
+    container.appendChild(confetti);
+  }
+  setTimeout(() => { container.innerHTML = ''; }, 4000);
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  RESULT OVERLAY with CHARTS & RECOMMENDATIONS
+// ══════════════════════════════════════════════════════════════════
+function showResult() {
+  const pct = Math.round((correct / questions.length) * 100);
+  const overlay = document.getElementById('resultOverlay');
+ 
+  // Title & Name - CONGRATULATIONS for 40+ correct
+  const isExcellent = correct >= 40;
+  if (isExcellent) {
+    launchConfetti();
+    document.getElementById('resEmoji').textContent = '🎊';
+    document.getElementById('resTitle').innerHTML = `🎉 Congratulations, ${currentUserName}! 🎉`;
+    document.getElementById('resName').innerHTML = `
+      Ajoyib natija! Siz ${correct} ta savolga to'g'ri javob berdingiz.<br>
+      Bu juda yuqori ko'rsatkich! Sizning bilimlaringiz a'lo darajada.<br>
+      <strong>O'qish va barcha ishlaringizda doim muvaffaqiyat, baxt va omad tilaymiz! 🌟</strong>
+    `;
+  } else {
+    document.getElementById('resEmoji').textContent = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : pct >= 40 ? '📚' : '💪';
+    document.getElementById('resTitle').textContent = 'Natijangiz';
+    document.getElementById('resName').textContent = currentUserName;
+  }
+ 
+  document.getElementById('resScore').textContent = `${correct}/${questions.length}`;
+  document.getElementById('resDetail').innerHTML =
+    `To'g'ri: <span>${correct}</span> &nbsp;|&nbsp; Noto'g'ri: <span>${wrong}</span> &nbsp;|&nbsp; Foiz: <span>${pct}%</span>`;
+ 
+  // Donut Chart
+  const circumference = 2 * Math.PI * 48;
+  const correctArc = (correct / questions.length) * circumference;
+  const wrongArc = (wrong / questions.length) * circumference;
+  document.getElementById('donutCorrect').setAttribute('stroke-dasharray', `${correctArc} ${circumference}`);
+  document.getElementById('donutWrong').setAttribute('stroke-dasharray', `${wrongArc} ${circumference}`);
+  document.getElementById('donutWrong').setAttribute('stroke-dashoffset', 75 - correctArc);
+  document.getElementById('donutPct').textContent = pct + '%';
+  document.getElementById('lgCorrect').textContent = `${correct} to'g'ri`;
+  document.getElementById('lgWrong').textContent = `${wrong} noto'g'ri`;
+  document.getElementById('lgPct').textContent = `${pct}% ball`;
+ 
+  // Bar Chart by Topic
+  const barChart = document.getElementById('barChart');
+  barChart.innerHTML = '';
+  Object.keys(topicStats).forEach(topic => {
+    const stat = topicStats[topic];
+    const topicPct = Math.round((stat.correct / stat.total) * 100);
+    const row = document.createElement('div');
+    row.className = 'bar-row';
+    const barColor = topic === 'Turizm Loyihasini Boshqarish' ? '#e8c07d' :
+                     topic === 'Menejmentga Kirish' ? '#7fa6e0' : '#a6c984';
+    row.innerHTML = `
+      <div class="bar-label">${topic}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${topicPct}%; background:${barColor}"></div></div>
+      <div class="bar-val">${stat.correct}/${stat.total}</div>
+    `;
+    barChart.appendChild(row);
+  });
+ 
+  // Recommendations
+  const recList = document.getElementById('recList');
+  recList.innerHTML = '';
+  const recs = generateRecommendations(pct, correct);
+  recs.forEach(r => {
+    const item = document.createElement('div');
+    item.className = 'rec-item';
+    item.innerHTML = `<div class="rec-icon">${r.icon}</div><div>${r.text}</div>`;
+    recList.appendChild(item);
+  });
+ 
+  overlay.classList.add('show');
+}
+ 
+function generateRecommendations(pct, correctCount) {
+  if (correctCount >= 40) return [
+    { icon: '🌟', text: 'A\'lo natija! Bilimlaringiz juda mustahkam va sifatli.' },
+    { icon: '📖', text: 'Nazariy bilimlaringizni amaliyotda qo\'llashni boshlang, real loyihalarda ishtirok eting.' },
+    { icon: '🎯', text: 'Murakkab va qiyin loyihalar ustida ishlashga tayyor ekansiz. Omad siz bilan!' }
+  ];
+  if (pct >= 70) return [
+    { icon: '👍', text: 'Yaxshi natija! Asosiy tushunchalarni yaxshi bilasiz.' },
+    { icon: '📚', text: 'Ba\'zi mavzularni chuqurroq o\'rganish foydali bo\'ladi, ayniqsa zaif tomonlaringizni.' },
+    { icon: '💡', text: 'Amaliy mashg\'ulotlar va real misollar orqali tajribangizni oshiring.' }
+  ];
+  if (pct >= 50) return [
+    { icon: '📖', text: 'O\'rtacha natija. Asosiy mavzularni qayta ko\'rib chiqing va mustahkamlang.' },
+    { icon: '🎯', text: 'Nazariy materialni qo\'shimcha manbalardan o\'qing va tahlil qiling.' },
+    { icon: '💪', text: 'Muntazam mashq qilish va test yechish natijangizni sezilarli yaxshilaydi.' }
+  ];
+  return [
+    { icon: '💪', text: 'Hozircha past natija, ammo tashvishlanmang! Bu faqat boshlanish.' },
+    { icon: '📚', text: 'Barcha mavzularni boshidan oxirigacha diqqat bilan o\'qib chiqing.' },
+    { icon: '👨‍🏫', text: 'O\'qituvchi yoki mentor yordamidan foydalaning, savollaringizni bering.' },
+    { icon: '🔄', text: 'Doimiy takrorlash, mashq qilish va testlarni qayta yechish kalit omildir.' }
+  ];
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  LEADERBOARD (localStorage)
+// ══════════════════════════════════════════════════════════════════
+function saveToLeaderboard(name, score, total) {
+  const lb = JSON.parse(localStorage.getItem('quiz-leaderboard') || '[]');
+  const pct = Math.round((score / total) * 100);
+  const timestamp = new Date().toLocaleString('uz-UZ', { 
+    year: 'numeric', month: '2-digit', day: '2-digit', 
+    hour: '2-digit', minute: '2-digit'
+  });
+  lb.push({ name, score, total, pct, timestamp });
+  lb.sort((a, b) => b.score - a.score || b.pct - a.pct);
+  localStorage.setItem('quiz-leaderboard', JSON.stringify(lb));
+}
+ 
+function openLB() {
+  const lb = JSON.parse(localStorage.getItem('quiz-leaderboard') || '[]');
+  const content = document.getElementById('lbContent');
+  if (lb.length === 0) {
+    content.innerHTML = '<div class="lb-empty">Hali hech kim test topshirmagan. Birinchi bo\'ling! 🏆</div>';
+  } else {
+    let html = '<table class="lb-table"><thead><tr><th>O\'rin</th><th>Ism</th><th>Ball</th><th>Sana</th></tr></thead><tbody>';
+    lb.forEach((entry, i) => {
+      const rank = i + 1;
+      const medal = rank === 1 ? '🥇' : rank === 2 ? '🥈' : rank === 3 ? '🥉' : '';
+      const scoreClass = entry.pct >= 80 ? 'style="background:#4caf87; color:#fff"' :
+                         entry.pct >= 60 ? 'style="background:#7fa6e0; color:#fff"' : 'style="background:#e05c5c; color:#fff"';
+      html += `<tr>
+        <td class="lb-rank">${medal} ${rank}</td>
+        <td>${entry.name}</td>
+        <td><span class="lb-score-pill" ${scoreClass}>${entry.score}/${entry.total} (${entry.pct}%)</span></td>
+        <td style="font-size:10.5px; color:var(--muted)">${entry.timestamp}</td>
+      </tr>`;
+    });
+    html += '</tbody></table>';
+    content.innerHTML = html;
+  }
+  document.getElementById('resultOverlay').classList.remove('show');
+  document.getElementById('lbOverlay').classList.add('show');
+}
+ 
+function closeLB() {
+  document.getElementById('lbOverlay').classList.remove('show');
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  RESET QUIZ
+// ══════════════════════════════════════════════════════════════════
+function resetQuiz() {
+  answered = 0; correct = 0; wrong = 0; currentUserName = '';
+  document.getElementById('resultOverlay').classList.remove('show');
+  document.getElementById('nameOverlay').classList.remove('show');
+  document.getElementById('lbOverlay').classList.remove('show');
+  document.getElementById('nameInput').value = '';
+  questions = buildQuestions();
+  updateStats();
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+ 
+// ══════════════════════════════════════════════════════════════════
+//  INIT
+// ══════════════════════════════════════════════════════════════════
+questions = buildQuestions();
+document.getElementById('totalQ').textContent = questions.length;
+document.getElementById('sRemain').textContent = questions.length;
+document.getElementById('progressLeft').textContent = `0 / ${questions.length} javob berildi`;
+updateStats();
+render();
+</script>
+</body>
+</html>
