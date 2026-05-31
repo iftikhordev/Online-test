@@ -13,18 +13,20 @@
    THEME VARIABLES (Day / Night) — localStorage'da saqlanadi
 ══════════════════════════════════════════════════════════════ */
 [data-theme="dark"] {
-  --bg: #0e0f13; --surface: #16181f; --card: #1c1f2a; --border: #2a2d3a;
-  --accent: #e8c07d; --accent2: #7fa6e0; --accent3: #a6c984;
-  --correct: #4caf87; --wrong: #e05c5c;
-  --text: #dce1ee; --muted: #7a8099; --shadow: rgba(0,0,0,0.5);
-  --overlay-bg: rgba(14,15,19,0.95); --score-bar-bg: rgba(14,15,19,0.92);
+  --bg: #0b0f1d; --surface: #131a2c; --card: #18203a; --border: #2a3354;
+  --accent: #a78bfa; --accent2: #38bdf8; --accent3: #f472b6;
+  --correct: #34d399; --wrong: #fb7185;
+  --text: #e4e9f7; --muted: #8491b3; --shadow: rgba(0,0,0,0.55);
+  --btn-text: #0b0f1d;
+  --overlay-bg: rgba(11,15,29,0.95); --score-bar-bg: rgba(11,15,29,0.92);
 }
 [data-theme="light"] {
-  --bg: #f4f5f8; --surface: #ffffff; --card: #ffffff; --border: #e0e3ed;
-  --accent: #b07a1a; --accent2: #3a72c4; --accent3: #5a8a3c;
-  --correct: #2e8a61; --wrong: #c0392b;
-  --text: #1a1d2e; --muted: #8892aa; --shadow: rgba(0,0,0,0.12);
-  --overlay-bg: rgba(244,245,248,0.97); --score-bar-bg: rgba(255,255,255,0.95);
+  --bg: #f3f4fb; --surface: #ffffff; --card: #ffffff; --border: #e5e8f4;
+  --accent: #7c3aed; --accent2: #0ea5e9; --accent3: #db2777;
+  --correct: #059669; --wrong: #e11d48;
+  --text: #1a1f36; --muted: #7b86a3; --shadow: rgba(31,28,79,0.12);
+  --btn-text: #ffffff;
+  --overlay-bg: rgba(243,244,251,0.97); --score-bar-bg: rgba(255,255,255,0.95);
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -32,12 +34,12 @@ body {
   min-height: 100vh; line-height: 1.6; transition: background .3s, color .3s;
 }
 [data-theme="dark"] body {
-  background-image: radial-gradient(ellipse at 20% 20%, rgba(126,166,224,0.06) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 80%, rgba(232,192,125,0.05) 0%, transparent 60%);
+  background-image: radial-gradient(ellipse at 20% 20%, rgba(56,189,248,0.07) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 80%, rgba(167,139,250,0.07) 0%, transparent 60%);
 }
 [data-theme="light"] body {
-  background-image: radial-gradient(ellipse at 20% 20%, rgba(58,114,196,0.04) 0%, transparent 60%),
-                    radial-gradient(ellipse at 80% 80%, rgba(176,122,26,0.04) 0%, transparent 60%);
+  background-image: radial-gradient(ellipse at 20% 20%, rgba(14,165,233,0.05) 0%, transparent 60%),
+                    radial-gradient(ellipse at 80% 80%, rgba(124,58,237,0.05) 0%, transparent 60%);
 }
 
 
@@ -60,7 +62,7 @@ body {
 }
 .hero-badge {
   display: inline-flex; align-items: center; gap: 8px;
-  background: rgba(232,192,125,0.1); border: 1px solid rgba(232,192,125,0.25); color: var(--accent);
+  background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.3); color: var(--accent);
   font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
   padding: 6px 16px; border-radius: 100px; margin-bottom: 16px;
 }
@@ -87,7 +89,7 @@ body {
 }
 .control-select:focus { border-color: var(--accent2); }
 .apply-btn {
-  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #0e0f13; border: none;
+  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: var(--btn-text); border: none;
   border-radius: 10px; padding: 10px 20px; font-family: 'DM Sans', sans-serif;
   font-size: 13.5px; font-weight: 700; cursor: pointer; transition: opacity .2s;
 }
@@ -116,7 +118,7 @@ body {
 .q-meta { display: flex; align-items: center; gap: 9px; margin-bottom: 13px; flex-wrap: wrap; }
 .q-num {
   font-family: 'Playfair Display', serif; font-size: 10.5px; font-weight: 700; color: var(--accent);
-  letter-spacing: 1.4px; background: rgba(232,192,125,0.1); border: 1px solid rgba(232,192,125,0.2);
+  letter-spacing: 1.4px; background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.25);
   padding: 3px 9px; border-radius: 100px;
 }
 .q-topic { font-size: 10.5px; color: var(--muted); letter-spacing: 0.9px; text-transform: uppercase; }
@@ -133,7 +135,7 @@ body {
 .option-btn:hover:not(:disabled) { border-color: var(--accent2); transform: translateX(2px); }
 .option-btn:disabled { cursor: default; transform: none !important; }
 .option-letter {
-  width: 25px; height: 25px; flex-shrink: 0; border-radius: 7px; background: rgba(127,166,224,0.1);
+  width: 25px; height: 25px; flex-shrink: 0; border-radius: 7px; background: rgba(56,189,248,0.12);
   border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
   font-size: 11.5px; font-weight: 700; color: var(--accent2); transition: all .2s; margin-top: 1px;
 }
@@ -160,15 +162,15 @@ body {
 .score-num.s-remain { color: var(--accent); }
 .score-label { font-size: 10.5px; color: var(--muted); margin-top: 2px; }
 .finish-btn {
-  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #0e0f13; border: none;
+  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: var(--btn-text); border: none;
   padding: 8px 18px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 12.5px; font-weight: 700; cursor: pointer; transition: all .2s;
 }
 .finish-btn:hover { opacity: .9; transform: scale(1.02); }
 .reset-btn {
-  background: rgba(232,192,125,0.1); border: 1px solid rgba(232,192,125,0.3); color: var(--accent);
+  background: rgba(167,139,250,0.12); border: 1px solid rgba(167,139,250,0.3); color: var(--accent);
   padding: 7px 17px; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 12.5px; font-weight: 600; cursor: pointer; transition: all .2s;
 }
-.reset-btn:hover { background: rgba(232,192,125,0.18); transform: scale(1.02); }
+.reset-btn:hover { background: rgba(167,139,250,0.2); transform: scale(1.02); }
 
 /* ══ OVERLAY BASE + MODALS ═════════════════════════════════ */
 .overlay {
@@ -197,7 +199,7 @@ body {
 .name-input:focus { border-color: var(--accent2); }
 .name-btn {
   width: 100%; padding: 12px; border-radius: 9px; border: none;
-  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #0e0f13;
+  background: linear-gradient(135deg, var(--accent2), var(--accent)); color: var(--btn-text);
   font-family: 'DM Sans', sans-serif; font-size: 14.5px; font-weight: 700; cursor: pointer; transition: opacity .2s;
 }
 .name-btn:hover { opacity: .88; }
@@ -235,7 +237,7 @@ body {
 .divider { height: 1px; background: var(--border); margin: 15px 0; }
 .result-actions { display: flex; gap: 9px; flex-wrap: wrap; }
 .result-btn { flex: 1; min-width: 120px; padding: 11px; border-radius: 9px; border: none; font-family: 'DM Sans', sans-serif; font-size: 13.5px; font-weight: 700; cursor: pointer; transition: all .2s; }
-.result-btn.primary { background: linear-gradient(135deg, var(--accent2), var(--accent)); color: #0e0f13; }
+.result-btn.primary { background: linear-gradient(135deg, var(--accent2), var(--accent)); color: var(--btn-text); }
 .result-btn.secondary { background: var(--surface); border: 1.5px solid var(--border); color: var(--text); }
 .result-btn:hover { opacity: .88; transform: translateY(-1px); }
 
@@ -254,7 +256,7 @@ body {
 .lb-table th { font-size: 10.5px; font-weight: 700; color: var(--muted); letter-spacing: 0.9px; text-transform: uppercase; padding: 0 7px 9px; text-align: left; border-bottom: 1px solid var(--border); }
 .lb-table td { padding: 9px 7px; font-size: 13.5px; border-bottom: 1px solid var(--border); }
 .lb-table tr:last-child td { border-bottom: none; }
-.lb-table tr.me td { background: rgba(232,192,125,0.08); }
+.lb-table tr.me td { background: rgba(167,139,250,0.12); }
 .lb-rank { font-family: 'Playfair Display', serif; font-weight: 700; color: var(--accent); }
 .lb-score-pill { display: inline-block; padding: 3px 9px; border-radius: 18px; font-size: 11.5px; font-weight: 700; }
 .lb-empty { text-align: center; color: var(--muted); padding: 30px; font-size: 13.5px; }
@@ -730,7 +732,7 @@ const RAW = [
 
 /* ── KONFIGURATSIYA ── */
 const CONFIG = {
-  DEFAULT_COUNT: 60,          // boshlang'ich savollar soni
+  DEFAULT_COUNT: 200,         // boshlang'ich savollar soni
   COUNT_OPTIONS: [20, 40, 60, 100, 200],  // "Hammasi" avtomatik qo'shiladi
   CELEBRATION_PERCENT: 90,    // tabriklash (konfetti) chegarasi (%)
   PASS_PERCENT: 60,           // o'tish chegarasi (%)
@@ -932,7 +934,7 @@ function saveName() {
 function launchConfetti() {
   const container = document.getElementById('confettiContainer');
   container.innerHTML = '';
-  const colors = ['#e8c07d', '#7fa6e0', '#4caf87', '#e05c5c', '#a6c984', '#f39c12'];
+  const colors = ['#a78bfa', '#38bdf8', '#f472b6', '#34d399', '#fb7185', '#facc15'];
   for (let i = 0; i < 120; i++) {
     const c = document.createElement('div');
     c.className = 'confetti';
@@ -1097,16 +1099,16 @@ function downloadPDF() {
   const pct = total ? Math.round((correct / total) * 100) : 0;
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF();
-  doc.setFillColor(232, 192, 125);
+  doc.setFillColor(124, 58, 237);
   doc.rect(0, 0, 210, 30, 'F');
-  doc.setTextColor(20, 20, 30);
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(19); doc.setFont(undefined, 'bold');
   doc.text('Online Test Platformasi', 105, 13, { align: 'center' });
   doc.setFontSize(11); doc.setFont(undefined, 'normal');
   doc.text('Test natijalari hisoboti', 105, 22, { align: 'center' });
 
   doc.autoTable({
-    startY: 40, theme: 'grid', headStyles: { fillColor: [127, 166, 224] },
+    startY: 40, theme: 'grid', headStyles: { fillColor: [124, 58, 237] },
     head: [['Ko\'rsatkich', 'Qiymat']],
     body: [
       ['Foydalanuvchi', currentUserName || '—'],
@@ -1125,7 +1127,7 @@ function downloadPDF() {
   doc.setFontSize(12); doc.setFont(undefined, 'bold'); doc.setTextColor(40, 40, 40);
   doc.text('Fanlar bo\'yicha natija:', 14, y); y += 4;
   const body = Object.keys(topicStats).map(t => [t, `${topicStats[t].correct} / ${topicStats[t].total}`]);
-  doc.autoTable({ startY: y + 2, theme: 'striped', headStyles: { fillColor: [166, 201, 132] },
+  doc.autoTable({ startY: y + 2, theme: 'striped', headStyles: { fillColor: [219, 39, 119] },
     head: [['Fan', 'To\'g\'ri / Jami']], body, styles: { fontSize: 10, cellPadding: 3 } });
 
   doc.setFontSize(9); doc.setTextColor(150, 150, 150);
